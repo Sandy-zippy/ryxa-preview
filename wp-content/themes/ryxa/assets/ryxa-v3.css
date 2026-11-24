@@ -6,7 +6,7 @@
 :root{
   --x3-ink:#0B0D12; --x3-ink-2:#11151D; --x3-ink-3:#171C26; --x3-on:#EEF0F5; --x3-on-2:#A9B0C0; --x3-on-3:#7D8597;
   --x3-glass:rgba(255,255,255,.055); --x3-glass-hi:rgba(255,255,255,.09); --x3-dline:rgba(255,255,255,.1);
-  --x3-trace:#45D49A; --x3-glow:#15C07B; --x3-navy:#1A1D23; --x3-bone:#F6F7F9; --x3-tile:#EEF0F3;
+  --x3-trace:#45D49A; --x3-glow:#15C07B; --x3-navy:#233766; --x3-bone:#F5F3EE; --x3-tile:#EEF0F3;
   --x3-r:20px; --x3-r-s:12px; --x3-ease:cubic-bezier(.16,1,.3,1);
   --x3-sh:0 1px 1px rgba(10,12,18,.04),0 18px 48px -24px rgba(10,12,18,.28);
   --x3-gut:max(20px,env(safe-area-inset-left,0px));
@@ -441,7 +441,7 @@ html:not(.x3-js) [data-rv]{opacity:1}
 /* ===== v3.1 LIGHT (20 Nov, Sandy: the store stays white). Brand: Bone/white surfaces, Ink text, Navy accents.
    Dark-section classes are kept for structure but repainted light here. ===== */
 :root{
-  --x3-ink:#1A1D23; --x3-ink-2:#FFFFFF; --x3-on:var(--ink); --x3-on-2:var(--ink-2); --x3-on-3:var(--ink-3);
+  --x3-ink:#233766; --x3-ink-2:#FFFFFF; --x3-on:var(--ink); --x3-on-2:var(--ink-2); --x3-on-3:var(--ink-3);
   --x3-glass:#FFFFFF; --x3-glass-hi:#FFFFFF; --x3-dline:var(--line); --x3-trace:#00935C; --x3-glow:#00A96A;
 }
 .x3-dark{background:var(--paper)!important;color:var(--ink)}
@@ -449,14 +449,14 @@ html:not(.x3-js) [data-rv]{opacity:1}
 .x3-hero.x3-dark{background:radial-gradient(60% 70% at 78% 35%,#E6ECFA 0%,rgba(230,236,250,0) 70%),linear-gradient(180deg,#FFFFFF,var(--paper))!important}
 .x3-hero__glow{background:radial-gradient(circle,rgba(59,91,217,.12),transparent 62%)}
 .x3-hero .x3-h1{color:var(--ink)}
-.x3-hero .x3-h1 .x3-w:last-child>span,.x3-hero .x3-h1 .hl{background:linear-gradient(90deg,#1A1D23,#00A96A);-webkit-background-clip:text;background-clip:text}
+.x3-hero .x3-h1 .x3-w:last-child>span,.x3-hero .x3-h1 .hl{background:linear-gradient(90deg,#233766,#00A96A);-webkit-background-clip:text;background-clip:text}
 .x3-verify.x3-dark,.x3-anat.x3-dark{background:var(--sand)!important}
 .x3-band.x3-dark{background:linear-gradient(135deg,#EEF1FA,#F7F5F0)!important;border:1px solid var(--line)}
 .x3-glass{background:#fff;border:1px solid var(--line);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:var(--x3-sh)}
 .x3-btn--glass{background:#fff;color:var(--ink);border-color:var(--line);backdrop-filter:none}
 .x3-btn--glass:hover{border-color:var(--ink);background:#fff}
 .x3-btn--glow{background:var(--blue);box-shadow:0 12px 30px -12px rgba(35,55,102,.6)}
-.x3-announce{background:#1A1D23;color:#DCE2F2;border-bottom:0}
+.x3-announce{background:#233766;color:#DCE2F2;border-bottom:0}
 .x3-marquee__row .ic{color:#AFC0EE}
 .x3-stats{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .x3-stats dd{color:var(--blue)}
@@ -499,7 +499,7 @@ html:not(.x3-js) [data-rv]{opacity:1}
 .x3-areanav__img{position:relative;height:64px;border-radius:12px;background:var(--x3-tile);overflow:hidden;box-shadow:inset 0 -3px 0 var(--cc)}
 .x3-areanav__img img{position:absolute;bottom:2px;width:46%;mix-blend-mode:darken}
 .x3-areanav__img .v0{left:2%}.x3-areanav__img .v1{left:27%;width:50%;z-index:2}.x3-areanav__img .v2{right:2%}
-.x3-areanav__img--all{display:grid;place-items:center;background:linear-gradient(135deg,#E9EEFB,#F6F7F9)}
+.x3-areanav__img--all{display:grid;place-items:center;background:linear-gradient(135deg,#E9EEFB,#F5F3EE)}
 .x3-areanav__img--all b{font:600 26px var(--d);font-stretch:125%;color:var(--blue)}
 .x3-perks{background:#fff;border-bottom:1px solid var(--line)}
 .x3-perks__in{display:flex;gap:28px;justify-content:space-between;flex-wrap:wrap;padding-block:14px;font-size:13.5px;color:var(--ink-2)}

@@ -34,7 +34,7 @@
       var tot = packTotal(q) + ex.reduce(function (s, x) { return s + parseFloat(x.dataset.price); }, 0);
       var n = q + ex.length;
       btn.textContent = (n > 1 ? 'Add ' + n + ' items' : 'Add to cart') + ' · ' + cad(tot);
-      var fp = $('[data-first-p]'); if (fp) fp.textContent = cad(packTotal(q) * (1 - (V.pct || 10) / 100));
+      var fp = $('[data-first-p]'); if (fp) fp.textContent = cad(packTotal(q));
       $$('.v5-add').forEach(function (l) { l.classList.toggle('on', $('input', l).checked); });
       var r = R(); if (r && r.ship) r.ship(tot);
     };
@@ -56,7 +56,7 @@
       var t = pac(), cut = 14 * 60, txt;
       if (t.d >= 1 && t.d <= 4 && t.m < cut) {
         var left = cut - t.m, h = Math.floor(left / 60), mm = left % 60;
-        txt = '<b>Order in ' + (h ? h + ' h ' : '') + mm + ' min</b> to make today\'s 2:00 PM Pacific cut-off. Ships in 1 to 2 business days.';
+        txt = '<b>Ships Mon to Thu</b> from BC, packed and tracked. Orders placed before 2:00 PM Pacific go out the same business day.';
       } else {
         var nd = t.d; do { nd = (nd + 1) % 7; } while (nd < 1 || nd > 4);
         txt = '<b>Next ship day: ' + DAYS[nd] + '.</b> Ships in 1 to 2 business days.';
@@ -77,7 +77,6 @@
     var sr = $('[data-cart-save]'); if (sr) { sr.hidden = !(save > 0); var a = $('[data-cart-save-amt]'); if (a) a.textContent = '−' + cad(save); }
     var tr = $('[data-cart-totrow]'); if (tr) { tr.hidden = !items.length; $('[data-cart-total]', tr).textContent = cad(parseInt(tt.total_price || 0, 10) / u) + ' CAD'; }
     // a first-order code beats the pack saving: say so on the line hints
-    if ((c.coupons || []).length) $$('.x3-tierhint.ok').forEach(function (h) { h.textContent = 'Your ' + c.coupons[0].code.toUpperCase() + ' 10% applies instead (better offer)'; });
     // two one-tap picks: pairs of what is in the cart, else best sellers; they scroll with the lines
     var box = upBox || (upBox = $('[data-cart-up]')); if (!box) return;
     var list = $('[data-cart-items]'); if (list) list.appendChild(box);
@@ -100,7 +99,7 @@
       .catch(function () { b.disabled = false; b.textContent = '+ Add'; say('Could not add. Please try again.'); });
   });
 
-  /* ---------- WELCOME10 popup: once per visitor, after 30 s (touch: 30 s + half-way scroll) or exit intent; never on product pages ---------- */
+  /* ---------- Signup pop-up: disabled 25 Nov 2026, no consumer promotions at launch ---------- */
   var pop = $('[data-pop]');
   if (pop && V.popup && !store('ryxa_pop')) {
     var last = null, shown = false;

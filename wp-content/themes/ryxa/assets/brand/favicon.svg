@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34 -30 68 66" width="64" height="64">
+  <rect x="-34" y="-30" width="68" height="66" rx="12" fill="#121316"/>
+  <defs>
+    <radialGradient id="mb" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#8ea2dc"/><stop offset=".55" stop-color="#2c4590"/><stop offset="1" stop-color="#14224d"/></radialGradient>
+    <radialGradient id="mp" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#e2e0da"/><stop offset="1" stop-color="#9d9b95"/></radialGradient>
+    <radialGradient id="ms" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#8e939a"/></radialGradient>
+  </defs>
+  <g stroke="#8d939c" stroke-linecap="round">
+    <path d="M0 0L-17 -11" stroke-width="3.2"/><path d="M2 2L-15 -9" stroke-width="2"/>
+    <path d="M0 0L16 -10" stroke-width="3.2"/><path d="M0 0L0 17" stroke-width="3.2"/>
+    <path d="M0 17L9 26" stroke-width="2.2"/>
+  </g>
+  <circle cx="-17" cy="-11" r="7.4" fill="url(#mp)"/><circle cx="16" cy="-10" r="6.4" fill="url(#mb)"/>
+  <circle cx="0" cy="17" r="7" fill="url(#mp)"/><circle cx="9" cy="26" r="3.8" fill="url(#ms)"/>
+  <circle cx="0" cy="0" r="9.2" fill="url(#mb)"/>
+</svg>

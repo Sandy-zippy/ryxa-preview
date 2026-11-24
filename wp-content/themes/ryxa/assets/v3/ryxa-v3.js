@@ -59,7 +59,7 @@
     var q = norm(SQ.value || '');
     var list = q ? data.filter(function (d) { return norm(d.n + d.s + d.c + d.t + famN[d.f]).indexOf(q) > -1; }) : data.slice(0, 8);
     if (!list.length) { SR.innerHTML = '<p class="x3-search__empty">Nothing matches “' + esc(SQ.value) + '”. Try a shorter name, like “BPC”.</p>'; return; }
-    SR.innerHTML = (q ? '' : '<span class="x3-lbl">Most searched</span>') + list.slice(0, 12).map(function (d) {
+    SR.innerHTML = (q ? '' : '<span class="x3-lbl">From the catalogue</span>') + list.slice(0, 12).map(function (d) {
       return '<a href="' + esc(d.u) + '" class="x3-hit"><img src="' + esc(d.i) + '" alt="" loading="lazy"><span><b>' + esc(d.n) + ' <small>' + esc(d.s) + '</small></b><em><i style="--cc:var(--c-' + d.f + ')"></i>' + esc(famN[d.f] || '') + ' · ' + esc(d.c) + '</em></span><strong>' + esc(d.p) + '</strong></a>';
     }).join('');
   }
@@ -100,7 +100,7 @@
     var free = parseFloat(C.freeMin || 0);
     if (free) {
       var left = Math.max(0, free - sub), pct = Math.min(100, sub / free * 100);
-      $$('[data-ship-txt]').forEach(function (b) { b.innerHTML = left > 0 ? 'You\'re <b>$' + left.toFixed(2) + '</b> away from free insulated shipping' : '<b>Free insulated shipping unlocked</b>'; });
+      $$('[data-ship-txt]').forEach(function (b) { b.innerHTML = left > 0 ? 'You\'re <b>$' + left.toFixed(2) + '</b> away from free shipping' : '<b>Free shipping unlocked</b>'; });
       $$('[data-ship-bar]').forEach(function (b) { b.style.width = pct + '%'; b.classList.toggle('done', left <= 0); });
     }
     var box = $('[data-cart-items]'); if (!box) return;
