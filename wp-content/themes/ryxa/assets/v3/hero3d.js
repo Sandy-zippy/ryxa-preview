@@ -17,11 +17,11 @@ function labelTexture(v, renderer) {
   cv.width = W; cv.height = H;
   const g = cv.getContext('2d');
   g.fillStyle = '#121418'; g.fillRect(0, 0, W, H);
-  g.fillStyle = '#233766'; g.fillRect(0, 0, W, 26); g.fillRect(0, H - 26, W, 26);
+  g.fillStyle = '#1A1D23'; g.fillRect(0, 0, W, 26); g.fillRect(0, H - 26, W, 26);
   // front panel is centred at u=0.25 (faces the camera at rotation 0)
   const cx = W * 0.75;
   g.textAlign = 'center'; g.textBaseline = 'middle';
-  g.fillStyle = '#F5F3EE';
+  g.fillStyle = '#F6F7F9';
   g.font = '600 46px Archivo, "Arial Black", sans-serif';
   if ('letterSpacing' in g) g.letterSpacing = '12px';
   g.fillText('RYXA LABS', cx, 160);
@@ -41,7 +41,7 @@ function labelTexture(v, renderer) {
   g.fillStyle = '#8B93A3'; g.font = '400 30px "IBM Plex Mono", monospace';
   ['FOR LABORATORY RESEARCH', 'USE ONLY. NOT FOR HUMAN', 'OR VETERINARY USE.', '', 'LOT  R26XX-XX', 'STORE SEALED, DRY, DARK'].forEach((t, i) => g.fillText(t, bx, 190 + i * 48));
   // barcode stripes at the seam
-  for (let i = 0; i < 40; i++) { g.fillStyle = i % 3 ? '#F5F3EE' : '#121418'; g.fillRect(W * 0.43 + i * 7, 230, (i % 4) + 2, 180); }
+  for (let i = 0; i < 40; i++) { g.fillStyle = i % 3 ? '#F6F7F9' : '#121418'; g.fillRect(W * 0.43 + i * 7, 230, (i % 4) + 2, 180); }
   const t = new THREE.CanvasTexture(cv);
   t.colorSpace = THREE.SRGBColorSpace;
   t.anisotropy = renderer.capabilities.getMaxAnisotropy();
