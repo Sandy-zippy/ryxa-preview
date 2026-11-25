@@ -99,7 +99,7 @@
       .catch(function () { b.disabled = false; b.textContent = '+ Add'; say('Could not add. Please try again.'); });
   });
 
-  /* ---------- WELCOME10 popup: once per visitor, after 30 s (touch: 30 s + half-way scroll) or exit intent; never on product pages ---------- */
+  /* ---------- Signup pop-up: disabled 25 Nov 2026, no consumer promotions at launch ---------- */
   var pop = $('[data-pop]');
   if (pop && V.popup && !store('ryxa_pop')) {
     var last = null, shown = false;

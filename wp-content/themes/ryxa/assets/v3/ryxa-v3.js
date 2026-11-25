@@ -53,7 +53,7 @@
   /* ---------- search ---------- */
   var S = $('[data-search]'), SQ = $('[data-search-q]'), SR = $('[data-search-res]'), data = [];
   try { data = JSON.parse(($('[data-search-json]') || {}).textContent || '[]'); } catch (e) {}
-  var famN = { rec: 'Recovery', met: 'Metabolic & growth', neu: 'Neuro & sleep', skin: 'Skin & blends' };
+  var famN = { rec: 'Repair & recovery', met: 'Metabolic & longevity', neu: 'Cognitive', skin: 'Aesthetic & wellness' };
   function norm(s) { return String(s).toLowerCase().replace(/[^a-z0-9+]/g, ''); }
   function renderSearch() {
     var q = norm(SQ.value || '');
