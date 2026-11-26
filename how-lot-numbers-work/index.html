@@ -138,6 +138,41 @@ var RYXA5 = {"list":[{"id":10,"k":"bpc-157","n":"BPC-157","s":"10 mg","p":59.99,
 			</div>
 		</div>
 	</div>
+		<div class="ryxa-ck" id="ryxa-ck" role="region" aria-label="Cookie notice" hidden>
+		<div class="ryxa-ck__in">
+			<div class="ryxa-ck__txt">
+				<p class="ryxa-ck__h">Essential cookies only</p>
+				<p>This site uses cookies for the cart and your 19+ confirmation. It runs no analytics or advertising cookies. If that ever changes we will ask first. <a href="../privacy/">Privacy policy</a></p>
+			</div>
+			<div class="ryxa-ck__act">
+				<button type="button" class="ryxa-ck__btn ryxa-ck__btn--yes" data-ryxa-ck="accept">Accept</button>
+				<button type="button" class="ryxa-ck__btn ryxa-ck__btn--no" data-ryxa-ck="decline">Decline</button>
+			</div>
+		</div>
+	</div>
+	<script>
+	(function () {
+		var K = 'ryxa_cookie_choice', el = document.getElementById('ryxa-ck');
+		if (!el) { return; }
+		var saved = null;
+		try { saved = window.localStorage.getItem(K); } catch (e) {}
+		if (saved) { return; }
+		// The 19+ gate is a full overlay. Wait for it to go before stacking a second thing on top.
+		var show = function () {
+			if (document.querySelector('.ryxa-gate')) { return window.setTimeout(show, 400); }
+			el.hidden = false;
+			window.requestAnimationFrame(function () { el.classList.add('is-in'); });
+		};
+		show();
+		el.addEventListener('click', function (ev) {
+			var b = ev.target.closest('[data-ryxa-ck]');
+			if (!b) { return; }
+			try { window.localStorage.setItem(K, b.getAttribute('data-ryxa-ck')); } catch (e) {}
+			el.classList.remove('is-in');
+			window.setTimeout(function () { el.hidden = true; }, 240);
+		});
+	})();
+	</script>
 	
 <a class="skip-link screen-reader-text" id="wp-skip-link" href="#wp--skip-link--target">Skip to content</a><div class="wp-site-blocks"><div class="wp-block-template-part"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="mb" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#8ea2dc"/><stop offset=".55" stop-color="#2c4590"/><stop offset="1" stop-color="#14224d"/></radialGradient><radialGradient id="mp" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#e2e0da"/><stop offset="1" stop-color="#9d9b95"/></radialGradient><radialGradient id="ms" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#8e939a"/></radialGradient><symbol id="mol" viewBox="-30 -24 60 58"><g stroke="#8d939c" stroke-linecap="round"><path d="M0 0L-17 -11" stroke-width="3.2"/><path d="M2 2L-15 -9" stroke-width="2"/><path d="M0 0L16 -10" stroke-width="3.2"/><path d="M0 0L0 17" stroke-width="3.2"/><path d="M0 17L9 26" stroke-width="2.2"/></g><circle cx="-17" cy="-11" r="7.4" fill="url(#mp)"/><circle cx="16" cy="-10" r="6.4" fill="url(#mb)"/><circle cx="0" cy="17" r="7" fill="url(#mp)"/><circle cx="9" cy="26" r="3.8" fill="url(#ms)"/><circle cx="0" cy="0" r="9.2" fill="url(#mb)"/></symbol></defs></svg><div class="x3-announce x3-announce--static" aria-label="Store notices"><div class="x3-utils"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>Third-party tested, every lot</span><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Ships Mon to Thu from BC · free shipping over $200.00</span><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Laboratory research use only &middot; 19+</span></div></div>
 <header class="x3-top" data-top><div class="x3-top__in">
