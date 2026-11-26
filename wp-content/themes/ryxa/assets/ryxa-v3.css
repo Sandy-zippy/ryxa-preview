@@ -115,6 +115,8 @@
 .x3-burger{display:none}
 @media (max-width:1080px){.x3-search-btn{min-width:0}.x3-search-btn span,.x3-search-btn kbd{display:none}}
 @media (max-width:960px){.x3-top__in{grid-template-columns:1fr auto;height:62px}.x3-nav{display:none}.x3-burger{display:inline-grid}.x3-hide-s{display:none}}
+/* Phone: logo + tools needed 406px in a 375px viewport, so the burger was clipped off the right edge. */
+@media (max-width:480px){.x3-top__in{padding:0 max(14px,env(safe-area-inset-right,0px)) 0 max(14px,env(safe-area-inset-left,0px));gap:10px}.x3-logo{font-size:16px}.x3-cartbtn{padding:0 5px 0 11px;gap:6px}.x3-cartbtn b{min-width:26px;height:26px;line-height:26px;padding:0 6px}}
 .x3-mm{position:fixed;inset:calc(62px + env(safe-area-inset-top,0px)) 0 0;z-index:55;background:var(--paper);overflow:auto;animation:x3-drop .3s var(--x3-ease)}
 .x3-mm__in{padding:20px max(20px,env(safe-area-inset-right,0px)) 40px max(20px,env(safe-area-inset-left,0px));display:grid;gap:10px}
 .x3-mm__fam{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:8px;border-radius:14px;background:var(--card);border:1px solid var(--line);text-decoration:none}
