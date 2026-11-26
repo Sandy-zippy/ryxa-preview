@@ -23,6 +23,7 @@
   var form = $('form.x-buy'), btn = form && $('[name="add-to-cart"]', form), pick = $('[data-pick]');
   if (form && btn) {
     var price = pick ? parseFloat(pick.dataset.price) : 0, tiers = C.tiers || {};
+    try { if (pick && pick.dataset.tiers) tiers = JSON.parse(pick.dataset.tiers); } catch (e) {}
     var packTotal = function (q) {
       var t = Object.keys(tiers).map(Number).sort(function (a, b) { return b - a; }).filter(function (x) { return q >= x; })[0];
       return price * q * (t ? 1 - tiers[t] / 100 : 1);

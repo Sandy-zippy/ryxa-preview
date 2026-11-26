@@ -274,3 +274,131 @@
   .ryxa-ck__btn{flex:1 1 0}
 }
 @media (prefers-reduced-motion:reduce){.ryxa-ck{transition:none}}
+
+/* ================================================================
+   Section 1, 26 Nov 2026: Rochelle's Mockup 1.
+   Her rules, in her order: v2.3 palette, the packaging's Molecular Lattice, one lattice field per
+   screen, always fading, navy glow behind the vials. The header is Ink and runs straight into the
+   Ink hero with no white bar between them, and turns Bone with a hairline once you scroll.
+   ================================================================ */
+
+/* The sticky header never actually stuck: the block template part that wraps it is only its own
+   height, and a sticky element cannot travel past its parent's box. display:contents lifts it into
+   the page flow so it pins for the whole scroll, which is what "turns Bone on scroll" needs. */
+.wp-block-template-part:has(> .x3-announce){display:contents}
+
+/* ---------- header over the Ink hero ---------- */
+/* The header is sticky, so it is not laid over the hero: it is simply the same Ink, which reads as
+   one band. On scroll it becomes the Bone bar with a hairline, which is what tells you the page has
+   moved. Home only; every other page keeps the Bone header it always had. */
+.home .x3-top{
+  background:var(--v8-ink);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+  border-bottom-color:transparent;
+  transition:background .28s ease,border-color .28s ease,color .28s ease;
+}
+.home .x3-top .x3-logo,
+.home .x3-top .x3-nav>a,
+.home .x3-top .x3-nav__item>button{color:#EDEFF2}
+.home .x3-top .x3-nav>a:hover,
+.home .x3-top .x3-nav__item>button:hover,
+.home .x3-top .x3-nav__item.is-open>button{color:#fff;background:rgba(255,255,255,.07)}
+.home .x3-top .x3-search-btn{color:#A8ACB4;border-color:#33363C;background:transparent}
+.home .x3-top .x3-search-btn:hover{color:#fff;border-color:var(--v8-silver)}
+.home .x3-top .x3-search-btn kbd{color:#8D9199;border-color:#33363C;background:transparent}
+.home .x3-top .x3-icbtn{color:#EDEFF2;border-color:#33363C;background:transparent}
+.home .x3-top .x3-icbtn:hover{border-color:var(--v8-silver)}
+.home .x3-top.is-scrolled{
+  background:var(--v8-bone);
+  border-bottom-color:var(--v8-silver);
+}
+.home .x3-top.is-scrolled .x3-logo,
+.home .x3-top.is-scrolled .x3-nav>a,
+.home .x3-top.is-scrolled .x3-nav__item>button,
+.home .x3-top.is-scrolled .x3-icbtn,
+.home .x3-top.is-scrolled .x3-track{color:var(--v8-ink)}
+.home .x3-top.is-scrolled .x3-nav>a:hover,
+.home .x3-top.is-scrolled .x3-nav__item>button:hover,
+.home .x3-top.is-scrolled .x3-nav__item.is-open>button{color:var(--v8-ink);background:#E7E3DA}
+.home .x3-top.is-scrolled .x3-search-btn{color:#5E616A;border-color:#DFE3E8}
+.home .x3-top.is-scrolled .x3-search-btn:hover{color:var(--v8-ink);border-color:var(--v8-ink)}
+.home .x3-top.is-scrolled .x3-icbtn{border-color:#DFE3E8}
+
+/* Track order: the words, not a cube nobody reads as a parcel. */
+.x3-track{
+  display:inline-flex;align-items:center;height:42px;padding:0 15px;
+  border:1px solid var(--line,#DFE3E8);border-radius:999px;
+  font:500 14px/1 var(--f);color:var(--ink,#121316);text-decoration:none;white-space:nowrap;flex:none;
+  transition:border-color .2s,color .2s;
+}
+.x3-track:hover{border-color:currentColor}
+.home .x3-top .x3-track{color:#EDEFF2;border-color:#33363C}
+.home .x3-top .x3-track:hover{border-color:var(--v8-silver)}
+
+/* ---------- the hero band ---------- */
+.v8-hero{position:relative;isolation:isolate;padding:clamp(40px,5vw,72px) 0 clamp(48px,6vw,88px)}
+/* The packaging lattice, as the packaging draws it: a hex ground with peptide chains over it,
+   graphite with a few navy runs, fading right to left. Static SVG, so the mirrored copy keeps it. */
+/* Drawn at 1:1, anchored to the right edge and simply cropped, so the chains keep the size the
+   packaging draws them at whatever the viewport is. Scaling them to fit turned them into wallpaper. */
+.v8-chain{
+  position:absolute;top:0;right:0;z-index:-1;
+  width:1600px;max-width:none;height:1200px;
+  pointer-events:none;user-select:none;
+  will-change:transform;
+}
+/* The navy glow sits behind the vials, not behind the type. */
+.v8-hero__glow{
+  position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);
+  width:120%;aspect-ratio:1/.66;z-index:0;pointer-events:none;
+  /* An ellipse, not closest-side: closest-side took its radius from the short axis and left the
+     outer two vials sitting right on the fade, which is why they disappeared into the Ink. */
+  background:radial-gradient(ellipse at 50% 52%,rgba(35,55,102,.88) 0%,rgba(35,55,102,.52) 30%,rgba(35,55,102,.2) 56%,rgba(35,55,102,0) 78%);
+}
+.v8-hero__art img{position:relative;z-index:1}
+
+/* H1 down 15%, and "to the lot." in Navy Tint so the navy actually reads on Ink. */
+.v8-h1{font-size:clamp(32px,7.1vw,99px);margin-top:18px}
+.v8-h1 span{color:var(--v8-tint)}
+.v8-lede{margin-top:20px}
+
+/* Lot field: Silver hairline, Plex Mono, a placeholder you can read. */
+.v8-lot{margin-top:30px}
+.v8-lot input{border:1px solid var(--v8-silver);background:rgba(30,32,36,.72);font-family:var(--m)}
+.v8-lot input::placeholder{color:#A3A6AD;opacity:1}
+.v8-lot input:focus-visible{border-color:var(--v8-tint)}
+
+/* The stats row has to sit inside the first screen at 1440x900. */
+.v8-stats{margin-top:38px}
+.v8-link{margin-top:18px}
+
+/* Vials: bigger, centre one about 1.4x the sides, raised so their base meets the lot field. */
+.v8-hero__art{align-items:flex-end;min-height:clamp(300px,34vw,500px);margin-bottom:clamp(40px,14.8vw,214px);gap:clamp(2px,1vw,14px)}
+.v8-hero__art img{width:31%;max-width:246px}
+.v8-hero__art img.v1{width:43.4%;max-width:344px}
+.v8-hero__art img.v0,.v8-hero__art img.v2{margin-bottom:clamp(16px,3.4vw,50px)}
+
+/* ---------- motion: once, on load, and never under reduced motion ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .v8-hero__art img{animation:v8rise .72s cubic-bezier(.2,.7,.2,1) both}
+  .v8-hero__art img.v0{animation-delay:.06s}
+  .v8-hero__art img.v1{animation-delay:0s}
+  .v8-hero__art img.v2{animation-delay:.12s}
+}
+@keyframes v8rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+@media (max-width:560px){
+  /* Three dark vials in 350px is a row of smudges. On a phone the centre vial carries the shot. */
+  .v8-hero__art img.v0,.v8-hero__art img.v2{display:none}
+  .v8-hero__art img.v1{width:54%;max-width:230px}
+}
+@media (max-width:860px){
+  .v8-hero__art{margin-bottom:0;min-height:230px}
+  .v8-hero__art img{width:32%}
+  .v8-hero__art img.v1{width:44%}
+  /* On a phone the visible window is the right edge of the field, where the fade has not bitten
+     yet, so the fade is redone in CSS and the whole thing pulled back. */
+  .v8-chain{opacity:.5;-webkit-mask-image:linear-gradient(to left,#000,rgba(0,0,0,.3) 55%,transparent 88%);mask-image:linear-gradient(to left,#000,rgba(0,0,0,.3) 55%,transparent 88%)}
+  .v8-hero__glow{width:132%;aspect-ratio:1/.72;background:radial-gradient(ellipse at 50% 52%,rgba(35,55,102,.82) 0%,rgba(35,55,102,.44) 34%,rgba(35,55,102,0) 76%)}
+  .x3-track{display:none}
+}

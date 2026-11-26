@@ -108,12 +108,14 @@
       box.innerHTML = '<div class="x3-empty"><b>Your cart is empty.</b><p>Start with a best seller or browse by research area.</p><a class="x3-btn x3-btn--solid" href="' + esc(C.shop) + '">Browse compounds</a></div>';
       return;
     }
-    var tiers = C.tiers || {};
+    // Each compound has its own pack ladder now, so resolve it per line, not once per cart.
+    var packsFor = function (sku) { return (sku && C.packs && C.packs[sku]) || C.tiers || {}; };
     box.innerHTML = c.items.map(function (it) {
+      var tiers = packsFor(it.sku);
       var img = it.images && it.images[0] ? it.images[0].thumbnail || it.images[0].src : '';
       var t = Object.keys(tiers).map(Number).sort(function (a, b) { return b - a; }).filter(function (q) { return it.quantity >= q; })[0];
       var next = Object.keys(tiers).map(Number).sort(function (a, b) { return a - b; }).filter(function (q) { return it.quantity < q; })[0];
-      var hint = t ? '<span class="x3-tierhint ok">Pack saving ' + tiers[t] + '% applied at checkout</span>' : (next ? '<button type="button" class="x3-tierhint v5-more" data-lmore="' + next + '">+ Add ' + (next - it.quantity) + ' more, save ' + tiers[next] + '% (' + money(Math.round(parseInt(it.prices.price, 10) * next * tiers[next] / 100), it.prices) + ')</button>' : '');
+      var hint = t ? '<span class="x3-tierhint ok">Pack saving ' + Math.floor(tiers[t]) + '% applied at checkout</span>' : (next ? '<button type="button" class="x3-tierhint v5-more" data-lmore="' + next + '">+ Add ' + (next - it.quantity) + ' more, save ' + Math.floor(tiers[next]) + '% (' + money(Math.round(parseInt(it.prices.price, 10) * next * tiers[next] / 100), it.prices) + ')</button>' : '');
       return '<div class="x3-line" data-key="' + esc(it.key) + '"><img src="' + esc(img) + '" alt=""><div><a href="' + esc(it.permalink) + '"><b>' + esc(it.name) + '</b></a><span>' + money(it.prices.price, it.prices) + ' CAD</span>' + hint +
         '<div class="x3-line__q"><button type="button" data-lq="-1" aria-label="Fewer">−</button><span>' + it.quantity + '</span><button type="button" data-lq="1" aria-label="More">+</button><button type="button" class="x3-line__rm" data-lrm>Remove</button></div></div><strong>' + money(it.totals.line_subtotal, it.totals) + '</strong></div>';
     }).join('');
@@ -164,7 +166,9 @@
   /* ---------- research pack picker (PDP) ---------- */
   var pick = $('[data-pick]');
   if (pick) {
-    var price = parseFloat(pick.dataset.price), qty = $('#qty'), btn = $('.x-buy [name="add-to-cart"]'), tiers = C.tiers || {};
+    var price = parseFloat(pick.dataset.price), qty = $('#qty'), btn = $('.x-buy [name="add-to-cart"]');
+    var tiers = C.tiers || {};
+    try { if (pick.dataset.tiers) tiers = JSON.parse(pick.dataset.tiers); } catch (e) {}
     var label = function (q) {
       var t = Object.keys(tiers).map(Number).sort(function (a, b) { return b - a; }).filter(function (x) { return q >= x; })[0];
       var tot = price * q * (t ? 1 - tiers[t] / 100 : 1);
