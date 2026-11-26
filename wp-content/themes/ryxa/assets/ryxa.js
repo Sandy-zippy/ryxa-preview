@@ -21,7 +21,8 @@
       const lot = form.lot.value.trim().toUpperCase();
       out.textContent = 'Checking…';
       try {
-        const r = await fetch(window.RYXA.rest + encodeURIComponent(lot));
+        const base = (window.RYXA_LOT && window.RYXA_LOT.rest) || '/wp-json/ryxa/v1/lot/';
+        const r = await fetch(base + encodeURIComponent(lot));
         const d = await r.json();
         if (!r.ok) { out.textContent = d.message || 'No report on file for that lot yet.'; return; }
         out.innerHTML = '';
