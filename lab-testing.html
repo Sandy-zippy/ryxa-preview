@@ -886,6 +886,60 @@ mark.tbc{font:inherit;color:inherit;background:rgba(232,163,61,.18);box-shadow:i
   .lk-box button{padding:0 14px}
 }
 
+/* ===== round 14: lab proof, Mockup B ===== */
+.pf14{background:var(--bone);padding:clamp(48px,6vw,96px) 0}
+.pf14-p{position:relative;isolation:isolate;overflow:hidden;border-radius:28px;background:var(--ink);color:var(--bone);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4.5vw,72px);align-items:center;padding:clamp(28px,4.4vw,72px)}
+.pf14-p>*{min-width:0}
+/* lattice behind the copy, fading out before the card */
+.pf14-p::before{content:"";position:absolute;inset:0;z-index:-1;background:url(a/lat-ink.svg) left top/1400px auto;opacity:.6;-webkit-mask:linear-gradient(90deg,#000 0,rgba(0,0,0,.5) 34%,transparent 58%);mask:linear-gradient(90deg,#000 0,rgba(0,0,0,.5) 34%,transparent 58%)}
+.pf14-p::after{content:"";position:absolute;z-index:-1;left:-10%;bottom:-40%;width:70%;height:90%;background:radial-gradient(closest-side,rgba(35,55,102,.55),transparent);pointer-events:none}
+.pf14-c .h2{color:var(--bone);font-size:clamp(32px,3.5vw,50px)}
+.pf14-c .h2 .lt{display:block;font-weight:350;color:var(--silver)}
+.pf14-l{margin:22px 0 0;font-size:clamp(16px,1.25vw,18px);line-height:1.6;color:#C9CBD0;max-width:38ch}
+.pf14-a{display:flex;align-items:center;flex-wrap:wrap;gap:14px 24px;margin-top:30px}
+.pf14-b{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:999px;background:var(--bone);color:var(--ink);font:600 14.5px var(--body);text-decoration:none;white-space:nowrap;transition:background .25s,transform .15s}
+.pf14-b svg{transition:transform .3s cubic-bezier(.23,1,.32,1)}
+.pf14-b:hover{background:#fff}.pf14-b:hover svg{transform:translateX(4px)}.pf14-b:active{transform:scale(.98)}
+.pf14-t{font:600 14.5px var(--body);color:var(--bone);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.pf14-t:hover{color:var(--tint)}
+.pf14-b:focus-visible,.pf14-t:focus-visible{outline:2px solid var(--tint);outline-offset:3px}
+.pf14-coa{margin:0;border-radius:18px;background:var(--bone);color:var(--ink);padding:clamp(18px,2vw,28px);box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
+.pf14-top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid #DDD9CF}
+.pf14-top b{font:600 clamp(15px,1.2vw,17px) var(--display);font-stretch:112%}
+.pf14-top span{font:500 12px var(--body);color:var(--navy);white-space:nowrap}
+.pf14-ch{position:relative;margin-top:16px;border-radius:10px;background:linear-gradient(180deg,#EDEFF5,#ECEAE4);padding:0 0 26px;overflow:hidden}
+.pf14-ch svg{display:block;width:100%;height:clamp(170px,17vw,250px)}
+.pf14-gr line{stroke:#D5D7DF;stroke-width:1;vector-effect:non-scaling-stroke}
+.pf14-ax{stroke:#9AA0AE;stroke-width:1;vector-effect:non-scaling-stroke}
+.pf14-tr{fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:0}
+.pf14-fl{fill:url(#pf14g);stroke:none}
+.pf14-an{position:absolute;left:clamp(14px,1.6vw,22px);top:clamp(12px,1.4vw,20px);z-index:1;margin:0;max-width:min(52%,250px);font-size:14px;line-height:1.45;color:#4E525A}
+.pf14-an b{display:block;margin-bottom:3px;font:600 15px var(--display);font-stretch:110%;color:var(--ink)}
+.pf14-tk{list-style:none;margin:0;padding:0 2px;position:absolute;left:0;right:0;bottom:7px;display:grid;grid-template-columns:repeat(4,1fr) auto;font:400 11px var(--mono);color:#5B5E66}
+.pf14-tk li{padding-left:6px}.pf14-tk li:last-child{padding:0 8px 0 0}
+.pf14-f{margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 clamp(14px,1.6vw,24px)}
+.pf14-f div{padding-top:16px;min-width:0}
+.pf14-f dt{font:600 15px/1.25 var(--display);font-stretch:110%;color:var(--ink)}
+.pf14-f dd{margin:6px 0 0;font-size:13.5px;line-height:1.5;color:#4E525A}
+/* one moment: the trace draws once when the card comes into view */
+@media (prefers-reduced-motion:no-preference){
+  .pf14.js .pf14-tr{stroke-dashoffset:1}
+  .pf14.js .pf14-fl,.pf14.js .pf14-an{opacity:0}
+  .pf14.js.in .pf14-tr{stroke-dashoffset:0;transition:stroke-dashoffset 1.5s cubic-bezier(.3,.6,.2,1) .15s}
+  .pf14.js.in .pf14-fl{opacity:1;transition:opacity .6s ease-out 1.25s}
+  .pf14.js.in .pf14-an{opacity:1;transition:opacity .5s ease-out 1.35s}
+}
+@media (max-width:1100px){.pf14-f{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  .pf14-p{grid-template-columns:1fr;border-radius:22px;padding:28px 18px 18px;gap:28px}
+  .pf14-p::before{-webkit-mask:linear-gradient(180deg,#000 0,rgba(0,0,0,.45) 30%,transparent 52%);mask:linear-gradient(180deg,#000 0,rgba(0,0,0,.45) 30%,transparent 52%);background-size:900px auto}
+  .pf14-c{padding:6px 6px 0}
+  .pf14-coa{padding:16px;border-radius:14px}
+  .pf14-an{max-width:58%;font-size:13px}
+  .pf14-ch svg{height:190px}
+}
+@media (max-width:420px){.pf14-top span{display:none}.pf14-f dd{font-size:13px}}
+
 /* ===== round 12, all pages ===== */
 #proof .xpf-vial,#proof .xpf-r,#proof .xpf-note,#proof .xpf-desc,#proof .xpf-bar{display:none!important}
 #proof .xpf-ins{display:block;background:none;box-shadow:none;border-radius:0;overflow:visible;color:var(--ink);margin-top:clamp(32px,4vw,56px)}
@@ -925,6 +979,49 @@ mark.tbc{background:none!important;box-shadow:none!important;padding:0;border-bo
 .sp-n b{font-size:22px}
 }
 .sp-r:hover{background:none}
+
+/* ===== round 14: four notes in the utility strip ===== */
+.strip .wrap{gap:clamp(24px,3.4vw,56px)}
+@media (max-width:1040px){.strip span:nth-child(n+2){display:none}.strip .wrap{justify-content:center}}
+
+/* ===== round 14: page heads, a shorter version of the home Ink band ===== */
+.pgh{position:relative;isolation:isolate;overflow:hidden;background:var(--ink);color:var(--bone);padding:clamp(34px,4.2vw,64px) 0 clamp(44px,5.2vw,80px);border-bottom:0}
+.pgh::before{content:"";position:absolute;inset:0;z-index:-2;background:url(a/lat-ink.svg) right -40px top -30px/1400px auto;opacity:.5;-webkit-mask:linear-gradient(270deg,#000 0,rgba(0,0,0,.55) 26%,transparent 52%);mask:linear-gradient(270deg,#000 0,rgba(0,0,0,.55) 26%,transparent 52%)}
+.pgh::after{content:"";position:absolute;z-index:-1;right:4%;top:-30%;width:min(46vw,620px);aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(44,66,127,.5),rgba(35,55,102,.16) 55%,transparent);pointer-events:none}
+.pgh-g{align-items:center}
+.pgh h1{color:var(--bone);font-size:clamp(38px,4.8vw,72px);line-height:1}
+.pgh-d{color:#C9CBD0;margin-top:22px;max-width:50ch}
+.pgh-cr{margin-bottom:20px}
+.pgh .pgh-cr,.pgh .pgh-cr a{color:#9A9DA5}.pgh .pgh-cr a:hover{color:var(--bone)}
+.pgh a:focus-visible{outline:2px solid var(--tint);outline-offset:3px}
+/* pages with no picture: the band is short and the copy may run wider */
+.pgh-sh,.pgh-j,.pgh-ct{padding-bottom:clamp(36px,4.2vw,64px)}
+.pgh-sh .pgh-g,.pgh-j .pgh-g,.pgh-ct .pgh-g{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+/* lab testing: the lot lookup is the one Bone object on the band */
+.pgh .lk{background:var(--bone);color:var(--ink);box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
+.pgh .lk-lat{display:none}
+.pgh .lk-box{background:#fff;box-shadow:inset 0 0 0 1px #D5D1C7}
+.pgh .lk-box:focus-within{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.pgh .lk-box span{color:#6B6E75}
+.pgh .lk-box input{color:var(--ink)}.pgh .lk-box input::placeholder{color:#A9ABB1}
+.pgh .lk-box button{background:var(--ink);color:var(--bone)}.pgh .lk-box button:hover{background:var(--navy)}
+.pgh .lk-box button:focus-visible{outline-color:var(--navy)}
+.pgh .lk .lotmsg{color:#4E525A}.pgh .lk .lotmsg.bad{color:#B4472F}.pgh .lk .lotmsg.good{color:var(--navy)}
+.pgh .lk-w{border-top-color:#DDD9CF;color:#4E525A}.pgh .lk-w b{color:var(--ink)}
+/* wholesale: the apply button and its reply line sit under the copy, unboxed */
+.pgh-ws .pgh-g{grid-template-columns:minmax(0,7fr) minmax(0,5fr);row-gap:0}
+.pgh-ws .pgh-a{grid-column:1;margin-top:30px}
+.pgh .ws-cta{display:flex;flex-direction:row;justify-content:flex-start;align-items:center;flex-wrap:wrap;gap:14px 22px;background:none;padding:0;border:0;border-radius:0;box-shadow:none}
+.pgh .ws-cta p{margin:0;color:#C9CBD0;font-size:15px}
+.pgh .ws-b{background:var(--bone);color:var(--ink)}.pgh .ws-b:hover{background:#fff}
+.pgh mark.tbc{color:inherit}
+/* about: the carton sits on the glow, no drop shadow box */
+.pgh .ab-box img{box-shadow:0 40px 70px -30px rgba(0,0,0,.9)}
+@media (max-width:1100px){
+  .pgh::before{-webkit-mask:linear-gradient(200deg,#000 0,rgba(0,0,0,.4) 22%,transparent 46%);mask:linear-gradient(200deg,#000 0,rgba(0,0,0,.4) 22%,transparent 46%);background-size:900px auto}
+  .pgh::after{right:-20%;top:-20%;width:90vw}
+  .pgh-sh .pgh-g,.pgh-j .pgh-g,.pgh-ct .pgh-g,.pgh-ws .pgh-g{grid-template-columns:1fr}
+}
 </style>
 <link rel="icon" type="image/svg+xml" href="a/favicon.svg">
 </head>
@@ -938,7 +1035,7 @@ mark.tbc{background:none!important;box-shadow:none!important;padding:0;border-bo
   </defs>
 </svg>
 
-<div class="strip"><div class="wrap"><span>Third-party tested, every lot</span><span>Ships Mon–Thu from BC</span><span>For laboratory research use only, 19+</span></div></div>
+<div class="strip"><div class="wrap"><span>Third-party tested, every lot</span><span>Ships Mon–Thu from BC</span><span>Free shipping over $200</span><span>For laboratory research use only, 19+</span></div></div>
 
 <header class="top" id="top">
   <div class="wrap">
@@ -963,51 +1060,30 @@ mark.tbc{background:none!important;box-shadow:none!important;padding:0;border-bo
 </div></div></div></section>
 <section class="pgs pgs-t" aria-labelledby="wth"><div class="wrap wt-g"><h2 class="pgs-h" id="wth">What we test</h2>
   <div class="wt" role="table" aria-label="What we test"><div class="wt-r wt-hd" role="row"><span></span><span>Test</span><span>What it tells you</span><span>Method</span></div><div class="wt-r"><span class="wt-i" aria-hidden="true"><svg viewBox="0 0 48 32"><path d="M2 28h44M4 27c6 0 8-1 10-2s3 0 5 1 3-1 4-6 2-17 3-17 2 14 3 19 2 4 4 4h11" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Purity</h3><p>How much of the material is the target peptide versus related impurities</p><p class="wt-m">HPLC (high-performance liquid chromatography)</p></div><div class="wt-r"><span class="wt-i" aria-hidden="true"><svg viewBox="0 0 48 32"><path d="M2 28h44M12 28V8M34 28V15M7 28v-3M20 28v-2M26 28v-4M41 28v-2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><h3>Identity</h3><p>That the molecule is the one on the label</p><p class="wt-m">Mass spectrometry (MS)</p></div><div class="wt-r"><span class="wt-i" aria-hidden="true"><svg viewBox="0 0 48 32"><rect x="2" y="10" width="44" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="2" y="10" width="38" height="12" rx="3" fill="currentColor" opacity=".9"/></svg></span><h3>Net peptide content <mark class="tbc" title="To be confirmed by RYXA">if tested</mark></h3><p>How much actual peptide is in the vial, after water and salts</p><p class="wt-m"><mark class="tbc" title="To be confirmed by RYXA">METHOD</mark></p></div><div class="wt-r"><span class="wt-i" aria-hidden="true"><svg viewBox="0 0 48 32"><g fill="currentColor"><circle cx="10" cy="12" r="2.4"/><circle cx="22" cy="20" r="2.4"/><circle cx="34" cy="10" r="2.4"/><circle cx="40" cy="22" r="2.4"/></g><circle cx="24" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/></svg></span><h3>Endotoxin <mark class="tbc" title="To be confirmed by RYXA">if tested</mark></h3><p>Bacterial endotoxin level</p><p class="wt-m"><mark class="tbc" title="To be confirmed by RYXA">LAL assay</mark></p></div></div></div></section>
-<section class="xpf xpf-in" id="proof" aria-labelledby="proofh">
-<div class="wrap">
-  <div class="xpf-h">
+<section class="pf14" id="proof" aria-labelledby="proofh">
+<div class="wrap"><div class="pf14-p">
+  <div class="pf14-c">
     <h2 class="h2" id="proofh">One dominant peak.<span class="lt">Every lot, published.</span></h2>
-    <div class="xpf-hr"><p class="lede">HPLC purity and mass-spec identity from an independent lab, with the lab and test date named.</p>
-      <div class="xpf-links"><a class="x8-o" href="how-to-read-a-peptide-coa.html"><span>How to read a peptide COA</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><a class="xwn-l" href="lab-testing.html#lookup">COA library</a></div></div>
+    <p class="pf14-l">HPLC purity and mass-spec identity from an independent lab, with the lab and test date named.</p>
+    <div class="pf14-a"><a class="pf14-b" href="how-to-read-a-peptide-coa.html"><span>How to read a peptide COA</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><a class="pf14-t" href="lab-testing.html#lookup">COA library</a></div>
   </div>
-  <div class="xpf-ins">
-    <div class="xpf-vial" aria-hidden="true"><div class="xpf-3d" id="xpfv"></div><img class="xpf-still" src="v/bpc-157.webp" alt="" width="800" height="1000"><span class="xpf-scan"></span></div>
-    <div class="xpf-r">
-      <div class="xpf-q" aria-hidden="true"><span class="k">Lot</span><span class="v"><span id="xpfq"></span><i class="car"></i></span><span class="m"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="2" fill="none"/></svg>Report found</span></div>
-      <figure class="xcoa" id="xcoa" data-view="trace" aria-label="Example certificate of analysis for BPC-157 10 mg, lot R2611-01">
-        <div class="xc-top"><span>Certificate of analysis</span><b>BPC-157 10 mg</b><em>RP-HPLC, ESI-MS</em></div>
-        <div class="xc-meta">
-          <div data-k="lab"><span>Lab</span><b>Independent lab</b></div>
-          <div data-k="date"><span>Tested</span><b>Nov 2026</b></div>
-          <div data-k="lot"><span>Lot</span><b>R2611-01</b></div>
-        </div>
-        <div class="xc-chart">
-          <svg class="xv-trace" viewBox="0 -14 560 190" role="img" aria-label="Example HPLC chromatogram: one main peak at 10.4 minutes, 99.2 percent purity by area.">
-            <defs><linearGradient id="xcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#233766" stop-opacity=".24"/><stop offset="1" stop-color="#233766" stop-opacity="0"/></linearGradient></defs>
-            <g class="xc-grid"><line x1="140" y1="0" x2="140" y2="152"/><line x1="280" y1="0" x2="280" y2="152"/><line x1="420" y1="0" x2="420" y2="152"/></g>
-            <line class="xc-axis" x1="0" y1="152" x2="560" y2="152"/>
-            <path class="xc-fill" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/>
-            <path class="xc-trace" id="xctr" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4"/>
-            <g class="xc-pk"><text x="380" y="6">Main peak, 10.4 min</text></g>
-            <g class="xc-tick"><text x="0" y="170">0</text><text x="140" y="170">4</text><text x="280" y="170">8</text><text x="420" y="170">12</text><text x="540" y="170">min</text></g>
-          </svg>
-          <svg class="xv-ms" viewBox="0 -14 560 190" role="img" aria-label="Example mass spectrum: peaks at m/z 710.8 and 1420.5 match the expected mass of 1419.5 daltons.">
-<line class="c9-axis" x1="0" y1="152" x2="560" y2="152"/><g class="ms-noise"><line x1="132.2" y1="152" x2="132.2" y2="147.1"/><line x1="221.8" y1="152" x2="221.8" y2="146.6"/><line x1="37.2" y1="152" x2="37.2" y2="144.4"/><line x1="514.1" y1="152" x2="514.1" y2="140.8"/><line x1="428.5" y1="152" x2="428.5" y2="146.0"/><line x1="300.5" y1="152" x2="300.5" y2="145.5"/><line x1="96.7" y1="152" x2="96.7" y2="147.0"/><line x1="120.1" y1="152" x2="120.1" y2="139.7"/><line x1="464.2" y1="152" x2="464.2" y2="140.7"/><line x1="448.3" y1="152" x2="448.3" y2="146.3"/><line x1="173.5" y1="152" x2="173.5" y2="142.4"/><line x1="409.9" y1="152" x2="409.9" y2="140.3"/><line x1="492.8" y1="152" x2="492.8" y2="147.2"/><line x1="339.3" y1="152" x2="339.3" y2="142.0"/><line x1="283.3" y1="152" x2="283.3" y2="146.4"/><line x1="265.2" y1="152" x2="265.2" y2="147.2"/><line x1="523.4" y1="152" x2="523.4" y2="140.2"/><line x1="306.7" y1="152" x2="306.7" y2="145.3"/><line x1="509.0" y1="152" x2="509.0" y2="142.8"/><line x1="494.1" y1="152" x2="494.1" y2="140.4"/><line x1="284.7" y1="152" x2="284.7" y2="144.3"/><line x1="335.4" y1="152" x2="335.4" y2="144.1"/><line x1="90.3" y1="152" x2="90.3" y2="145.3"/><line x1="455.1" y1="152" x2="455.1" y2="147.6"/><line x1="25.9" y1="152" x2="25.9" y2="142.4"/><line x1="157.0" y1="152" x2="157.0" y2="143.2"/><line x1="263.9" y1="152" x2="263.9" y2="144.9"/><line x1="558.5" y1="152" x2="558.5" y2="146.2"/><line x1="231.2" y1="152" x2="231.2" y2="146.2"/><line x1="354.3" y1="152" x2="354.3" y2="145.5"/><line x1="199.3" y1="152" x2="199.3" y2="141.3"/><line x1="179.6" y1="152" x2="179.6" y2="143.0"/><line x1="506.4" y1="152" x2="506.4" y2="147.1"/><line x1="34.5" y1="152" x2="34.5" y2="145.9"/></g><g class="ms-peaks"><line class="ms-pk" x1="145.0" y1="152" x2="145.0" y2="24"/><text x="153.0" y="34">[M+2H]²⁺ 710.8</text><line class="ms-pk" x1="476.2" y1="152" x2="476.2" y2="68"/><text x="484.2" y="78">[M+H]⁺ 1420.5</text></g><g class="c9-tick"><text x="0.0" y="170">400</text><text x="186.7" y="170">800</text><text x="373.3" y="170">1200</text><text x="534" y="170">m/z</text></g></svg>
-          <div class="xv-net" role="img" aria-label="Example net peptide content: 87 percent peptide, 13 percent water and salts.">
-            <div class="xnet"><i class="p"><span>Peptide</span><b>87 %</b></i><i class="w"><span>Water and salts</span><b>13 %</b></i></div>
-          </div>
-        </div>
-        <div class="xc-foot">
-          <div data-k="trace"><span>Purity</span><b><span class="xcnt" data-to="99.2" data-d="1">99.2</span> %</b></div>
-          <div data-k="ms"><span>Mass</span><b><span class="xcnt" data-to="1419.5" data-d="1">1419.5</span> Da <svg class="xok" width="15" height="15" viewBox="0 0 14 14" aria-label="matches expected mass"><circle cx="7" cy="7" r="7"/><path d="M4 7.2l2 2 4-4.2" fill="none" stroke="#F5F3EE" stroke-width="1.6"/></svg></b></div>
-          <div data-k="net"><span>Net peptide</span><b><span class="xcnt" data-to="87" data-d="0">87</span> %</b></div>
-        </div>
-      </figure>
+  <figure class="pf14-coa">
+    <div class="pf14-top"><b>Certificate of analysis</b><span>RP-HPLC, ESI-MS</span></div>
+    <div class="pf14-ch">
+      <p class="pf14-an"><b>HPLC trace</b>One dominant peak is what you want to see.</p>
+      <svg viewBox="0 -14 560 190" preserveAspectRatio="none" role="img" aria-label="Drawing of an HPLC chromatogram: a flat baseline with one tall main peak.">
+        <defs><linearGradient id="pf14g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#233766" stop-opacity=".22"/><stop offset="1" stop-color="#233766" stop-opacity="0"/></linearGradient></defs>
+        <g class="pf14-gr"><line x1="140" y1="-14" x2="140" y2="152"/><line x1="280" y1="-14" x2="280" y2="152"/><line x1="420" y1="-14" x2="420" y2="152"/></g>
+        <line class="pf14-ax" x1="0" y1="152" x2="560" y2="152"/>
+        <path class="pf14-fl" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/>
+        <path class="pf14-tr" pathLength="1" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4"/>
+      </svg>
+      <ol class="pf14-tk" aria-hidden="true"><li>0</li><li>4</li><li>8</li><li>12</li><li>min</li></ol>
     </div>
-    <div class="xpf-steps"><ol><li><button type="button" data-k="lab" data-d="Each batch is tested by an independent, named laboratory." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">1</span><b>Lab name</b></button></li><li><button type="button" data-k="date" data-d="Each COA names the lab, the test date and the lot number." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">2</span><b>Test date</b></button></li><li><button type="button" data-k="trace" data-d="One dominant peak is what you want to see." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">3</span><b>HPLC trace</b></button></li><li><button type="button" data-k="ms" data-d="The measured mass should match the expected mass for the compound." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">4</span><b>MS identity</b></button></li><li><button type="button" data-k="net" data-d="How much actual peptide is in the vial, after water and salts." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">5</span><b>Net peptide content</b></button></li></ol><p class="xpf-desc" aria-live="polite"></p></div>
-  </div>
-  <p class="xpf-note">Example report. Each lot’s real COA names the lab and the test date.</p>
-</div></section>
+    <dl class="pf14-f"><div><dt>Lab name</dt><dd>Each batch is tested by an independent, named laboratory.</dd></div><div><dt>Test date</dt><dd>Each COA names the lab, the test date and the lot number.</dd></div><div><dt>MS identity</dt><dd>The measured mass should match the expected mass for the compound.</dd></div><div><dt>Net peptide content</dt><dd>How much actual peptide is in the vial, after water and salts.</dd></div></dl>
+  </figure>
+</div></div>
+</section>
 <section class="pgs pgs-navy" aria-labelledby="tph"><div class="wrap tp-g">
   <div><h2 class="pgs-h" id="tph">Our testing partner</h2>
     <p class="tp-p">Lots are tested by <mark class="tbc" title="To be confirmed by RYXA">LAB NAME</mark>, <mark class="tbc" title="To be confirmed by RYXA">CITY, COUNTRY</mark>. <mark class="tbc" title="To be confirmed by RYXA">ACCREDITATION, e.g. ISO/IEC 17025.</mark> Each COA names the lab, the test date and the lot number.</p></div>
@@ -1108,35 +1184,11 @@ f.addEventListener('submit',e=>{e.preventDefault();const v=i.value.trim().toUppe
 if(!v){m.textContent='Enter the lot number printed on the vial label.';return}
 if(!/^R\d{4}-\d{2}$/.test(v)){m.classList.add('bad');m.textContent='Lot numbers look like R2611-01. Check the label on the vial.';return}
 const n=+v.slice(-2);if(v.startsWith('R2611-')&&n>=1&&n<=19){m.classList.add('good');m.textContent='Lot '+v+' is an example lot in this preview. Real reports open here at launch.';return}
-m.classList.add('bad');m.textContent='No published report for '+v+' yet. New lots go live before they ship.'})})();</script><script type="module">
-{const sec=document.getElementById('proof');if(sec&&sec.classList.contains('xpf')){
-const $=s=>sec.querySelector(s),$$=s=>[...sec.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getContext('webgl2')||c.getContext('webgl'))}catch(e){return false}})();
-const coa=$('#xcoa'),btns=$$('.xpf-steps button'),desc=$('.xpf-desc'),tr=$('#xctr'),L=tr.getTotalLength(),q=$('#xpfq'),LOT='R2611-01';
-const VIEW={lab:'trace',date:'trace',trace:'trace',ms:'ms',net:'net'},LOTK=['lab','date'];let k=-1,st=null,started=false;
-tr.style.strokeDasharray=L;tr.style.strokeDashoffset=L;
-const count=()=>$$('.xcnt').forEach(el=>{const to=+el.dataset.to,d=+el.dataset.d;if(reduce){el.textContent=to.toFixed(d);return}const t0=performance.now();
-  const f=t=>{const p=Math.min(1,(t-t0)/1100),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(d);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});
-const draw=()=>{if(reduce){tr.style.strokeDashoffset=0;return}tr.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:1500,easing:'cubic-bezier(.25,1,.5,1)',fill:'forwards'})};
-const show=i=>{k=i;const key=btns[i].dataset.k;btns.forEach((b,j)=>{b.classList.toggle('on',j===i);b.classList.toggle('done',j<i);b.setAttribute('aria-current',j===i?'step':'false')});
-  coa.dataset.view=VIEW[key];$$('#xcoa [data-k]').forEach(e=>e.classList.toggle('hl',e.dataset.k===key||(key==='date'&&e.dataset.k==='lot')));
-  if(key==='trace')draw()
-  if(st)st.showLot(LOTK.includes(key)?'ok':null);
-  desc.textContent=btns[i].dataset.d;desc.classList.remove('xsw');void desc.offsetWidth;desc.classList.add('xsw');
-  const bar=btns[i].querySelector('.xpf-bar');bar.style.display='none';void bar.offsetWidth;bar.style.display=''};
-btns.forEach((b,i)=>{b.addEventListener('click',()=>{if(!sec.classList.contains('found')){sec.classList.add('found');q.textContent=LOT;count();draw()}show(i)});
-  b.querySelector('.xpf-bar').addEventListener('animationend',()=>show((i+1)%btns.length))});
-const steps=$('.xpf-steps');steps.addEventListener('focusin',()=>steps.classList.add('hold'));steps.addEventListener('focusout',()=>steps.classList.remove('hold'));
-/* read the lot off the label, type it into the lookup, open the report */
-const run=()=>{if(started)return;started=true;if(reduce){q.textContent=LOT;sec.classList.add('found');count();draw();show(0);return}
-  sec.classList.add('reading');if(st)st.showLot('ok');let n=0;
-  const ty=()=>{if(sec.classList.contains('found'))return;q.textContent=LOT.slice(0,++n);if(n<LOT.length)setTimeout(ty,85+Math.random()*60);else setTimeout(()=>{sec.classList.add('found');count();draw();setTimeout(()=>{if(k<0)show(0)},550)},380)};
-  setTimeout(ty,700)};
-new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();run()}},{threshold:.35}).observe($('.xpf-ins'));
-if(gl)new IntersectionObserver(async(es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();try{const {mountStage}=await import('./lib/stage.js');
-  st=await mountStage($('#xpfv'),{mode:'single',rim:'#9AA8CF',pointerZone:$('.xpf-vial'),vials:[{name:'BPC-157',mg:'10 mg',rx:'RX-01',lot:'R2611-01',chip:'#E8A33D',rotY:-.25}]});
-  $('.xpf-vial').classList.add('on');if(sec.classList.contains('reading')&&(k<0||LOTK.includes(btns[k].dataset.k)))st.showLot('ok')}catch(e){console.warn(e)}},{rootMargin:'300px'}).observe(sec);
-}}
+m.classList.add('bad');m.textContent='No published report for '+v+' yet. New lots go live before they ship.'})})();</script>
+<script>
+(()=>{const s=document.querySelector('.pf14');if(!s)return;s.classList.add('js');
+if(!('IntersectionObserver' in window)){s.classList.add('in');return}
+new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){o.disconnect();s.classList.add('in')}},{threshold:.3}).observe(s.querySelector('.pf14-coa'))})();
 </script>
 </body>
 </html>
