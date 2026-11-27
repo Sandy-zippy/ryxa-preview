@@ -84,7 +84,7 @@ nav.main a:hover{color:#fff}
 .hero .glow{position:absolute;z-index:1;right:4%;top:8%;width:min(62vw,860px);aspect-ratio:1;border-radius:50%;
   background:radial-gradient(closest-side,rgba(44,66,127,.62),rgba(35,55,102,.28) 45%,rgba(35,55,102,0) 100%);pointer-events:none}
 .hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;align-items:center;gap:24px;min-height:min(calc(100svh - 112px),780px);padding-top:56px;padding-bottom:72px}
-.hero h1{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:clamp(50px,6.6vw,100px);line-height:.98;letter-spacing:-.025em;margin:0}
+.hero h1{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:clamp(50px,5.5vw,86px);line-height:.98;letter-spacing:-.025em;margin:0}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .ln>span{display:block}
 .hero h1 .lt{font-weight:300;color:var(--silver)}
@@ -221,7 +221,7 @@ nav.main a:hover{color:#fff}
 .date .lt{font-weight:300;color:var(--mute)}
 .left{margin-top:22px;font:400 15px var(--body);color:var(--mute)}
 .left b{color:var(--ink);font-weight:500}
-.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:30px 0 18px}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin:30px 0 18px}
 .week div{border-radius:6px;padding:12px 8px;text-align:center;font:400 12px var(--mono);background:var(--bone2);color:var(--mute)}
 .week div b{display:block;font:600 14px var(--body);color:var(--ink);margin-bottom:2px}
 .week .s{background:var(--ink);color:#C9CBD0}
@@ -440,6 +440,31 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
   .ruo{flex-direction:column}
 }
 
+/* example badge for illustrative results */
+.exb{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--mono);letter-spacing:.04em;padding:5px 8px 4px;border-radius:999px;border:1px dashed currentColor;color:#C9A86A;vertical-align:middle;white-space:nowrap}
+.exb::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+/* packaging in 3D */
+.pack{padding:clamp(72px,9vw,128px) 0}
+.pk{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:center;background:var(--ink);color:var(--bone);border-radius:22px;padding:clamp(28px,4vw,56px);overflow:hidden;isolation:isolate}
+.pk::before{content:"";position:absolute;inset:auto -10% -40% 30%;height:80%;background:radial-gradient(closest-side,rgba(35,55,102,.55),transparent);z-index:-1}
+.pk .h2{color:var(--bone)}.pk .lede{color:#B9BCC4;max-width:46ch}
+.pk-views{display:grid;gap:8px;margin:28px 0 24px}
+.pk-views button{all:unset;cursor:pointer;display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:baseline;padding:14px 16px;border-radius:12px;border:1px solid #2A2D33;transition:border-color .25s,background .25s}
+.pk-views button b{font:600 15px var(--display);font-stretch:112%;color:var(--bone)}
+.pk-views button span{font-size:14px;color:#9EA2AB}
+.pk-views button:hover{border-color:#3A3F4A}
+.pk-views button[aria-pressed=true]{background:#1B1E25;border-color:var(--tint)}
+.pk-views button:focus-visible{outline:2px solid var(--tint);outline-offset:2px}
+.pk-spec{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0}
+.pk-spec div{border-top:1px solid #2A2D33;padding-top:12px}.pk-spec dt{font:500 12px var(--mono);color:#868A93;margin-bottom:4px}.pk-spec dd{margin:0;font-size:14px;color:#D9DBE0}
+.pk-stage{position:relative;aspect-ratio:7/5;min-height:320px}
+.pk-stage canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab}
+.pk-still{position:absolute;inset:18% 6%;width:88%;object-fit:contain;border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.pk-stage.on .pk-still{display:none}
+@media (max-width:900px){.pk{grid-template-columns:1fr}.pk-stage{order:-1;aspect-ratio:16/11;min-height:0;margin:-8px -12px 0}.pk-views button{grid-template-columns:1fr;gap:4px}}
+@media (min-width:1101px){#winter .wrap.winter{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px}#winter .date{font-size:clamp(52px,5.4vw,92px)}}
+#winter .week div{min-width:0;padding:12px 2px}
+
 .drawer{position:fixed;inset:0;z-index:80;background:rgba(10,11,13,.6);backdrop-filter:blur(6px)}
 .drawer[hidden]{display:none}
 .dw-in{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--ink);color:var(--bone);padding:28px var(--gut);display:flex;flex-direction:column;gap:28px;animation:dwin .35s var(--ease-out)}
@@ -462,6 +487,15 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 .toast{position:fixed;z-index:95;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:var(--bone);color:var(--ink);border-radius:999px;padding:12px 20px;font-weight:500;font-size:14px;pointer-events:none;transition:opacity .25s ease,transform .3s var(--ease-out)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
+.exb{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--mono);letter-spacing:.04em;padding:5px 8px 4px;border-radius:999px;border:1px dashed currentColor;color:#A07A2E;vertical-align:middle;white-space:nowrap}
+.exb::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.lbhead{display:flex;align-items:center;justify-content:space-between;margin:22px 0 8px;font:500 12px var(--mono);color:var(--mute)}
+.fr-head .exb{margin-left:12px}
+.chem{margin-top:32px;border-top:1px solid var(--line,#DAD6CC);padding-top:20px}.chem h2{font:600 18px var(--display);font-stretch:112%;margin:0 0 12px}
+.chem dl{display:grid;gap:0;margin:0}.chem dl div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line,#DAD6CC)}
+.chem dt{font:500 12px var(--mono);color:var(--mute);padding-top:2px}.chem dd{margin:0;font-size:14px;overflow-wrap:anywhere}
+.ymark{float:left;width:64px;height:64px;margin:4px 18px 6px 0;border-radius:14px;background:var(--ink);display:grid;place-items:center}.ymark svg{width:42px;height:42px}
+@media (max-width:600px){.chem dl div{grid-template-columns:1fr;gap:2px}}
 .phero{position:relative;background:var(--ink);color:var(--bone);overflow:hidden;isolation:isolate}
 .phero .lat{right:0;top:0;width:60%;height:100%;background-image:url(a/lat-ink.svg);background-position:right top;background-size:auto 130%;opacity:.9;
   -webkit-mask-image:linear-gradient(to left,#000 10%,transparent 85%);mask-image:linear-gradient(to left,#000 10%,transparent 85%)}
@@ -599,7 +633,7 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
   </defs>
 </svg>
 
-<div class="strip"><div class="wrap"><span>Third-party tested, every lot</span><span>Ships Mon–Thu from BC, insulated</span><span>For laboratory research use only, 19+</span></div></div>
+<div class="strip"><div class="wrap"><span>Third-party tested, every lot</span><span>Ships Mon–Thu from BC</span><span>For laboratory research use only, 19+</span></div></div>
 
 <header class="top" id="top">
   <div class="wrap">
@@ -619,7 +653,7 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 <div class="pd"><div class="pd-art"><div class="lat"></div><div class="glow"></div><img class="still" src="v/tb-500.webp" alt="RYXA Labs TB-500 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"><div class="v3d" id="v3d"></div><span class="hint">Hover the lot block to turn the vial</span></div>
 <div><span class="chip" style="--c:var(--amber)">RX-01 Repair &amp; recovery</span><h1>TB-500</h1><p class="sz">10 mg, lyophilized powder</p>
 <p class="short">A synthetic peptide fragment based on the active region of thymosin beta-4.</p>
-<div class="lotblock" id="lotb" aria-label="Current lot">
+<div class="lbhead"><span>Current lot</span><span class="exb">Example</span></div><div class="lotblock" id="lotb" aria-label="Current lot, example values">
 <div class="f"><span>Lot</span><b>R2611-02</b></div><div class="f"><span>Purity (HPLC)</span><b>Per COA</b></div><div class="f"><span>Identity (MS)</span><b>Confirmed</b></div>
 <div class="f"><span>Tested</span><b>Nov 2026</b></div><div class="f"><span>Lab</span><b><span class="pend">Lab name</span></b></div><div class="f"><span>Report</span><b><a href="lab-testing.html#lookup">View COA</a></b></div></div>
 <div class="buy"><div class="seg" id="seg" role="group" aria-label="Pack size"><i id="segi"></i>
@@ -627,11 +661,11 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 <button aria-pressed="false" data-n="5" data-p="85">5 vials<small>$85 each</small></button>
 <button aria-pressed="false" data-n="10" data-p="80">10 vials<small>$80 each</small></button></div>
 <div class="tot"><span id="totl">1 vial</span><b id="tot">$90</b></div>
-<button class="btn btn-ink" id="add">Add to cart</button><p class="ruo-line">For laboratory research use only. Not for human or veterinary use. Ships Mon to Thu, insulated.</p></div>
+<button class="btn btn-ink" id="add">Add to cart</button><p class="ruo-line">For laboratory research use only. Not for human or veterinary use. 19+ only. Ships Monday to Thursday.</p></div>
 <div class="specs2"><div><span>Form</span><b>Lyophilized powder</b></div><div><span>Vial</span><b>3 mL, crimp-sealed</b></div><div><span>Store</span><b>2–8 °C, dark</b></div><div><span>SKU</span><b>RXA-01-TB500-10MG-VL</b></div></div>
-<div class="copy" style="margin-top:32px;font-size:16px"><p>A synthetic peptide fragment based on the active region of thymosin beta-4.</p><p>Lyophilized powder in a 3 mL crimp-sealed vial. Every lot is tested by an independent lab for purity (HPLC) and identity (mass spectrometry); enter the lot number from the label to see its report.</p></div>
+<div class="chem"><h2>Chemistry</h2><dl><div><dt>Type</dt><dd>Peptide</dd></div><div><dt>Sequence</dt><dd>Synthetic peptide based on the actin-binding region of thymosin beta-4</dd></div><div><dt>Formula</dt><dd>Stated on the lot COA</dd></div><div><dt>Molecular weight</dt><dd>Stated on the lot COA</dd></div></dl></div><div class="copy" style="margin-top:32px;font-size:16px"><p>A synthetic peptide fragment based on the active region of thymosin beta-4.</p><p>Lyophilized powder in a 3 mL crimp-sealed vial. Every lot is tested by an independent lab for purity (HPLC) and identity (mass spectrometry); enter the lot number from the label to see its report.</p></div>
 </div></div></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="fr-head"><h2>Lot status, R2611-02</h2></div>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="fr-head"><h2>Lot status, R2611-02</h2><span class="exb">Example</span></div>
 <div class="path" style="margin-top:24px">
 <div class="step pstep lit"><b>Manufactured</b><span>Sealed and lot-coded</span></div><div class="step pstep lit"><b>HPLC</b><span>Purity measured</span></div>
 <div class="step pstep lit"><b>Mass spec</b><span>Identity confirmed</span></div><div class="step pstep lit"><b>COA public</b><span>Report published</span></div></div></div></section>
@@ -731,6 +765,12 @@ try{
     addEventListener('scroll',()=>{if(!vis)return;const f=document.querySelector('footer').getBoundingClientRect();sc=Math.max(0,Math.min(1,1-f.top/innerHeight))-.5;tx=tx;kick();if(!raf)draw()},{passive:true});}
   window.__ready=true;
 }catch(err){window.__ready=true}
+</script>
+<script type="module">
+(()=>{const st=document.getElementById('pkstage');if(!st)return;const bs=[...document.querySelectorAll('.pk-views button')];let api=null;
+bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria-pressed',x===b));api&&api.setView(b.dataset.v)}));
+if(!document.documentElement.classList.contains('gl'))return;
+new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();import('./lib/boxes.js').then(m=>{api=m.mountBoxes(st,'a/');st.classList.add('on')}).catch(()=>{})},{rootMargin:'400px'}).observe(st);})();
 </script>
 </body>
 </html>

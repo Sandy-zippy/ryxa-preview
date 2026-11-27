@@ -83,7 +83,7 @@ nav.main a:hover{color:#fff}
 .hero .glow{position:absolute;z-index:1;right:4%;top:8%;width:min(62vw,860px);aspect-ratio:1;border-radius:50%;
   background:radial-gradient(closest-side,rgba(44,66,127,.62),rgba(35,55,102,.28) 45%,rgba(35,55,102,0) 100%);pointer-events:none}
 .hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;align-items:center;gap:24px;min-height:min(calc(100svh - 112px),780px);padding-top:56px;padding-bottom:72px}
-.hero h1{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:clamp(50px,6.6vw,100px);line-height:.98;letter-spacing:-.025em;margin:0}
+.hero h1{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:clamp(50px,5.5vw,86px);line-height:.98;letter-spacing:-.025em;margin:0}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .ln>span{display:block}
 .hero h1 .lt{font-weight:300;color:var(--silver)}
@@ -220,7 +220,7 @@ nav.main a:hover{color:#fff}
 .date .lt{font-weight:300;color:var(--mute)}
 .left{margin-top:22px;font:400 15px var(--body);color:var(--mute)}
 .left b{color:var(--ink);font-weight:500}
-.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:30px 0 18px}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin:30px 0 18px}
 .week div{border-radius:6px;padding:12px 8px;text-align:center;font:400 12px var(--mono);background:var(--bone2);color:var(--mute)}
 .week div b{display:block;font:600 14px var(--body);color:var(--ink);margin-bottom:2px}
 .week .s{background:var(--ink);color:#C9CBD0}
@@ -439,6 +439,31 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
   .ruo{flex-direction:column}
 }
 
+/* example badge for illustrative results */
+.exb{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--mono);letter-spacing:.04em;padding:5px 8px 4px;border-radius:999px;border:1px dashed currentColor;color:#C9A86A;vertical-align:middle;white-space:nowrap}
+.exb::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+/* packaging in 3D */
+.pack{padding:clamp(72px,9vw,128px) 0}
+.pk{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:center;background:var(--ink);color:var(--bone);border-radius:22px;padding:clamp(28px,4vw,56px);overflow:hidden;isolation:isolate}
+.pk::before{content:"";position:absolute;inset:auto -10% -40% 30%;height:80%;background:radial-gradient(closest-side,rgba(35,55,102,.55),transparent);z-index:-1}
+.pk .h2{color:var(--bone)}.pk .lede{color:#B9BCC4;max-width:46ch}
+.pk-views{display:grid;gap:8px;margin:28px 0 24px}
+.pk-views button{all:unset;cursor:pointer;display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:baseline;padding:14px 16px;border-radius:12px;border:1px solid #2A2D33;transition:border-color .25s,background .25s}
+.pk-views button b{font:600 15px var(--display);font-stretch:112%;color:var(--bone)}
+.pk-views button span{font-size:14px;color:#9EA2AB}
+.pk-views button:hover{border-color:#3A3F4A}
+.pk-views button[aria-pressed=true]{background:#1B1E25;border-color:var(--tint)}
+.pk-views button:focus-visible{outline:2px solid var(--tint);outline-offset:2px}
+.pk-spec{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0}
+.pk-spec div{border-top:1px solid #2A2D33;padding-top:12px}.pk-spec dt{font:500 12px var(--mono);color:#868A93;margin-bottom:4px}.pk-spec dd{margin:0;font-size:14px;color:#D9DBE0}
+.pk-stage{position:relative;aspect-ratio:7/5;min-height:320px}
+.pk-stage canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab}
+.pk-still{position:absolute;inset:18% 6%;width:88%;object-fit:contain;border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.pk-stage.on .pk-still{display:none}
+@media (max-width:900px){.pk{grid-template-columns:1fr}.pk-stage{order:-1;aspect-ratio:16/11;min-height:0;margin:-8px -12px 0}.pk-views button{grid-template-columns:1fr;gap:4px}}
+@media (min-width:1101px){#winter .wrap.winter{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px}#winter .date{font-size:clamp(52px,5.4vw,92px)}}
+#winter .week div{min-width:0;padding:12px 2px}
+
 .drawer{position:fixed;inset:0;z-index:80;background:rgba(10,11,13,.6);backdrop-filter:blur(6px)}
 .drawer[hidden]{display:none}
 .dw-in{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--ink);color:var(--bone);padding:28px var(--gut);display:flex;flex-direction:column;gap:28px;animation:dwin .35s var(--ease-out)}
@@ -461,6 +486,15 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 .toast{position:fixed;z-index:95;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:var(--bone);color:var(--ink);border-radius:999px;padding:12px 20px;font-weight:500;font-size:14px;pointer-events:none;transition:opacity .25s ease,transform .3s var(--ease-out)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
+.exb{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--mono);letter-spacing:.04em;padding:5px 8px 4px;border-radius:999px;border:1px dashed currentColor;color:#A07A2E;vertical-align:middle;white-space:nowrap}
+.exb::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.lbhead{display:flex;align-items:center;justify-content:space-between;margin:22px 0 8px;font:500 12px var(--mono);color:var(--mute)}
+.fr-head .exb{margin-left:12px}
+.chem{margin-top:32px;border-top:1px solid var(--line,#DAD6CC);padding-top:20px}.chem h2{font:600 18px var(--display);font-stretch:112%;margin:0 0 12px}
+.chem dl{display:grid;gap:0;margin:0}.chem dl div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line,#DAD6CC)}
+.chem dt{font:500 12px var(--mono);color:var(--mute);padding-top:2px}.chem dd{margin:0;font-size:14px;overflow-wrap:anywhere}
+.ymark{float:left;width:64px;height:64px;margin:4px 18px 6px 0;border-radius:14px;background:var(--ink);display:grid;place-items:center}.ymark svg{width:42px;height:42px}
+@media (max-width:600px){.chem dl div{grid-template-columns:1fr;gap:2px}}
 .phero{position:relative;background:var(--ink);color:var(--bone);overflow:hidden;isolation:isolate}
 .phero .lat{right:0;top:0;width:60%;height:100%;background-image:url(a/lat-ink.svg);background-position:right top;background-size:auto 130%;opacity:.9;
   -webkit-mask-image:linear-gradient(to left,#000 10%,transparent 85%);mask-image:linear-gradient(to left,#000 10%,transparent 85%)}
@@ -598,7 +632,7 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
   </defs>
 </svg>
 
-<div class="strip"><div class="wrap"><span>Third-party tested, every lot</span><span>Ships Mon–Thu from BC, insulated</span><span>For laboratory research use only, 19+</span></div></div>
+<div class="strip"><div class="wrap"><span>Third-party tested, every lot</span><span>Ships Mon–Thu from BC</span><span>For laboratory research use only, 19+</span></div></div>
 
 <header class="top" id="top">
   <div class="wrap">
@@ -624,7 +658,7 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 f.addEventListener('submit',e=>{e.preventDefault();const v=i.value.trim().toUpperCase();m.classList.remove('bad');
 if(!v){m.textContent='Enter the lot number printed on the vial label.';return}
 if(!/^R\d{4}-\d{2}$/.test(v)){m.classList.add('bad');m.textContent='Lot numbers look like R2611-01. Check the label on the vial.';return}
-const n=+v.slice(-2);if(v.startsWith('R2611-')&&n>=1&&n<=19){m.innerHTML='<span class="ok" aria-hidden="true"></span>Lot '+v+' has a published report. The PDF opens here at launch.';return}
+const n=+v.slice(-2);if(v.startsWith('R2611-')&&n>=1&&n<=19){m.innerHTML='<span class="ok" aria-hidden="true"></span>Lot '+v+' is an example lot in this preview. Real reports open here at launch.';return}
 m.classList.add('bad');m.textContent='No published report for '+v+' yet. New lots go live before they ship.'})});</script><div class="prose"><nav class="toc" aria-label="On this page"><b>On this page</b><a href="#documented-to-the-lot.">Documented to the lot.</a><a href="#what-we-test">What we test</a><a href="#our-testing-partner-tbd">Our testing partner TBD</a><a href="#how-to-read-a-coa">How to read a COA</a><a href="#independent-retests">Independent retests</a></nav>
 <div class="copy"><h3 id="documented-to-the-lot.">Documented to the lot.</h3>
 <p>Every RYXA Labs lot is tested by an independent laboratory before it
@@ -766,6 +800,12 @@ try{
     addEventListener('scroll',()=>{if(!vis)return;const f=document.querySelector('footer').getBoundingClientRect();sc=Math.max(0,Math.min(1,1-f.top/innerHeight))-.5;tx=tx;kick();if(!raf)draw()},{passive:true});}
   window.__ready=true;
 }catch(err){window.__ready=true}
+</script>
+<script type="module">
+(()=>{const st=document.getElementById('pkstage');if(!st)return;const bs=[...document.querySelectorAll('.pk-views button')];let api=null;
+bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria-pressed',x===b));api&&api.setView(b.dataset.v)}));
+if(!document.documentElement.classList.contains('gl'))return;
+new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();import('./lib/boxes.js').then(m=>{api=m.mountBoxes(st,'a/');st.classList.add('on')}).catch(()=>{})},{rootMargin:'400px'}).observe(st);})();
 </script>
 </body>
 </html>
