@@ -439,6 +439,96 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
   .ruo{flex-direction:column}
 }
 
+/* ===== fx layer ===== */
+@property --ba{syntax:'<angle>';inherits:false;initial-value:0deg}
+/* border beam: a light travelling round the COA card */
+.coa{position:relative;isolation:isolate}
+.coa::before{content:"";position:absolute;inset:-1.5px;border-radius:9.5px;padding:1.5px;z-index:-1;pointer-events:none;
+  background:conic-gradient(from var(--ba),transparent 0 72%,rgba(154,168,207,.0) 74%,#9AA8CF 86%,#fff 90%,transparent 92%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:beam 5.5s linear infinite}
+@keyframes beam{to{--ba:360deg}}
+/* animated beam pipeline: vial -> lab -> HPLC -> MS -> COA */
+.pipe{grid-column:1/-1;position:relative;margin-top:8px;padding-top:40px;border-top:1px solid #2A2C32}
+.pipe h3{font:500 15px var(--body);color:#C9CBD0;margin:0 0 26px}
+.pipe-row{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.pipe svg.beams{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.pipe .b-base{stroke:#2E3138;stroke-width:1.5;fill:none}
+.pipe .b-run{stroke:url(#beamg);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-dasharray:70 900;animation:run 3.2s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes run{from{stroke-dashoffset:70}to{stroke-dashoffset:-900}}
+.node{position:relative;z-index:1;display:grid;justify-items:center;text-align:center;gap:12px}
+.node .ic{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:#17181C;border:1px solid #2E3138;box-shadow:0 0 0 6px var(--ink),0 0 30px -6px rgba(90,115,200,.55);transition:border-color .4s,box-shadow .4s}
+.node .ic svg{width:28px;height:28px;stroke:#C9CBD0;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.node b{font:500 14px var(--body);color:var(--bone)}
+.node small{font:400 12.5px var(--mono);color:#868A93}
+.node.hot .ic{border-color:#9AA8CF;box-shadow:0 0 0 6px var(--ink),0 0 36px -2px rgba(154,168,207,.7)}
+/* families: magic card (spotlight follows the pointer) + 3D tilt, vial floats forward */
+.rack .slot{perspective:900px}
+.slot .vw{transform-style:preserve-3d;transition:transform .5s var(--ease-out)}
+.slot .vw::after{content:"";position:absolute;inset:0 6%;border-radius:14px;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),color-mix(in oklab,var(--c) 28%,transparent),transparent 70%)}
+.slot:hover .vw::after{opacity:1}
+.slot img{transform:translateZ(0);transition:transform .5s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.slot:hover .vw{transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}.slot:hover img{transform:translateZ(60px) translateY(-10px)}}
+/* lot path: a comet rides the head of the fill */
+#trackfill{position:relative}
+#trackfill::after{content:"";position:absolute;right:-6px;top:50%;width:12px;height:12px;border-radius:50%;translate:0 -50%;background:#fff;box-shadow:0 0 0 4px rgba(154,168,207,.35),0 0 24px 6px rgba(154,168,207,.6)}
+.tick-n{font-variant-numeric:tabular-nums}
+/* institutions: bento */
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:32px 0 30px}
+.bento .t{position:relative;overflow:hidden;isolation:isolate;border-radius:12px;background:var(--bone2);padding:22px 22px 20px;display:grid;gap:8px;align-content:start;min-height:150px}
+.bento .t.wide{grid-column:1/-1;min-height:0;grid-template-columns:auto 1fr;align-items:center;gap:18px}
+.bento .t.ink{background:var(--ink);color:var(--bone)}
+.bento .t svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.bento .t b{font-weight:600;font-size:17px}
+.bento .t p{margin:0;color:var(--mute);font-size:15px}
+.bento .t.ink p{color:#C9CBD0}
+.bento .t::after{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s;background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(35,55,102,.16),transparent 70%)}
+.bento .t.ink::after{background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(154,168,207,.22),transparent 70%)}
+.bento .t:hover::after{opacity:1}
+.bento .days{font:500 40px/1 var(--mono);letter-spacing:-.02em}
+.inst{align-items:stretch}.ladder{align-content:center;grid-template-columns:200px 1fr}.ladder img{width:200px}
+/* shimmer button */
+.btn-shim{position:relative;overflow:hidden;isolation:isolate}
+.btn-shim::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.22) 50%,transparent 70%);background-size:250% 100%;animation:shim 3.4s ease-in-out infinite}
+@keyframes shim{0%{background-position:150% 0}60%,100%{background-position:-50% 0}}
+/* winter: cold particles behind the date */
+.winter>div:first-child{position:relative}
+.snow{position:absolute;inset:0;z-index:-1;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 40%,transparent);mask-image:radial-gradient(closest-side,#000 40%,transparent)}
+#winter .wrap.winter{position:relative;isolation:isolate;background:var(--ink);color:var(--bone);border-radius:14px;padding:64px 64px 56px;overflow:hidden;width:calc(100% - 2*var(--gut));max-width:calc(var(--wrap) - 2*var(--gut));margin-inline:auto}
+#winter .winter>div{position:relative;z-index:1}
+#winter .winter .lede,#winter .left{color:#C9CBD0!important}
+#winter #winh{color:#9AA8CF!important}
+#winter .week div{background:#1E2024;color:#868A93}#winter .week div b{color:#C9CBD0}
+#winter .week .s{background:var(--navy);color:#C9CBD0}#winter .week .s b{color:var(--bone)}
+#winter .cd div{background:#1E2024;border:1px solid #2E3138}
+#winter .link{color:var(--bone)}
+#winter .snow{position:absolute;inset:0;z-index:0;-webkit-mask-image:none;mask-image:none}
+.cd{display:flex;gap:10px;margin-top:22px}
+.cd div{background:var(--ink);color:var(--bone);border-radius:8px;padding:12px 14px 10px;min-width:72px;display:grid;gap:2px}
+.cd b{font:500 30px/1 var(--mono);font-variant-numeric:tabular-nums}
+.cd span{font:400 11.5px var(--mono);color:#868A93}
+/* journal: hover image reveal that follows the pointer */
+.jl{position:relative}
+.jprev{position:fixed;left:0;top:0;z-index:30;width:260px;aspect-ratio:4/3;border-radius:10px;overflow:hidden;pointer-events:none;opacity:0;scale:.9;transition:opacity .25s ease,scale .35s var(--ease-out);box-shadow:0 30px 60px -20px rgba(0,0,0,.45);background:var(--ink)}
+.jprev.on{opacity:1;scale:1}
+.jprev img{width:100%;height:100%;object-fit:contain}
+/* signup: shine border on the field */
+.sform{position:relative}
+.sform .shine{position:relative;border-radius:5px;padding:1.5px;background:conic-gradient(from var(--ba),#CFCCC4 0 70%,#233766 85%,#9AA8CF 90%,#CFCCC4 100%);animation:beam 6s linear infinite}
+.sform .shine input{border:0;display:block}
+@media (max-width:900px){
+  .pipe-row{grid-template-columns:1fr;gap:26px;justify-items:start}
+  .node{grid-template-columns:68px 1fr;justify-items:start;text-align:left;align-items:center;column-gap:16px}
+  .node .ic{grid-row:span 2}
+  .bento{grid-template-columns:1fr}
+  #winter .wrap.winter{padding:40px 22px;border-radius:12px}
+  #winter .date{font-size:clamp(40px,12.5vw,70px)}
+  .ladder{grid-template-columns:1fr}.ladder img{display:none}
+  .jprev{display:none}
+  .sform .shine{flex:1}.sform .shine input{width:100%}
+}
+@media (prefers-reduced-motion:reduce){.coa::before,.pipe .b-run,.btn-shim::after,.sform .shine{animation:none}}
+
 .drawer{position:fixed;inset:0;z-index:80;background:rgba(10,11,13,.6);backdrop-filter:blur(6px)}
 .drawer[hidden]{display:none}
 .dw-in{position:absolute;right:0;top:0;bottom:0;width:min(420px,100%);background:var(--ink);color:var(--bone);padding:28px var(--gut);display:flex;flex-direction:column;gap:28px;animation:dwin .35s var(--ease-out)}
@@ -547,9 +637,9 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
           </svg>
         </div>
         <div class="foot">
-          <div>Purity<b>99.2 %</b></div>
+          <div>Purity<b><span class="tick-n" data-to="99.2" data-d="1">99.2</span> %</b></div>
           <div>Mass<b>1419.5 Da <span class="ok" aria-label="matches expected">✓</span></b></div>
-          <div>Net peptide<b>87 %</b></div>
+          <div>Net peptide<b><span class="tick-n" data-to="87">87</span> %</b></div>
           <div>Tested<b>Nov 2026</b></div>
         </div>
         <figcaption class="note">Example layout. Each lot’s report names the lab that tested it.</figcaption>
@@ -557,6 +647,18 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
         <div class="labelrow">
           <div class="lbl" aria-label="Fields on the vial label"><div class="f"><span>Lot</span><b>R2611-01</b></div><div class="f"><span>Exp</span><b>12/2028</b></div><div class="f"><span>Store</span><b>2–8 °C</b></div></div>
           <p>Same lot on the vial label. Type it in the lookup above to open this report.</p>
+        </div>
+      </div>
+    
+      <div class="pipe" id="pipe">
+        <h3>The path every lot takes before it reaches the catalogue</h3>
+        <div class="pipe-row" id="piperow">
+          <svg class="beams" id="beams" aria-hidden="true"><defs><linearGradient id="beamg" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9AA8CF" stop-opacity="0"/><stop offset=".6" stop-color="#9AA8CF"/><stop offset="1" stop-color="#fff"/></linearGradient></defs></svg>
+          <div class="node"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 2h6M10 2v3h4V2M8.5 5h7v2.5c0 .6.5 1 1 1.5v11.5a1.5 1.5 0 0 1-1.5 1.5H9a1.5 1.5 0 0 1-1.5-1.5V10c.5-.5 1-.9 1-1.5z"/><path d="M7.5 13h9"/></svg></span><b>Lot sealed</b><small>R2611-01 on the label</small></div>
+          <div class="node"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></span><b>Independent lab</b><small>named on the report</small></div>
+          <div class="node"><span class="ic"><svg viewBox="0 0 24 24"><path d="M2 19h20"/><path d="M3 18c3 0 4-1 5-1s1.5-12 3-12 1.5 12 3 12 2 1 7 1"/></svg></span><b>HPLC purity</b><small><span class="tick-n" data-to="99.2" data-d="1">99.2</span> %</small></div>
+          <div class="node"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 20V4M3 20h18"/><path d="M7 20v-6M11 20V8M15 20v-9M19 20v-4"/></svg></span><b>Mass spec identity</b><small><span class="tick-n" data-to="1419.5" data-d="1">1419.5</span> Da</small></div>
+          <div class="node"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4M9 12l2 2 4-4M9 18h6"/></svg></span><b>COA public</b><small>before the first vial ships</small></div>
         </div>
       </div>
     </div>
@@ -587,8 +689,8 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
     <div class="path" id="steps">
       <div class="track"><i id="trackfill"></i></div>
       <div class="pstep step"><h3>Manufactured</h3><div class="val">R2611-01<small>printed on the label</small></div></div>
-      <div class="pstep step"><h3>HPLC</h3><div class="val">99.2 %<small>purity, independent lab</small></div></div>
-      <div class="pstep step"><h3>Mass spec</h3><div class="val">1419.5 Da<small>matches the expected mass</small></div></div>
+      <div class="pstep step"><h3>HPLC</h3><div class="val"><span class="tick-n" data-to="99.2" data-d="1">99.2</span> %<small>purity, independent lab</small></div></div>
+      <div class="pstep step"><h3>Mass spec</h3><div class="val"><span class="tick-n" data-to="1419.5" data-d="1">1419.5</span> Da<small>matches the expected mass</small></div></div>
       <div class="pstep step"><h3>COA public</h3><div class="val">Live<small>before the first vial ships</small></div></div>
     </div>
     <div class="lbl light" aria-label="The standard under every vial">
@@ -606,13 +708,13 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
     <div>
       <h2 class="h2" id="insth">Buying for a lab? Order on your PO.</h2>
       <p class="lede">Universities, contract labs and research groups order on account, by the lot, in the same 1, 5 and 10-vial runs as our boxes.</p>
-      <dl class="terms">
-        <div><dt>Purchase orders</dt><dd>Order on a PO and pay by invoice.</dd></div>
-        <div><dt>Net-30</dt><dd>For approved institutional accounts.</dd></div>
-        <div><dt>Lot reservation</dt><dd>Hold one lot for the length of a study.</dd></div>
-        <div><dt>Founding-lab credit</dt><dd>For accounts verified before 18 December.</dd></div>
-      </dl>
-      <a class="btn btn-ink" href="wholesale.html#apply">Open an institutional account</a>
+      <div class="bento">
+        <div class="t ink"><svg viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4M9 13h6M9 17h4"/></svg><b>Purchase orders</b><p>Order on a PO and pay by invoice.</p></div>
+        <div class="t"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><b>Net-30</b><p>For approved institutional accounts.</p></div>
+        <div class="t"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg><b>Lot reservation</b><p>Hold one lot for the length of a study, so every run uses the same material.</p></div>
+        <div class="t ink"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2 3-2s3 .8 3 2-1.3 1.8-3 2.3-3 1-3 2.3 1.3 2.2 3 2.2 3-.8 3-2"/></svg><b>Founding-lab credit</b><p>For accounts verified before 18 December.</p></div>
+      </div>
+      <a class="btn btn-ink btn-shim" href="#">Open an institutional account</a>
     </div>
     <div class="ladder">
       <img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy">
@@ -628,11 +730,11 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 </section>
 
 <section class="sec" id="winter" aria-labelledby="winh" style="padding-top:0">
-  <div class="wrap winter">
+  <div class="wrap winter"><canvas class="snow" id="snow" aria-hidden="true"></canvas>
     <div>
       <h2 class="tag" id="winh" style="font-size:18px;color:var(--mute);font-weight:400">Last holiday shipment</h2>
       <p class="date" aria-label="Thursday 17 December">Thu 17 Dec</p>
-      <p class="left"><b id="days">20 days</b> left. Order by 2 PM Pacific to ship that day.</p>
+      <div class="cd" aria-label="Time left to order"><div><b id="cdD">00</b><span>days</span></div><div><b id="cdH">00</b><span>hours</span></div><div><b id="cdM">00</b><span>minutes</span></div></div><p class="left" style="margin-top:14px">Order by 2 PM Pacific to ship that day. <span class="sr" id="days"></span></p>
     </div>
     <div>
       <p class="lede" style="margin:0">We ship Monday to Thursday, so nothing sits in a depot over a weekend. A temperature indicator goes in every box.</p>
@@ -647,10 +749,10 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 <section class="sec" id="journal" aria-labelledby="jh" style="padding-top:0">
   <div class="wrap">
     <div class="jhead"><h2 class="h2" id="jh">From the lab bench</h2><a class="link" href="journal.html">All articles</a></div>
-    <div class="jl">
-      <a href="how-to-read-a-peptide-coa.html"><span class="k">Lab testing</span><h3>How to read a peptide COA</h3><span class="t">6 min read</span><span class="a">→</span></a>
-      <a href="lab-testing.html"><span class="k">Lots</span><h3>How lot numbers work at RYXA Labs</h3><span class="t">4 min read</span><span class="a">→</span></a>
-      <a href="shipping.html"><span class="k">Shipping</span><h3>Shipping lyophilized peptides in winter</h3><span class="t">5 min read</span><span class="a">→</span></a>
+    <div class="jprev" id="jprev" aria-hidden="true"><img alt="" src="a/lot-macro.webp"></div><div class="jl">
+      <a href="#" data-img="a/lot-macro.webp"><span class="k">Lab testing</span><h3>How to read a peptide COA</h3><span class="t">6 min read</span><span class="a">→</span></a>
+      <a href="#" data-img="a/bpc-hi.webp"><span class="k">Lots</span><h3>How lot numbers work at RYXA Labs</h3><span class="t">4 min read</span><span class="a">→</span></a>
+      <a href="#" data-img="v/tb-500.webp"><span class="k">Shipping</span><h3>Shipping lyophilized peptides in winter</h3><span class="t">5 min read</span><span class="a">→</span></a>
     </div>
   </div>
 </section>
@@ -660,7 +762,7 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
     <div class="sign">
       <div class="lat"></div>
       <div class="z"><h2 id="sh">New lots. New COAs. <span class="lt">Nothing else.</span></h2><p>One email when a new lot and its report go live.</p></div>
-      <form class="sform z" onsubmit="event.preventDefault();this.querySelector('button').textContent='You’re on the list'"><label class="sr" for="em">Email</label><input id="em" type="email" placeholder="you@lab.ca" autocomplete="email"><button class="btn btn-ink" type="submit">Get lot updates</button></form>
+      <form class="sform z" onsubmit="event.preventDefault();this.querySelector('button').textContent='You’re on the list'"><label class="sr" for="em">Email</label><span class="shine"><input id="em" type="email" placeholder="you@lab.ca" autocomplete="email"></span><button class="btn btn-ink" type="submit">Get lot updates</button></form>
     </div>
   </div>
 </section>
@@ -720,6 +822,44 @@ $('#gateok').addEventListener('click',()=>{st.set('ryxa-19','1');gate.hidden=tru
 const n=+(st.get('ryxa-cart')||0);document.querySelectorAll('.cartn').forEach(e=>e.textContent=n);
 window.ryxaToast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2600)};
 window.ryxaAdd=q=>{const v=(+(st.get('ryxa-cart')||0))+q;st.set('ryxa-cart',v);document.querySelectorAll('.cartn').forEach(e=>e.textContent=v)};
+})();
+</script>
+<script>
+(()=>{const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* number ticker */
+const tick=el=>{const to=+el.dataset.to,d=+(el.dataset.d||0),t0=performance.now(),dur=1400;if(reduce){el.textContent=to.toFixed(d);return}
+  const f=now=>{const k=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-k,4);el.textContent=(to*e).toFixed(d);if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);tick(e.target)}}),{threshold:.6});$$('.tick-n').forEach(e=>io.observe(e));
+/* animated beams between pipeline nodes */
+const row=$('#piperow'),svg=$('#beams');
+const drawBeams=()=>{if(!row)return;svg.querySelectorAll('path').forEach(p=>p.remove());const R=row.getBoundingClientRect(),ns=$$('#piperow .ic'),vert=innerWidth<=900;
+  for(let i=0;i<ns.length-1;i++){const a=ns[i].getBoundingClientRect(),b=ns[i+1].getBoundingClientRect();
+    const ax=a.left+a.width/2-R.left,ay=a.top+a.height/2-R.top,bx=b.left+b.width/2-R.left,by=b.top+b.height/2-R.top;
+    const d=vert?`M${ax} ${ay+34} L${bx} ${by-34}`:`M${ax+40} ${ay} C ${(ax+bx)/2} ${ay-26}, ${(ax+bx)/2} ${by-26}, ${bx-40} ${by}`;
+    ['b-base','b-run'].forEach(c=>{const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);p.setAttribute('class',c);if(c==='b-run')p.style.animationDelay=(i*.45)+'s';svg.appendChild(p)})}
+  const g=$('#beamg');g.setAttribute('x1',0);g.setAttribute('x2',vert?0:R.width);g.setAttribute('y1',0);g.setAttribute('y2',vert?R.height:0)};
+if(row){drawBeams();new ResizeObserver(drawBeams).observe(row);
+  /* light each node in turn, like a sample moving through */
+  const ns=$$('#piperow .node');let k=0;if(!reduce)setInterval(()=>{ns.forEach((n,i)=>n.classList.toggle('hot',i===k));k=(k+1)%ns.length},800);}
+/* magic cards: spotlight + tilt */
+if(fine&&!reduce){$$('.slot').forEach(s=>{const v=s.querySelector('.vw');s.addEventListener('pointermove',e=>{const r=v.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+  v.style.setProperty('--mx',x*100+'%');v.style.setProperty('--my',y*100+'%');v.style.setProperty('--ry',(x-.5)*14+'deg');v.style.setProperty('--rx',(.5-y)*10+'deg')})});
+  $$('.bento .t').forEach(t=>t.addEventListener('pointermove',e=>{const r=t.getBoundingClientRect();t.style.setProperty('--mx',e.clientX-r.left+'px');t.style.setProperty('--my',e.clientY-r.top+'px')}));}
+/* winter countdown to the last ship cutoff (2 PM Pacific, Thu 17 Dec) */
+const end=new Date('2026-12-17T14:00:00-08:00');const pad=n=>String(n).padStart(2,'0');
+const cd=()=>{let s=Math.max(0,(end-new Date())/1000);const D=Math.floor(s/86400);s-=D*86400;const Hh=Math.floor(s/3600);s-=Hh*3600;const M=Math.floor(s/60);
+  if($('#cdD')){$('#cdD').textContent=pad(D);$('#cdH').textContent=pad(Hh);$('#cdM').textContent=pad(M)}};cd();setInterval(cd,30000);
+/* cold particles */
+const cv=$('#snow');if(cv&&!reduce){const x=cv.getContext('2d');let W,Hc,P=[];const fit=()=>{const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio,2);W=cv.width=r.width*d;Hc=cv.height=r.height*d;
+  P=Array.from({length:Math.round(r.width*r.height/2600)},()=>({x:Math.random()*W,y:Math.random()*Hc,r:(Math.random()*1.6+.5)*d,v:(Math.random()*.25+.08)*d,w:Math.random()*6.28}))};
+  fit();new ResizeObserver(fit).observe(cv);let on=false;new IntersectionObserver(e=>{on=e[0].isIntersecting;if(on)requestAnimationFrame(step)}).observe(cv);
+  function step(){if(!on)return;x.clearRect(0,0,W,Hc);P.forEach(p=>{p.y+=p.v;p.w+=.01;p.x+=Math.sin(p.w)*.2;if(p.y>Hc){p.y=-4;p.x=Math.random()*W}
+    x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle='rgba(190,202,235,'+(.10+p.r/10)+')';x.fill()});requestAnimationFrame(step)}}
+/* journal hover reveal */
+const jp=$('#jprev');if(jp&&fine&&!reduce){let tx=0,ty=0,cx=0,cy=0,raf=0;const loop=()=>{cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;jp.style.transform=`translate(${cx+24}px,${cy-90}px)`;raf=Math.abs(tx-cx)+Math.abs(ty-cy)>.5?requestAnimationFrame(loop):0};
+  $$('.jl a').forEach(a=>{a.addEventListener('pointerenter',e=>{jp.querySelector('img').src=a.dataset.img;jp.classList.add('on');tx=cx=e.clientX;ty=cy=e.clientY});
+    a.addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;if(!raf)raf=requestAnimationFrame(loop)});a.addEventListener('pointerleave',()=>jp.classList.remove('on'))});}
 })();
 </script>
 
