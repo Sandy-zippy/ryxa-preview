@@ -1909,8 +1909,25 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
 .x8-f.on{flex:0 0 100%;height:clamp(560px,44vw,640px);order:-1}
 .x8-f:not(.on) .x8-lead{left:auto;right:22px;bottom:-46px;height:200px;transform:none}
 }
+/* round 13: journal as an editorial row, dispatch date set in type */
+@media (min-width:901px){.xjr-g{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto;gap:0;border-top:1px solid #D6D2C8}
+.xjr-g .jx{grid-row:auto;grid-column:auto;padding:30px 32px 6px;border-left:1px solid #D6D2C8}.xjr-g .jx:first-child{padding-left:0;border-left:0}}
+@media (max-width:900px){.xjr-g{gap:0}.xjr-g .jx{padding:24px 0;border-top:1px solid #D6D2C8}}
+.xjr-g .jx{background:none;color:var(--ink);box-shadow:none;border-radius:0;transform:none!important}
+.jx-coa,.jx-key,.jx-lot,.jx-win{display:none!important}
+.xjr-g .jx-m{padding:0;margin:0;gap:12px}
+.xjr-g .jx-k{color:var(--navy)}
+.xjr-g .jx h3{color:var(--ink);font-size:clamp(22px,1.9vw,28px);line-height:1.15}
+.xjr-g .jx p{color:#4E525A}
+.xjr-g .jx-go{color:var(--ink);margin-top:10px}
+.xwn-board .fl{background:none!important;box-shadow:none!important;width:auto;margin:0;border-radius:0;font-family:var(--display);font-stretch:125%;font-weight:700;letter-spacing:-.02em}
+.xwn-board .fl::before,.xwn-board .fl::after{display:none!important}
+.xwn-board .fl-gap{display:inline-block;width:.32em}
+.xwn-board .xwn-n .fl,.xwn-board .xwn-sm .fl{font-family:var(--mono);font-stretch:100%;font-weight:500;letter-spacing:0}
+.xwn-board .xwn-n .fl{color:var(--tint)}
 .eyebrow{font-family:var(--body);font-weight:600;font-size:13px}
 </style>
+<link rel="icon" type="image/svg+xml" href="a/favicon.svg">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
