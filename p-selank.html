@@ -633,6 +633,218 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
   .shelfrow{grid-template-columns:repeat(2,1fr);gap:4px}
   .jgrid,.calc,.cartbox,.form{grid-template-columns:1fr}
 }
+</style>
+<link rel="icon" type="image/svg+xml" href="a/favicon.svg">
+<style id="pp14-css">
+/* ===== round 14: product page ===== */
+.pp14{--pl:#DDD9CF;--pm:#6B6E75;--pt:#4E525A}
+.pp14 mark.tbc{font:inherit;color:inherit;cursor:help}
+.pp14 h2{margin:0}
+.pp14 a:focus-visible,.pp14 button:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:6px}
+.pp14-top{padding:24px 0 clamp(64px,7vw,112px)}
+.pp14-cr{display:flex;flex-wrap:wrap;gap:4px 10px;margin:0 0 22px;font:500 13px/1.4 var(--body);color:var(--pm)}
+.pp14-cr a{color:var(--pm);transition:color .2s}.pp14-cr a:hover,.pp14-cr [aria-current]{color:var(--ink)}
+
+/* hero: the vial on the left, name, lot record and price on the right */
+.pp14-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"stage head" "stage lot" "stage buy";grid-template-rows:auto auto 1fr;column-gap:clamp(40px,5vw,72px);align-items:start}
+.pp14-hero>*{min-width:0}
+.pp14-head{grid-area:head}.pp14-stage{grid-area:stage}.pp14-lot{grid-area:lot}.pp14-buy{grid-area:buy}
+
+.pp14-fam{display:inline-flex;align-items:center;gap:10px;font:500 14px/1 var(--body);color:var(--pt)}
+.pp14-fam b{font:500 12.5px/1 var(--mono);background:var(--c);color:var(--ink);padding:6px 8px 5px;border-radius:4px}
+.pp14-fam span{transition:color .2s}.pp14-fam:hover span{color:var(--ink)}
+.pp14-h1{font:700 clamp(40px,4.3vw,60px)/1 var(--display);font-stretch:125%;letter-spacing:-.022em;margin:14px 0 0;text-wrap:balance}
+.pp14-h1.pp14-long{font-size:clamp(32px,3.3vw,46px);line-height:1.06}
+.pp14-form{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:12px 0 0;font-size:16px;line-height:1.4;color:var(--pt)}
+.pp14-form b{font:500 20px/1.2 var(--mono);color:var(--ink)}
+.pp14-short{margin:14px 0 0;font-size:17px;line-height:1.55;color:#3E4148;max-width:54ch}
+
+/* stage: Ink, family colour on the top edge, lattice fading down, navy glow behind the vial */
+.pp14-stage{position:sticky;top:100px;aspect-ratio:.9;max-height:calc(100vh - 198px);min-height:440px;background:var(--ink);border-radius:24px;overflow:hidden;isolation:isolate;box-shadow:0 30px 60px -44px rgba(18,19,22,.6)}
+.pp14-stage::before{content:"";position:absolute;z-index:4;left:0;right:0;top:0;height:3px;background:var(--c)}
+.pp14-lat{position:absolute;inset:0;z-index:0;background:url(a/lat-card.svg) center top/cover no-repeat;opacity:.5;-webkit-mask-image:linear-gradient(to bottom,#000,transparent 58%);mask-image:linear-gradient(to bottom,#000,transparent 58%)}
+.pp14-glow{position:absolute;z-index:0;inset:24% 6% -14%;background:radial-gradient(closest-side,rgba(44,66,127,.62),transparent)}
+.pp14-still{position:absolute;z-index:1;left:50%;bottom:11%;height:76%;width:auto;max-width:none;transform:translateX(-50%)}
+.gl .pp14-still{visibility:hidden}.gl.gl-fail .pp14-still{visibility:visible}
+.pp14-v3d{position:absolute;z-index:2;inset:0 0 28px}
+.pp14-v3d .vcanvas{display:block;width:100%;height:100%}
+.gl-fail .pp14-v3d{display:none}
+.pp14-sfoot{position:absolute;z-index:3;left:20px;right:22px;bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.pp14-view{display:none;padding:3px;border-radius:999px;background:#1B1D22;box-shadow:inset 0 0 0 1px #33363E}
+.gl-on:not(.gl-fail) .pp14-view{display:inline-flex}
+.pp14-view button{all:unset;box-sizing:border-box;cursor:pointer;height:36px;padding:0 15px;border-radius:999px;font:500 13.5px/36px var(--body);color:#B9BCC4;transition:background-color .25s,color .25s}
+.pp14-view button:hover{color:var(--bone)}
+.pp14-view button.is-view{background:var(--bone);color:var(--ink)}
+.pp14 .pp14-view button:focus-visible{outline:2px solid var(--tint);outline-offset:2px;border-radius:999px}
+.pp14-tag{margin:0 0 0 auto;display:flex;align-items:center;gap:8px;font:500 13px/1 var(--body);color:#8E929B}
+.pp14-tag b{font:500 14px/1 var(--mono);color:var(--bone);padding:6px 8px 5px;border-radius:5px;box-shadow:inset 0 0 0 1px #3A3D44;transition:background-color .3s var(--ease-out),color .3s var(--ease-out),box-shadow .3s}
+.pp14.is-match .pp14-tag b{background:var(--bone);color:var(--ink);box-shadow:none}
+
+/* lot record: the block under the product name. Navy top and bottom, as on the label */
+.pp14-lot{margin-top:22px;border-top:3px solid var(--navy)}
+.pp14-lot-h{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:12px 0 12px}
+.pp14-lot h2{font:500 13.5px/1.2 var(--body);color:var(--pm)}
+.pp14-code{display:inline-block;margin:5px 0 0 -8px;padding:3px 8px 2px;border-radius:6px;font:500 30px/1.1 var(--mono);letter-spacing:-.01em;color:var(--ink);transition:background-color .3s var(--ease-out),color .3s var(--ease-out)}
+.pp14.is-match .pp14-code{background:var(--ink);color:var(--bone)}
+.pp14-coa{display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink);font:600 14px/1 var(--body);white-space:nowrap;transition:background-color .25s,color .25s}
+.pp14-coa:hover{background:var(--ink);color:var(--bone)}
+.pp14 .pp14-coa:focus-visible{border-radius:999px}
+.pp14-lot-f{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--pl)}
+.pp14-lot-f>div{min-width:0;padding:10px 16px 11px 0;border-bottom:1px solid var(--pl)}
+.pp14-lot-f>div:nth-child(even){padding-left:18px;border-left:1px solid var(--pl)}
+.pp14-lot-f dt{font:500 13px/1.3 var(--body);color:var(--pm)}
+.pp14-lot-f dd{margin:3px 0 0;font-size:15.5px;line-height:1.4;color:var(--ink)}
+.pp14-ruo{margin:0;padding:9px 14px 10px;background:var(--navy);color:var(--bone);font:500 13px/1.4 var(--body)}
+
+/* price ladder: 1 / 5 / 10 as a price list you can select from */
+.pp14-buy{margin-top:18px}
+.pp14-lad{border:0;margin:0;padding:0;min-width:0}
+.pp14-lad-h,.pp14-tier{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);align-items:center;column-gap:12px;padding:0 20px 0 18px}
+.pp14-lad-h{font:500 12.5px/1 var(--body);color:var(--pm);padding-bottom:8px}
+.pp14-lad-h span:nth-child(n+2),.pp14-u,.pp14-t{text-align:right}
+.pp14-tiers{position:relative;border-radius:14px;box-shadow:inset 0 0 0 1px #CFCBC0;overflow:hidden;isolation:isolate}
+.pp14-sel{position:absolute;z-index:-1;left:0;right:0;top:0;height:calc(100%/3);background:var(--ink);transition:transform .32s var(--ease-out)}
+.pp14-tier{position:relative;height:46px;cursor:pointer;color:var(--ink);transition:color .2s,background-color .2s}
+.pp14-tier+.pp14-tier{box-shadow:inset 0 1px 0 var(--pl)}
+.pp14-tier:not(.is-on):hover{background:rgba(18,19,22,.045)}
+.pp14-tier.is-on{color:var(--bone);box-shadow:none}
+.pp14-tier input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.pp14-q{display:flex;align-items:center;gap:12px;font:600 15px/1 var(--body)}
+.pp14-q::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #9A9DA5;transition:box-shadow .2s}
+.pp14-tier.is-on .pp14-q::before{box-shadow:inset 0 0 0 5px var(--bone)}
+.pp14-u{font:400 14.5px/1 var(--mono);color:var(--pt);transition:color .2s}
+.pp14-tier.is-on .pp14-u{color:#C9CBD0}
+.pp14-t{font:500 16px/1 var(--mono)}
+.pp14-tiers.is-kb{outline:2px solid var(--navy);outline-offset:3px}
+.pp14-add{all:unset;box-sizing:border-box;cursor:pointer;margin-top:10px;width:100%;height:54px;padding:0 20px 0 22px;border-radius:14px;background:var(--ink);color:var(--bone);display:flex;align-items:center;justify-content:space-between;gap:16px;font:600 16px/1 var(--body);transition:background-color .2s,transform .15s var(--ease-out)}
+.pp14-add b{font:500 17px/1 var(--mono)}
+.pp14-add:hover{background:var(--navy)}
+.pp14-add:active{transform:scale(.985)}
+.pp14 .pp14-add:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:14px}
+.pp14-ship{margin:14px 0 0;font-size:14px;line-height:1.5;color:var(--pt)}
+.pp14-soon{padding-top:20px;border-top:1px solid var(--pl)}
+.pp14-soon-t{margin:0;font:600 20px/1.2 var(--display);font-stretch:115%;color:var(--ink)}
+.pp14-soon .pp14-ship{margin-top:8px}
+
+/* chemistry, storage and handling: two spec tables on the hero's centre axis */
+.pp14-spec{padding:0 0 clamp(64px,7vw,112px)}
+.pp14-spec-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px clamp(40px,5vw,72px);align-items:start}
+.pp14-spec-g>*{min-width:0}
+.pp14-spec h2,.pp14-also h2{font:700 clamp(24px,2.2vw,32px)/1.1 var(--display);font-stretch:125%;letter-spacing:-.012em}
+.pp14-dl{margin:20px 0 0;border-top:1px solid var(--ink)}
+.pp14-dl>div{display:grid;grid-template-columns:156px minmax(0,1fr);gap:16px;padding:15px 0;border-bottom:1px solid var(--pl)}
+.pp14-dl dt{font:500 14px/1.6 var(--body);color:var(--pm)}
+.pp14-dl dd{margin:0;font-size:16px;line-height:1.5;color:var(--ink);overflow-wrap:anywhere}
+.pp14-dl dd a,.pp14-comp a{text-decoration:underline;text-decoration-color:#A9A59B;text-underline-offset:3px;transition:text-decoration-color .2s}
+.pp14-dl dd a:hover,.pp14-comp a:hover{text-decoration-color:var(--ink)}
+.pp14-mv{font-family:var(--mono);font-size:15px}
+.pp14-seq{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;row-gap:8px;max-width:460px}
+.pp14-seq li{position:relative;flex:0 0 10%;min-width:0;padding-top:15px;font:400 15px/1.4 var(--mono);color:var(--ink)}
+.pp14-seq li::before{content:"";position:absolute;left:0;right:0;top:11px;height:1px;background:var(--pl)}
+.pp14-seq li[data-i]::after{content:attr(data-i);position:absolute;left:0;top:-2px;font:400 10.5px/1 var(--mono);color:#8A8D94}
+.pp14-nw{white-space:nowrap}
+.pp14-res{display:block;margin-top:8px;font-size:13.5px;color:var(--pm)}
+.pp14-mv sub{font-size:.72em;line-height:0;vertical-align:-.28em}
+.pp14-comp{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pp14-comp li{display:grid;grid-template-columns:60px minmax(0,1fr) auto;gap:12px;align-items:baseline}
+.pp14-comp b{font:500 15px/1.5 var(--mono)}
+.pp14-comp i{font-style:normal;text-align:right;color:var(--pt)}
+
+/* lot status: the four steps every lot passes before it is listed */
+.pp14-st{position:relative;isolation:isolate;overflow:hidden;background:var(--navy);color:var(--bone);padding:clamp(64px,7vw,104px) 0}
+.pp14-st::before{content:"";position:absolute;z-index:-1;right:-10%;top:-60%;width:70%;height:200%;background:radial-gradient(closest-side,rgba(154,168,207,.2),transparent)}
+.pp14-st-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px clamp(40px,5vw,72px);align-items:start}
+.pp14-st-g>*{min-width:0}
+.pp14-st h2{font:700 clamp(30px,3.2vw,46px)/1.02 var(--display);font-stretch:125%;letter-spacing:-.02em}
+.pp14-st-code{margin:14px 0 0;font:500 clamp(22px,2.1vw,30px)/1 var(--mono);color:var(--tint)}
+.pp14-st-p{margin:0;font-size:17px;line-height:1.6;color:#D5DBEE;max-width:52ch}
+.pp14-st-a{margin:22px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.pp14-st-b{display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:999px;background:var(--bone);color:var(--ink);font:600 14px/1 var(--body);transition:background-color .2s}
+.pp14-st-b:hover{background:#fff}
+.pp14-st-l{font:500 15px/1.4 var(--body);color:var(--bone);text-decoration:underline;text-decoration-color:rgba(245,243,238,.45);text-underline-offset:4px;transition:text-decoration-color .2s}
+.pp14-st-l:hover{text-decoration-color:var(--bone)}
+.pp14 .pp14-st a:focus-visible{outline-color:var(--bone)}
+.pp14 .pp14-st-b:focus-visible{border-radius:999px}
+.pp14-path{position:relative;list-style:none;margin:clamp(44px,5vw,72px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.pp14-path::before,.pp14-path::after{content:"";position:absolute;left:8px;right:calc(25% - 8px);top:7px;height:2px;border-radius:2px}
+.pp14-path::before{background:rgba(245,243,238,.22)}
+.pp14-path::after{background:var(--bone);transform-origin:left center}
+.pp14-path li{position:relative;z-index:1;min-width:0;padding:38px 24px 0 0}
+.pp14-path li::before{content:"";position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--bone)}
+.pp14-path b{display:block;font:600 19px/1.25 var(--display);font-stretch:115%}
+.pp14-path span{display:block;margin-top:6px;font-size:15px;line-height:1.5;color:#D5DBEE}
+.pp14-pre .pp14-path::after{transform:scaleX(0)}
+.pp14-pre .pp14-path li::before{background:#2B3F70;box-shadow:inset 0 0 0 2px #8D99BC}
+.pp14-pre.pp14-in .pp14-path::after{transform:none;transition:transform 1.5s cubic-bezier(.4,0,.2,1)}
+.pp14-pre.pp14-in .pp14-path li::before{background:var(--bone);box-shadow:inset 0 0 0 2px var(--bone);transition:background-color .3s ease calc(var(--k)*.5s),box-shadow .3s ease calc(var(--k)*.5s)}
+
+/* also in the family: rows, not tiles. Add puts one vial in the cart */
+.pp14-also{padding:clamp(64px,7vw,104px) 0 clamp(72px,8vw,120px)}
+.pp14-also-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--ink)}
+.pp14-also-h a{font:500 15px/1.4 var(--body);text-decoration:underline;text-decoration-color:#A9A59B;text-underline-offset:4px;transition:text-decoration-color .2s}
+.pp14-also-h a:hover{text-decoration-color:var(--ink)}
+.pp14-rows{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(40px,5vw,72px)}
+.pp14-r{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--pl)}
+.pp14-rl{min-width:0;display:grid;grid-template-columns:60px minmax(0,1fr);gap:16px;align-items:center}
+.pp14-th{width:60px;height:72px;border-radius:10px;background:var(--ink);display:grid;place-items:end center;overflow:hidden}
+.pp14-th img{height:64px;width:auto;max-width:none;margin-bottom:-3px}
+.pp14-rn b{display:block;font:600 17px/1.25 var(--display);font-stretch:112%;transition:color .2s}
+.pp14-rn small{display:block;margin-top:3px;font:400 13.5px/1.3 var(--mono);color:var(--pm)}
+.pp14-rp{text-align:right}
+.pp14-rp b{display:block;font:500 16px/1.2 var(--mono)}
+.pp14-rp small{display:block;margin-top:3px;font:400 12.5px/1.3 var(--body);color:var(--pm)}
+.pp14-rb{all:unset;box-sizing:border-box;cursor:pointer;height:40px;min-width:72px;padding:0 16px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font:600 14px/1 var(--body);transition:background-color .2s,color .2s,transform .15s var(--ease-out)}
+.pp14-radd{background:var(--ink);color:var(--bone)}
+.pp14-radd:hover,.pp14-radd.is-ok{background:var(--navy)}
+.pp14-rview{box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink)}
+.pp14-rview:hover{background:var(--ink);color:var(--bone)}
+.pp14-rb:active{transform:scale(.96)}
+.pp14 .pp14-rb:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:999px}
+@media (hover:hover) and (pointer:fine){.pp14-rl:hover .pp14-rn b{color:var(--navy)}}
+
+@media (max-width:1100px){
+  .pp14-rows{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .pp14-top{padding-top:20px}
+  .pp14-cr{margin-bottom:22px}
+  .pp14-hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "stage" "lot" "buy";grid-template-rows:none}
+  .pp14-stage{position:relative;top:0;margin-top:26px;aspect-ratio:1/1.12;max-height:none;min-height:0;border-radius:20px}
+  .pp14-v3d{inset:6px 0 62px}
+  .pp14-still{bottom:19%;height:70%}
+  .pp14-sfoot{left:16px;right:16px;bottom:14px}
+  .pp14-lot{margin-top:28px}
+  .pp14-spec-g,.pp14-st-g{grid-template-columns:minmax(0,1fr)}
+  .pp14-st-g{align-items:start}
+  .pp14-path{grid-template-columns:minmax(0,1fr);gap:26px}
+  .pp14-path::before,.pp14-path::after{left:7px;right:auto;top:8px;bottom:36px;width:2px;height:auto}
+  .pp14-path::after{transform-origin:center top}
+  .pp14-pre .pp14-path::after{transform:scaleY(0)}
+  .pp14-path li{padding:0 0 0 36px}
+  .pp14-path li::before{top:3px}
+}
+@media (max-width:520px){
+  .pp14-code{font-size:26px}
+  .pp14-dl>div{grid-template-columns:minmax(0,1fr);gap:2px;padding:13px 0}
+  .pp14-lad-h,.pp14-tier{padding:0 14px 0 14px;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr) minmax(0,1fr)}
+  .pp14-r{grid-template-columns:minmax(0,1fr) auto;gap:10px 12px}
+  .pp14-rp{grid-column:1;grid-row:2;text-align:left;padding-left:76px;margin-top:-6px}
+  .pp14-rp b,.pp14-rp small{display:inline}.pp14-rp b+small{margin-left:8px}
+  .pp14-rb{grid-column:2;grid-row:1/3}
+}
+@media (max-width:370px){
+  .pp14-v3d{inset:6px 0 104px}
+  .pp14-still{bottom:28%;height:62%}
+}
+@media (prefers-reduced-motion:reduce){
+  .pp14-sel,.pp14-code,.pp14-tag b,.pp14-add{transition:none}
+}
+
+/* merge pass: the four steps are a sequence every lot passes, not a live status, so the markers stay open rings;
+   family rows use the same white specimen tile as the catalogue (one tile colour site-wide) */
+.pp14 .pp14-path::after{display:none}
+.pp14 .pp14-path li::before,.pp14 .pp14-pre .pp14-path li::before,.pp14 .pp14-pre.pp14-in .pp14-path li::before{background:var(--navy);box-shadow:inset 0 0 0 2px var(--bone);transition:none}
+.pp14 .pp14-th{background:#fff;box-shadow:inset 0 0 0 1px #DDD9CF}
 
 /* ===== round 12, all pages ===== */
 #proof .xpf-vial,#proof .xpf-r,#proof .xpf-note,#proof .xpf-desc,#proof .xpf-bar{display:none!important}
@@ -680,7 +892,6 @@ mark.tbc{background:none!important;box-shadow:none!important;padding:0;border-bo
 /* footer: the molecule in the large mark clears the legal line */
 .ruo{margin-top:clamp(44px,7.4vw,108px)}
 </style>
-<link rel="icon" type="image/svg+xml" href="a/favicon.svg">
 </head>
 <body data-slug="selank">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -707,32 +918,49 @@ mark.tbc{background:none!important;box-shadow:none!important;padding:0;border-bo
 </header>
 
 <main>
-<section class="sec" style="padding-top:48px"><div class="wrap">
-<p class="crumb" style="color:var(--mute)"><a href="index.html" style="color:var(--mute)">Home</a> / <a href="shop.html#rx-03" style="color:var(--mute)">Cognitive</a> / Selank</p>
-<div class="pd"><div class="pd-art"><div class="lat"></div><div class="glow"></div><img class="still" src="v/selank.webp" alt="RYXA Labs Selank 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"><div class="v3d" id="v3d"></div><span class="hint">Hover the lot block to turn the vial</span></div>
-<div><span class="chip" style="--c:var(--violet)">RX-03 Cognitive</span><h1>Selank</h1><p class="sz">10 mg, lyophilized powder</p>
-<p class="short">A synthetic heptapeptide analog of tuftsin.</p>
-<div class="lbhead"><span>Current lot</span><span class="exb">Example</span></div><div class="lotblock" id="lotb" aria-label="Current lot, example values">
-<div class="f"><span>Lot</span><b>R2611-17</b></div><div class="f"><span>Purity (HPLC)</span><b>Per COA</b></div><div class="f"><span>Identity (MS)</span><b>Confirmed</b></div>
-<div class="f"><span>Tested</span><b>Nov 2026</b></div><div class="f"><span>Lab</span><b><span class="pend">Lab name</span></b></div><div class="f"><span>Report</span><b><a href="lab-testing.html#lookup">View COA</a></b></div></div>
-<div class="buy"><div class="seg" id="seg" role="group" aria-label="Pack size"><i id="segi"></i>
-<button aria-pressed="true" data-n="1" data-p="70">1 vial<small>$70 each</small></button>
-<button aria-pressed="false" data-n="5" data-p="60">5 vials<small>$60 each</small></button>
-<button aria-pressed="false" data-n="10" data-p="50">10 vials<small>$50 each</small></button></div>
-<div class="tot"><span id="totl">1 vial</span><b id="tot">$70</b></div>
-<div class="addon"><p>Also in Cognitive</p><label class="ao"><input type="checkbox" value="semax"><img src="v/semax.webp" alt="RYXA Labs Semax 10 mg research vial, lot-coded label" width="40" height="50"><span><b>Semax</b><small>10 mg · RX-03</small></span><em>+$60</em></label><label class="ao"><input type="checkbox" value="dsip"><img src="v/dsip.webp" alt="RYXA Labs DSIP 10 mg research vial, lot-coded label" width="40" height="50"><span><b>DSIP</b><small>10 mg · RX-03</small></span><em>+$75</em></label></div>
-<button class="btn btn-ink" id="add">Add to cart</button><p class="ruo-line">For laboratory research use only. Not for human or veterinary use. 19+ only. Ships Monday to Thursday.</p></div>
-<div class="specs2"><div><span>Form</span><b>Lyophilized powder</b></div><div><span>Vial</span><b>3 mL, crimp-sealed</b></div><div><span>Store</span><b>2–8 °C, dark</b></div><div><span>SKU</span><b>RXA-03-SELANK-10MG-VL</b></div></div>
-<div class="chem"><h2>Chemistry</h2><dl><div><dt>Type</dt><dd>Heptapeptide</dd></div><div><dt>Sequence</dt><dd>Thr-Lys-Pro-Arg-Pro-Gly-Pro (7 residues)</dd></div><div><dt>Formula</dt><dd>C33H57N11O9</dd></div><div><dt>Molecular weight</dt><dd>751.9 g/mol</dd></div><div><dt>Reference</dt><dd>PubChem CID 11765600</dd></div></dl></div><div class="copy" style="margin-top:32px;font-size:16px"><p>A synthetic heptapeptide analog of tuftsin.</p><p>Lyophilized powder in a 3 mL crimp-sealed vial. Every lot is tested by an independent lab for purity (HPLC) and identity (mass spectrometry); enter the lot number from the label to see its report.</p></div>
-</div></div></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="fr-head"><h2>Lot status, R2611-17</h2><span class="exb">Example</span></div>
-<div class="path" style="margin-top:24px">
-<div class="step pstep lit"><b>Manufactured</b><span>Sealed and lot-coded</span></div><div class="step pstep lit"><b>HPLC</b><span>Purity measured</span></div>
-<div class="step pstep lit"><b>Mass spec</b><span>Identity confirmed</span></div><div class="step pstep lit"><b>COA public</b><span>Report published</span></div></div></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="fr-head"><span class="chip" style="--c:var(--violet)">RX-03</span><h2>More in Cognitive</h2><a class="cnt" href="shop.html#rx-03">See the family</a></div>
-<div class="shelfrow"><a class="prod" href="p-semax.html" style="--c:var(--violet)"><span class="vw"><span class="spot"></span><span class="bb"></span><img class="" src="v/semax.webp" alt="RYXA Labs Semax 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></span>
-<span class="meta"><h3>Semax</h3><span class="sz">10 mg · RX-03</span><span class="pr">$60 <small>from $40 at 10</small></span></span></a><a class="prod" href="p-dsip.html" style="--c:var(--violet)"><span class="vw"><span class="spot"></span><span class="bb"></span><img class="" src="v/dsip.webp" alt="RYXA Labs DSIP 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></span>
-<span class="meta"><h3>DSIP</h3><span class="sz">10 mg · RX-03</span><span class="pr">$75 <small>from $65 at 10</small></span></span></a></div></div></section>
+<div class="pp14" style="--c:var(--violet)">
+<section class="pp14-top"><div class="wrap">
+<nav class="pp14-cr" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="shop.html#rx-03">Cognitive</a><span aria-hidden="true">/</span><span aria-current="page">Selank</span></nav>
+<div class="pp14-hero">
+<div class="pp14-head"><a class="pp14-fam" href="shop.html#rx-03"><b>RX-03</b><span>Cognitive</span></a>
+<h1 class="pp14-h1">Selank</h1>
+<p class="pp14-form"><b>10 mg</b><span>Lyophilized powder, 3 mL crimp-sealed vial</span></p>
+<p class="pp14-short">A synthetic heptapeptide analog of tuftsin.</p></div>
+<div class="pp14-stage"><div class="pp14-lat" aria-hidden="true"></div><div class="pp14-glow" aria-hidden="true"></div>
+<img class="pp14-still" src="v/selank.webp" alt="RYXA Labs Selank 10 mg research vial, lot-coded label" width="800" height="1000"><div class="pp14-v3d" id="v3d"></div>
+<div class="pp14-sfoot"><div class="pp14-view" role="group" aria-label="Vial view"><button type="button" aria-pressed="true" data-v="front">Front</button><button type="button" aria-pressed="false" data-v="lot">Lot panel</button></div>
+<p class="pp14-tag"><span>Lot</span><b>R2611-17</b></p></div></div>
+<section class="pp14-lot" id="lotb" aria-labelledby="pp14lot-h">
+<div class="pp14-lot-h"><div><h2 id="pp14lot-h">Current lot</h2><p class="pp14-code" id="pp14code">R2611-17</p></div><a class="pp14-coa" href="lab-testing.html#lookup">View COA</a></div>
+<dl class="pp14-lot-f"><div><dt>Purity (HPLC)</dt><dd>Per COA</dd></div><div><dt>Identity (MS)</dt><dd>Per COA</dd></div>
+<div><dt>Tested</dt><dd><mark class="tbc" title="To be confirmed by RYXA">Test date</mark>, <mark class="tbc" title="To be confirmed by RYXA">Lab name</mark></dd></div><div><dt>Storage</dt><dd><mark class="tbc" title="To be confirmed by RYXA">2–8 °C</mark>, dry and away from light</dd></div></dl>
+<p class="pp14-ruo">For laboratory research use only. Not for human or veterinary use.</p></section>
+<form class="pp14-buy" id="pp14buy"><fieldset class="pp14-lad"><legend class="sr">Pack size</legend>
+<div class="pp14-lad-h" aria-hidden="true"><span>Pack</span><span>Per vial</span><span>Total, CAD</span></div>
+<div class="pp14-tiers"><i class="pp14-sel" aria-hidden="true"></i><label class="pp14-tier is-on"><input type="radio" name="pack" value="1" data-p="70" checked><span class="pp14-q">1 vial</span><span class="pp14-u">$70<span class="sr"> per vial,</span></span><span class="pp14-t"><span class="sr">total </span>$70</span></label><label class="pp14-tier"><input type="radio" name="pack" value="5" data-p="60"><span class="pp14-q">5 vials</span><span class="pp14-u">$60<span class="sr"> per vial,</span></span><span class="pp14-t"><span class="sr">total </span>$300</span></label><label class="pp14-tier"><input type="radio" name="pack" value="10" data-p="50"><span class="pp14-q">10 vials</span><span class="pp14-u">$50<span class="sr"> per vial,</span></span><span class="pp14-t"><span class="sr">total </span>$500</span></label></div></fieldset>
+<button class="pp14-add" type="submit"><span class="pp14-add-l" aria-live="polite">Add to cart</span><b id="pp14tot">$70</b></button>
+<p class="pp14-ship">Free tracked shipping on orders over $200. Ships Monday to Thursday.</p></form>
+</div></div></section>
+<section class="pp14-spec"><div class="wrap pp14-spec-g">
+<div><h2>Chemistry</h2><dl class="pp14-dl"><div><dt>Type</dt><dd>Heptapeptide</dd></div><div><dt>Sequence</dt><dd><ol class="pp14-seq"><li data-i="1">Thr<span class="sr">-</span></li><li>Lys<span class="sr">-</span></li><li>Pro<span class="sr">-</span></li><li>Arg<span class="sr">-</span></li><li data-i="5">Pro<span class="sr">-</span></li><li>Gly<span class="sr">-</span></li><li>Pro</li></ol><span class="pp14-res">7 residues</span></dd></div><div><dt>Formula</dt><dd><span class="pp14-mv">C<sub>33</sub>H<sub>57</sub>N<sub>11</sub>O<sub>9</sub></span></dd></div><div><dt>Molecular weight</dt><dd><span class="pp14-mv">751.9 g/mol</span></dd></div><div><dt>Reference</dt><dd>PubChem CID <span class="pp14-mv">11765600</span></dd></div></dl></div>
+<div><h2>Storage and handling</h2><dl class="pp14-dl">
+<div><dt>Form</dt><dd>Lyophilized (freeze-dried) powder</dd></div>
+<div><dt>Vial</dt><dd>3 mL, crimp-sealed, labelled with the compound, amount, lot number and storage conditions</dd></div>
+<div><dt>Storage</dt><dd><mark class="tbc" title="To be confirmed by RYXA">2–8 °C short term or −20 °C long term</mark>, dry and away from light</dd></div>
+<div><dt>Shipping</dt><dd>Monday to Thursday. Orders placed before 2:00 PM Pacific on a business day ship within 1–2 business days. <a class="pp14-nw" href="shipping.html">Shipping policy</a></dd></div>
+<div><dt>SKU</dt><dd><span class="pp14-mv">RXA-03-SELANK-10MG-VL</span></dd></div></dl></div>
+</div></section>
+<section class="pp14-st" aria-labelledby="pp14st-h"><div class="wrap">
+<div class="pp14-st-g"><div><h2 id="pp14st-h">Lot status</h2><p class="pp14-st-code">R2611-17</p></div>
+<div><p class="pp14-st-p">Every lot is tested by an independent lab for purity (HPLC) and identity (mass spectrometry); enter the lot number from the label to see its report.</p>
+<p class="pp14-st-a"><a class="pp14-st-b" href="lab-testing.html#lookup">View COA</a><a class="pp14-st-l" href="how-to-read-a-peptide-coa.html">How to read a peptide COA</a></p></div></div>
+<ol class="pp14-path"><li style="--k:0"><b>Manufactured</b><span>Sealed and lot-coded</span></li><li style="--k:1"><b>HPLC</b><span>Purity measured</span></li>
+<li style="--k:2"><b>Mass spec</b><span>Identity confirmed</span></li><li style="--k:3"><b>COA public</b><span>Report published</span></li></ol>
+</div></section>
+<section class="pp14-also" aria-labelledby="pp14also-h"><div class="wrap">
+<div class="pp14-also-h"><h2 id="pp14also-h">Also in Cognitive</h2><a href="shop.html#rx-03">See the family</a></div>
+<ul class="pp14-rows"><li class="pp14-r"><a class="pp14-rl" href="p-semax.html"><span class="pp14-th"><img class="" src="v/semax.webp" alt="RYXA Labs Semax 10 mg research vial, lot-coded label" aria-hidden="true" width="80" height="100" loading="lazy"></span><span class="pp14-rn"><b>Semax</b><small>10 mg</small></span></a><span class="pp14-rp"><b>$60</b><small>$50 at 5, $40 at 10</small></span><button class="pp14-rb pp14-radd" type="button" data-s="semax" aria-label="Add 1 vial of Semax 10 mg to cart">Add</button></li><li class="pp14-r"><a class="pp14-rl" href="p-dsip.html"><span class="pp14-th"><img class="" src="v/dsip.webp" alt="RYXA Labs DSIP 10 mg research vial, lot-coded label" aria-hidden="true" width="80" height="100" loading="lazy"></span><span class="pp14-rn"><b>DSIP</b><small>10 mg</small></span></a><span class="pp14-rp"><b>$75</b><small>$70 at 5, $65 at 10</small></span><button class="pp14-rb pp14-radd" type="button" data-s="dsip" aria-label="Add 1 vial of DSIP 10 mg to cart">Add</button></li></ul></div></section>
+</div>
 </main>
 <footer>
   <div class="lat" id="footLat"></div>
@@ -772,16 +1000,30 @@ window.ryxaToast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');c
 if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('.prod').forEach(c=>{const v=c.querySelector('.vw');c.addEventListener('pointermove',e=>{const r=v.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;v.style.setProperty('--mx',x*100+'%');v.style.setProperty('--my',y*100+'%');v.style.setProperty('--ry',(x-.5)*12+'deg');v.style.setProperty('--rx',(.5-y)*9+'deg')})});
 window.ryxaAdd=q=>{const v=(+(st.get('ryxa-cart')||0))+q;st.set('ryxa-cart',v);document.querySelectorAll('.cartn').forEach(e=>e.textContent=v)};
 })();
-</script><script>(()=>{const seg=document.getElementById('seg');if(!seg)return;const bs=[...seg.querySelectorAll('button')];let n=1;
-bs.forEach((b,i)=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria-pressed',x===b));document.getElementById('segi').style.transform=`translateX(${i*100}%)`;n=+b.dataset.n;
-document.getElementById('tot').textContent='$'+(n*+b.dataset.p).toLocaleString();document.getElementById('totl').textContent=n+(n>1?' vials':' vial')}));
-document.getElementById('add').addEventListener('click',()=>{const ex=[...document.querySelectorAll('.ao input:checked')].map(x=>x.value);if(window.ryxaCart){ex.forEach(k=>ryxaCart.add(k,1,false));ryxaAdd(n)}else{ryxaAdd(n+ex.length)}});})()</script><script type="module">
+</script><script>(()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const f=$('#pp14buy');
+if(f&&f.tagName==='FORM'){const rs=$$('#pp14buy input[name=pack]'),box=$('.pp14-tiers'),sel=$('.pp14-sel'),tot=$('#pp14tot'),lab=$('.pp14-add-l');
+const sync=()=>{const i=Math.max(0,rs.findIndex(r=>r.checked)),r=rs[i];rs.forEach(x=>x.closest('label').classList.toggle('is-on',x===r));sel.style.transform='translateY('+i*100+'%)';tot.textContent='$'+(r.value*r.dataset.p).toLocaleString('en-CA')};
+rs.forEach(r=>r.addEventListener('change',sync));sync();
+box.addEventListener('focusin',e=>box.classList.toggle('is-kb',e.target.matches(':focus-visible')));box.addEventListener('focusout',()=>box.classList.remove('is-kb'));
+f.addEventListener('submit',e=>{e.preventDefault();const n=+rs.find(r=>r.checked).value;if(window.ryxaAdd)ryxaAdd(n);lab.textContent='Added to cart';clearTimeout(f._t);f._t=setTimeout(()=>lab.textContent='Add to cart',1800)});}
+$$('.pp14-radd').forEach(b=>b.addEventListener('click',()=>{if(window.ryxaCart)ryxaCart.add(b.dataset.s,1);b.textContent='Added';b.classList.add('is-ok');clearTimeout(b._t);b._t=setTimeout(()=>{b.textContent='Add';b.classList.remove('is-ok')},1600)}));
+const st=$('.pp14-st');if(st&&'IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){st.classList.add('pp14-pre');
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){st.classList.add('pp14-in');o.disconnect()}},{threshold:.35}).observe(st)}
+})()</script><script type="module">
 if(document.documentElement.classList.contains('gl')){const root=document.documentElement,host=document.getElementById('v3d');
 const t=setTimeout(()=>{if(!root.classList.contains('gl-on'))root.classList.add('gl-fail')},6000);
 (window.requestIdleCallback||setTimeout)(async()=>{try{const {mountVials}=await import('./lib/vials.js');
-const api=await mountVials(host,{focus:0,camZ:17,camY:3.4,pointerZone:host.parentElement,vials:[{name:"Selank",mg:"10 mg",rx:"RX-03",lot:"R2611-17",pos:[0,0,0],chip:'#8F7BE8'}]});
-clearTimeout(t);root.classList.add('gl-on');const lb=document.getElementById('lotb');
-lb.addEventListener('pointerenter',()=>api.showLot('ok'));lb.addEventListener('pointerleave',()=>api.showLot(null));
+const api=await mountVials(host,{focus:0,camZ:17,camY:3.4,pointerZone:host.parentElement,vials:[{"name": "Selank", "mg": "10 mg", "rx": "RX-03", "lot": "R2611-17", "purity": "COA", "pos": [0, 0, 0], "chip": "#8F7BE8"}]});
+clearTimeout(t);root.classList.remove('gl-fail');root.classList.add('gl-on');
+const still=document.querySelector('.pp14-still');if(still){host.setAttribute('role','img');host.setAttribute('aria-label',still.alt)}
+/* match the lot: the record and the vial show the same code. Hover or focus in the record peeks; the stage control pins. */
+const lb=document.getElementById('lotb'),pg=document.querySelector('.pp14'),bs=[...document.querySelectorAll('.pp14-view button')];let pin=false,peek=false,was=null;
+const set=()=>{const on=pin||peek;if(on!==was){api.showLot(on?'ok':null);was=on}pg.classList.toggle('is-match',on);
+bs.forEach(b=>{const l=b.dataset.v==='lot';b.setAttribute('aria-pressed',String(l===pin));b.classList.toggle('is-view',l===on)})};
+bs.forEach(b=>b.addEventListener('click',()=>{pin=b.dataset.v==='lot';peek=false;set()}));
+lb.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){peek=true;set()}});lb.addEventListener('pointerleave',()=>{peek=false;set()});
+lb.addEventListener('focusin',()=>{peek=true;set()});lb.addEventListener('focusout',()=>{peek=false;set()});set();
 }catch(e){clearTimeout(t);root.classList.add('gl-fail')}},{timeout:900});}
 </script><script type="importmap">{"imports":{"three":"./lib/three.module.min.js"}}</script>
 <script type="module">
