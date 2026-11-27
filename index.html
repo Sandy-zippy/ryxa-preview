@@ -821,6 +821,7 @@ if(!st.get('ryxa-19')){gate.hidden=false;$('#gateok').focus();}
 $('#gateok').addEventListener('click',()=>{st.set('ryxa-19','1');gate.hidden=true});
 const n=+(st.get('ryxa-cart')||0);document.querySelectorAll('.cartn').forEach(e=>e.textContent=n);
 window.ryxaToast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2600)};
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('.prod').forEach(c=>{const v=c.querySelector('.vw');c.addEventListener('pointermove',e=>{const r=v.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;v.style.setProperty('--mx',x*100+'%');v.style.setProperty('--my',y*100+'%');v.style.setProperty('--ry',(x-.5)*12+'deg');v.style.setProperty('--rx',(.5-y)*9+'deg')})});
 window.ryxaAdd=q=>{const v=(+(st.get('ryxa-cart')||0))+q;st.set('ryxa-cart',v);document.querySelectorAll('.cartn').forEach(e=>e.textContent=v)};
 })();
 </script>
