@@ -1891,6 +1891,24 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
 #institutions dl>div:last-child dt{color:#C9D2EC!important}
 .jx-top b,.jx-foot b{white-space:nowrap}
 .xwn,.xjr,#faq.xfq{border-top:0}
+/* round 12: Sandy's home review */
+#proof .xpf-vial,#proof .xpf-r,#proof .xpf-note,#proof .xpf-desc,#proof .xpf-bar{display:none!important}
+#proof .xpf-ins{display:block;background:none;box-shadow:none;border-radius:0;overflow:visible;color:var(--ink);margin-top:clamp(32px,4vw,56px)}
+#proof .xpf-steps{padding:0;border-top:1px solid #D6D2C8;background:none}
+#proof .xpf-steps ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 28px;overflow:visible;margin:0;padding:0}
+#proof .xpf-steps li{min-width:0}
+#proof .xpf-ins::before,#proof .xpf-ins::after{display:none!important}
+#proof .xpf-steps button{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:8px 10px;padding:22px 0 0;cursor:default;white-space:normal;pointer-events:none}
+#proof .xpf-steps button::after{content:attr(data-d);grid-column:1/-1;font:400 15px/1.55 var(--body);color:#4E525A}
+#proof .xpf-steps b{color:var(--ink)!important;font-size:17px}
+#proof .xpf-steps .xpf-n{color:var(--navy)!important}
+@media (max-width:900px){#proof .xpf-steps ol{grid-template-columns:1fr}#proof .xpf-steps li{border-bottom:1px solid #D6D2C8;padding-bottom:18px}#proof .xpf-steps{border-top:1px solid #D6D2C8}}
+@media (min-width:901px){
+.x8-fams{flex-wrap:wrap;height:auto}
+.x8-f{flex:1 1 calc(33.333% - 10px);height:190px;flex-grow:1}
+.x8-f.on{flex:0 0 100%;height:clamp(560px,44vw,640px);order:-1}
+.x8-f:not(.on) .x8-lead{left:auto;right:22px;bottom:-46px;height:200px;transform:none}
+}
 .eyebrow{font-family:var(--body);font-weight:600;font-size:13px}
 </style>
 </head>
@@ -2607,8 +2625,8 @@ const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getConte
 let st=null,cur=-1;
 /* place each note at its anchor height and run its leader line to the vial's edge */
 const lay=()=>{if(!desk.matches)return;const S=stage.getBoundingClientRect(),V=vh.getBoundingClientRect(),hh=V.height,half=hh*.178,cx=V.left-S.left+V.width/2;
-  cos.forEach(c=>{const ay=+c.dataset.ay,y=hh*(.04+ay*.9);c.style.top=y+'px';const ln=c.querySelector('.x9-ln'),cb=c.getBoundingClientRect();
-    const r=(ay<.2?half*.87:half)*1.12;
+  cos.forEach(c=>{const ay=+c.dataset.ay,y=hh*(.12+ay*.66);c.style.top=y+'px';const ln=c.querySelector('.x9-ln'),cb=c.getBoundingClientRect();
+    const r=ay<.2?hh*.118:hh*.138;
     if(c.classList.contains('x9-l')){const x0=cb.right-S.left+18;ln.style.width=Math.max(20,cx-r-x0)+'px'}else{const x0=cb.left-S.left-18;ln.style.width=Math.max(20,x0-(cx+r))+'px'}})};
 const set=i=>{if(i===cur)return;cur=i;cos.forEach((c,j)=>{c.classList.toggle('on',j===i);c.classList.toggle('done',j<i)});prog.forEach((p,j)=>p.classList.toggle('on',j<=i));
   if(st){const cue=cos[i]&&cos[i].dataset.cue;st.showLot(cue==='lot'?'ok':null)}};
