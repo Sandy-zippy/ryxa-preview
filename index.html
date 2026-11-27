@@ -969,6 +969,141 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
   .o7{grid-template-columns:1fr}.o7-ui{height:auto;min-height:160px}
 }
 @media (prefers-reduced-motion:reduce){.sc,.sc-v img,.s7-ink,.ui-line i,.ui-box,.ui-box::after{transition:none!important;animation:none!important}}
+
+/* ===== round 8: Rochelle's review, to the letter ===== */
+:root{--graphite:#1E2024}
+/* hero: three proof points, as Mockup 1 */
+.hp8{display:flex;gap:clamp(28px,4vw,56px);margin-top:40px}
+.hp8 b{display:block;font:600 clamp(20px,1.8vw,26px)/1.1 var(--display);font-stretch:118%;color:var(--bone);letter-spacing:-.01em}
+.hp8 span{display:block;margin-top:6px;font:400 12.5px var(--mono);color:var(--silver)}
+/* lab proof band: Mockup B */
+.pb8{padding:clamp(72px,8vw,112px) 0}
+.pb8-band{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,4vw,64px);align-items:center;background:var(--ink);border:1px solid #24272D;border-radius:24px;padding:clamp(28px,4.4vw,64px);overflow:hidden;isolation:isolate}
+.pb8-band::after{content:"";position:absolute;right:-8%;top:10%;width:62%;aspect-ratio:1;z-index:-1;background:radial-gradient(closest-side,rgba(35,55,102,.55),transparent);pointer-events:none}
+.pb8-lat{position:absolute;inset:-10% -10% -10% -10%;z-index:-2;background:url(a/lat-ink.svg) left center/1100px auto repeat;opacity:.9;
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.6) 40%,transparent 62%);mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.6) 40%,transparent 62%);animation:latdrift 60s linear infinite}
+@keyframes latdrift{to{background-position:-1100px center}}
+.pb8-tag{display:flex;align-items:center;gap:10px;font:500 12.5px var(--mono);color:var(--tint);margin:0 0 18px}.pb8-tag i{width:4px;height:4px;border-radius:50%;background:var(--silver)}
+.pb8 .h2{color:var(--bone);font-size:clamp(30px,2.9vw,44px)}.pb8 .lede{color:#C9CBD0}
+.pb8-k{margin:30px 0 10px;font:500 12.5px var(--mono);color:var(--silver)}
+.pb8-anat{list-style:none;margin:0;padding:0;border-top:1px solid #2A2D33}
+.pb8-anat li{border-bottom:1px solid #2A2D33}
+.pb8-anat button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:12px 4px}
+.pb8-anat .n{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:500 12px var(--mono);color:var(--silver);border:1px solid #3A3E47;transition:background .3s,color .3s,border-color .3s}
+.pb8-anat b{display:block;font:600 16px var(--display);font-stretch:112%;color:#D9DBE0;transition:color .3s}
+.pb8-anat .t>span>span{min-height:0;overflow:hidden}
+.pb8-anat .t>span{display:grid;grid-template-rows:0fr;color:#A3A6AD;font-size:14px;line-height:1.55;transition:grid-template-rows .45s var(--ease-out),opacity .3s;opacity:0;overflow:hidden}
+.pb8-anat button.on .n{background:var(--tint);border-color:var(--tint);color:var(--ink)}
+.pb8-anat button.on b{color:#fff}.pb8-anat button.on .t>span{grid-template-rows:1fr;opacity:1;padding-top:4px}
+.pb8-anat button:focus-visible{outline:2px solid var(--tint);outline-offset:2px;border-radius:6px}
+.pb8-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:26px}.pb8 .link{color:var(--bone)}
+/* the COA card is printed on Bone, as in the mockup */
+.coa8{position:relative;margin:0;background:var(--bone);color:var(--ink);border-radius:16px;padding:22px 24px 18px;box-shadow:0 40px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.06);transform:rotate(.6deg);transition:transform .8s var(--ease-out)}
+.coa8:hover{transform:none}
+.c8-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:13px;color:#5B5E66}.c8-top b{font:600 16px var(--display);font-stretch:112%;color:var(--ink)}.c8-top em{margin-left:auto;font:500 12px var(--mono);font-style:normal;color:var(--navy)}
+.c8-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#D9D6CF;border:1px solid #D9D6CF;border-radius:10px;overflow:hidden;margin:14px 0}
+.c8-meta>div{background:var(--bone);padding:9px 12px;transition:background .35s}
+.c8-meta span,.c8-foot span{display:block;font:500 11px var(--mono);color:#6F737C}.c8-meta b{font:500 14px var(--mono)}
+.pendb{display:inline-block;font:500 11px var(--mono);letter-spacing:.04em;color:#5B5E66;background:#E4E1DA;border:1px dashed #A3A6AD;border-radius:4px;padding:1px 6px}
+.c8-chart{position:relative;border-radius:10px;padding:10px 6px 2px;transition:background .35s,box-shadow .35s}
+.c8-chart svg{width:100%;height:auto;overflow:visible;display:block}
+.c8-grid line{stroke:#E4E1DA}.c8-axis{stroke:#A3A6AD}
+.c8-trace{fill:none;stroke:var(--navy);stroke-width:2;stroke-linejoin:round}
+.c8-fill{fill:url(#c8g);opacity:0;transition:opacity 1s .9s}
+.c8-pk line{stroke:#5B5E66;stroke-dasharray:2 3}.c8-pk text,.c8-tick text{font:500 11px var(--mono);fill:#5B5E66}
+.c8-pk{opacity:0;transform:translateY(6px);transition:opacity .4s 1.5s,transform .5s var(--ease-out) 1.5s}
+.c8-scan{fill:url(#c8s);fill:rgba(154,168,207,.35);opacity:0}
+.coa8.in .c8-fill{opacity:1}.coa8.in .c8-pk{opacity:1;transform:none}
+.coa8.in .c8-scan{animation:c8scan 1.6s var(--ease-io) .2s 1 both}
+@keyframes c8scan{0%{opacity:0;transform:translateX(0)}15%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translateX(520px)}}
+.c8-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.c8-foot>div{border-top:1px solid #D9D6CF;padding:10px 6px 4px;border-radius:0 0 8px 8px;transition:background .35s}
+.c8-foot b{display:flex;align-items:center;gap:6px;font:600 20px var(--display);font-stretch:112%}
+.c8-foot .cnt{font:inherit}
+.ok{width:16px;height:16px;border-radius:50%;background:#2F8F5B;display:inline-block;position:relative}.ok::after{content:"";position:absolute;left:5px;top:3px;width:4px;height:7px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.coa8 figcaption{margin-top:12px;font-size:12.5px;color:#5B5E66;display:flex;gap:8px;align-items:center}
+.coa8 [data-k].hl{background:#E3E7F3;box-shadow:inset 0 0 0 1.5px var(--tint)}
+/* catalogue by family: Mockup A */
+.cat8{padding:clamp(72px,8vw,112px) 0}
+.cat8-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px}
+.fc8-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.fc8{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;flex-direction:column;min-height:clamp(300px,25vw,360px);padding:22px 22px 20px 26px;border-radius:16px;background:var(--graphite);overflow:hidden;isolation:isolate;
+  box-shadow:inset 4px 0 0 var(--c),inset 0 0 0 1px #2A2D33;transition:transform .5s var(--ease-out),box-shadow .4s}
+.fc8::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 60% at 78% 92%,color-mix(in oklab,var(--c) 30%,transparent),transparent 70%);opacity:.45;transition:opacity .5s}
+.fc8-lat{position:absolute;inset:0;z-index:-1;background:url(a/lat-card.svg) center top/150% auto repeat-x;opacity:.75;-webkit-mask-image:linear-gradient(to bottom,#000 10%,transparent 78%);mask-image:linear-gradient(to bottom,#000 10%,transparent 78%);transition:background-position 1.4s var(--ease-out)}
+.fc8:hover .fc8-lat{background-position:40% top}
+.fc8:hover{transform:translateY(-4px)}.fc8:hover::before,.fc8[aria-selected=true]::before{opacity:1}
+.fc8[aria-selected=true]{box-shadow:inset 4px 0 0 var(--c),inset 0 0 0 1.5px color-mix(in oklab,var(--c) 70%,#2A2D33),0 24px 60px -24px color-mix(in oklab,var(--c) 45%,transparent)}
+.fc8:focus-visible{outline:2px solid var(--tint);outline-offset:3px}
+.fc8-chip,.sc-code{display:inline-block;align-self:flex-start;font:600 11.5px var(--mono);color:var(--ink);background:var(--c);padding:3px 7px;border-radius:5px}
+.fc8-h{margin-top:12px;font:600 clamp(20px,1.7vw,24px)/1.12 var(--display);font-stretch:118%;color:var(--bone);max-width:9ch}
+.fc8-n{margin-top:8px;font:400 12.5px var(--mono);color:var(--silver)}
+.fc8-v{position:absolute;right:6%;bottom:-16%;width:46%;z-index:-1;pointer-events:none}
+.fc8-v img{width:100%;height:auto;filter:drop-shadow(0 20px 22px rgba(0,0,0,.55));transition:transform .9s var(--ease-out)}
+.fc8:hover .fc8-v img,.fc8[aria-selected=true] .fc8-v img{transform:translateY(-12%) rotate(-4deg)}
+.fc8-go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--bone)}
+.fc8-go span{transition:transform .35s var(--ease-out)}.fc8:hover .fc8-go span{transform:translateX(5px)}
+.fc8-go{background:linear-gradient(var(--c),var(--c)) 0 100%/0 1.5px no-repeat;padding-bottom:3px;align-self:flex-start;transition:background-size .45s var(--ease-out)}
+.fc8:hover .fc8-go,.fc8[aria-selected=true] .fc8-go{background-size:100% 1.5px}
+/* living vials: slow float, a light sweep across the glass on hover */
+.fc8-bob,.sc8-bob{position:relative;display:block;animation:bob 6s ease-in-out infinite;animation-delay:calc(var(--d,0)*-1.3s)}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.sc8-shine{position:absolute;inset:0;pointer-events:none;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 47%,rgba(255,255,255,.08) 53%,transparent 60%) -150% 0/250% 100% no-repeat;transition:background-position 0s}
+.fc8:hover .sc8-shine,.sc8:hover .sc8-shine{background-position:150% 0;transition:background-position 1.1s var(--ease-out)}
+/* shelf */
+.shelf8{margin-top:18px;border:1px solid #24272D;border-radius:20px;background:linear-gradient(180deg,#17191D,#141518);padding:20px}
+.sh8[hidden]{display:none}
+.sh8-h{display:flex;align-items:center;gap:12px;margin:0 4px 16px}.sh8-h b{font:600 18px var(--display);font-stretch:115%}.sh8-h .vd8{margin-left:auto}
+.sh8-row{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 36px)/4);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:thin;scrollbar-color:#33363E transparent}
+.sc8{scroll-snap-align:start;position:relative;display:grid;grid-template-rows:auto 1fr auto;border:1px solid #23262C;border-radius:16px;background:var(--graphite);overflow:hidden;transition:border-color .4s,transform .5s var(--ease-out)}
+.sc8:hover{border-color:color-mix(in oklab,var(--c) 50%,#23262C);transform:translateY(-3px)}
+.sh8.in .sc8{animation:sc8in .7s var(--ease-out) both;animation-delay:calc(var(--k)*70ms)}
+@keyframes sc8in{from{opacity:0;transform:translateY(22px)}}
+.sc8-v{position:relative;display:block;aspect-ratio:5/4;overflow:hidden;isolation:isolate}
+.sc8-glow{position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 55% at 50% 82%,color-mix(in oklab,var(--c) 30%,transparent),transparent 72%);opacity:.6;transition:opacity .5s}
+.sc8-floor{position:absolute;left:28%;right:28%;bottom:7%;height:12px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.7),transparent);z-index:-1}
+.sc8-bob{position:absolute;left:50%;bottom:9%;height:86%;aspect-ratio:4/5;transform:translateX(-50%)}
+.sc8-v .sc8-bob{animation:none}
+.sc8-bob img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(0,0,0,.5));transition:transform .8s var(--ease-out)}
+.sc8:hover .sc8-glow{opacity:1}.sc8:hover .sc8-bob img{transform:translateY(-6%) rotate(-3deg)}
+.sc8-m{padding:2px 16px 0}.sc8 h3{margin:8px 0 2px;font:600 18px/1.15 var(--display);font-stretch:115%}
+.sc8 h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.sc8-buy{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:10px;padding:14px 16px 16px}
+.sc8 .sc-pr b{font-size:20px}.sc8 .sc-soon{font-size:12.5px;max-width:13ch;display:block;line-height:1.35}
+/* add to cart: label slides open, morphs to Added, the vial flies to the cart */
+.add8{all:unset;box-sizing:border-box;position:relative;cursor:pointer;height:40px;min-width:40px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;background:var(--bone);color:var(--ink);font:600 13.5px var(--body);overflow:hidden;transition:background .3s,transform .15s,box-shadow .3s}
+.add8 .a-t{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .45s var(--ease-out)}
+.sc8:hover .add8 .a-t,.add8:focus-visible .a-t{max-width:100px}
+.add8:hover{box-shadow:0 0 0 4px color-mix(in oklab,var(--c) 35%,transparent)}.add8:active{transform:scale(.94)}
+.add8:focus-visible{outline:2px solid var(--tint);outline-offset:3px}
+.add8 .a-ok{position:absolute;inset:0;display:grid;place-items:center;background:#6FCF97;color:var(--ink);transform:translateY(100%);transition:transform .35s var(--ease-out)}
+.add8.done .a-ok{transform:none}
+.vd8{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:999px;border:1px solid #3A3E47;color:var(--bone);font:600 13.5px var(--body);
+  background:linear-gradient(var(--bone),var(--bone)) 0 0/0 100% no-repeat;transition:background-size .45s var(--ease-out),color .3s,border-color .3s}
+.vd8 svg{transition:transform .35s var(--ease-out)}
+.vd8:hover{background-size:100% 100%;color:var(--ink);border-color:var(--bone)}.vd8:hover svg{transform:translateX(4px)}
+.vd8.sm{height:34px;font-size:13px}
+.fly8{position:fixed;z-index:95;pointer-events:none;width:60px;height:75px;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(0,0,0,.6))}
+.pill-b.bump{animation:bump .5s var(--ease-out)}@keyframes bump{40%{transform:scale(1.14)}}
+/* signup on Bone, lattice at 20 %: Mockup C */
+.sign{background:var(--bone)!important;color:var(--ink);border:0!important}
+.sign .lat{background-image:url(a/lat-bone.svg)!important;opacity:.22!important}
+.sign h2 .lt{color:#5B5E66!important}.sign p{color:#5B5E66!important}
+.sign .btn-ink{background:var(--ink)!important;color:var(--bone)!important}
+.sign input{color:var(--ink)}
+@media (max-width:1100px){.fc8-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  .hero .copy>.hp8{order:6}.hp8{gap:22px;margin-top:28px}
+  .hero .lat.mol{-webkit-mask-image:linear-gradient(to bottom,transparent 18%,rgba(0,0,0,.7) 30%,#000 40%,rgba(0,0,0,.5) 54%,transparent 64%)!important;mask-image:linear-gradient(to bottom,transparent 18%,rgba(0,0,0,.7) 30%,#000 40%,rgba(0,0,0,.5) 54%,transparent 64%)!important}.hp8 b{font-size:18px}.hp8 span{font-size:11.5px}
+  .pb8-band{grid-template-columns:1fr;padding:24px 18px;border-radius:18px}.coa8{transform:none;padding:16px}.c8-foot b{font-size:17px}.c8-meta b{font-size:12.5px}
+  .cat8-head{flex-direction:column;align-items:flex-start}
+  .fc8-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;gap:10px;scrollbar-width:none}.fc8-row::-webkit-scrollbar{display:none}
+  .fc8{flex:0 0 72%;min-height:250px;scroll-snap-align:start}
+  .shelf8{padding:14px;border-radius:16px}.sh8-h{flex-wrap:wrap}.sh8-h .vd8{margin-left:0}
+  .sh8-row{grid-auto-columns:64%}.sc8 .sc-st .ly{display:none}.sc8-buy{flex-direction:column;align-items:stretch}.add8 .a-t{max-width:100px}
+}
+@media (prefers-reduced-motion:reduce){.fc8-bob,.sc8-bob,.pb8-lat{animation:none!important}.sc8-shine{display:none}.c8-scan{display:none}}
 </style>
 </head>
 <body>
@@ -1010,13 +1145,11 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
         <a class="btn btn-ghost" href="shop.html">Browse the catalogue</a>
         <p class="lotmsg" id="lotmsg" aria-live="polite"></p>
       </form>
-      <div class="lbl rv" style="margin-top:34px" aria-label="At a glance">
-        <div class="f"><span>Compounds</span><b>19</b></div>
-        <div class="f"><span>Tested</span><b>HPLC + MS</b></div>
-        <div class="f"><span>Store</span><b>2–8 °C</b></div>
-        <div class="f"><span>Ships</span><b>Mon–Thu</b></div>
-      </div>
-
+      <div class="hp8 rv" aria-label="At a glance">
+  <div><b>19</b><span>lot-tested compounds</span></div>
+  <div><b>HPLC + MS</b><span>on every lot</span></div>
+  <div><b>2–8 °C</b><span>insulated, Mon–Thu</span></div>
+</div>
     </div>
     <div class="stage" id="stage" aria-hidden="true">
       <div class="v3d" id="v3d"></div>
@@ -1031,145 +1164,137 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
   <p class="sr">Three RYXA Labs vials: TB-500, BPC-157 and KPV, each labelled RX-01.</p>
 </section>
 
-<section class="lp" id="proof" aria-labelledby="proofh">
-  <div class="lp-bg" id="proofChain" aria-hidden="true"></div>
-  <div class="wrap lp-grid">
-    <div class="lp-copy">
-      <div class="lp-head"><p class="lp-k">Lab proof <span class="exb">Example lot</span></p>
-      <h2 class="h2" id="proofh">One dominant peak. Every lot, published.</h2></div>
-      <ol class="lp-list"><li class="lp-c" data-s="0"><span class="lp-n" aria-hidden="true">01</span><div><h3>Sealed and numbered.</h3><p>The lot number, R2611-01, goes on the vial label and the carton end panel before anything is tested.</p></div></li><li class="lp-c" data-s="1"><span class="lp-n" aria-hidden="true">02</span><div><h3>HPLC measures purity.</h3><p>An independent lab separates the sample. One dominant peak at 10.4 minutes means one dominant molecule: 99.2 % by area.</p></div></li><li class="lp-c" data-s="2"><span class="lp-n" aria-hidden="true">03</span><div><h3>Mass spec confirms identity.</h3><p>The measured mass, 1419.5 Da, matches BPC-157’s expected mass. Right purity, and the right molecule.</p></div></li><li class="lp-c" data-s="3"><span class="lp-n" aria-hidden="true">04</span><div><h3>The report goes public.</h3><p>Lab name, test date, both traces and net peptide content, published under the lot number before the first vial ships.</p><div class="lp-links"><a class="link" href="how-to-read-a-peptide-coa.html">How to read a peptide COA</a><a class="link" href="lab-testing.html#lookup">Every published COA</a></div></div></li></ol>
-    </div>
-    <div class="lp-stick">
-      <figure class="rep" id="coa" data-s="0" aria-label="Example certificate of analysis for lot R2611-01">
-        <div class="rep-top"><span>Certificate of analysis</span><b>BPC-157 10 mg</b><span class="exb">Example</span></div>
-        <div class="rep-meta"><div><span>Lot</span><b>R2611-01</b></div><div><span>Method</span><b>RP-HPLC, ESI-MS</b></div><div><span>Tested</span><b>Nov 2026</b></div></div>
-        <div class="rep-scr">
-          <div class="scr scr-lot"><img src="a/lot-macro.webp" alt="Lot number printed on the vial label" width="360" height="660" loading="lazy"><div class="scan" aria-hidden="true"></div>
-            <div class="lotchip"><span>LOT</span><b>R2611-01</b><span>EXP</span><b>12/2028</b></div></div>
-          <div class="scr scr-hplc"><svg viewBox="0 -14 560 190" role="img" aria-label="HPLC chromatogram: one main peak at 10.4 minutes, purity 99.2 percent by area">
-            <g class="grid"><line x1="70" y1="0" x2="70" y2="152"/><line x1="140" y1="0" x2="140" y2="152"/><line x1="210" y1="0" x2="210" y2="152"/><line x1="280" y1="0" x2="280" y2="152"/><line x1="350" y1="0" x2="350" y2="152"/><line x1="420" y1="0" x2="420" y2="152"/><line x1="490" y1="0" x2="490" y2="152"/></g>
-            <line class="axis" x1="0" y1="152" x2="560" y2="152"/>
-            <g class="tick"><text x="0" y="170">0</text><text x="140" y="170">4</text><text x="280" y="170">8</text><text x="420" y="170">12</text><text x="530" y="170">min</text></g>
-            <path class="fill" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/><path class="trace" id="trace" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4"/>
-            <g class="pk"><line x1="364" y1="16" x2="364" y2="2"/><text x="372" y="6">main peak, 10.4 min</text></g></svg></div>
-          <div class="scr scr-ms"><svg viewBox="0 -14 560 190" role="img" aria-label="Mass spectrum: main ion matches the expected mass of 1419.5 Da">
-            <line class="axis" x1="0" y1="152" x2="560" y2="152"/><rect class="b" x="20.0" y="142" width="3" height="8" style="--i:0"/><rect class="b" x="31.6" y="144" width="3" height="6" style="--i:1"/><rect class="b" x="43.2" y="140" width="3" height="10" style="--i:2"/><rect class="b" x="54.8" y="145" width="3" height="5" style="--i:3"/><rect class="b" x="66.4" y="146" width="3" height="4" style="--i:4"/><rect class="b" x="78.0" y="146" width="3" height="4" style="--i:5"/><rect class="b" x="89.6" y="143" width="3" height="7" style="--i:6"/><rect class="b" x="101.2" y="136" width="3" height="14" style="--i:7"/><rect class="b" x="112.8" y="146" width="3" height="4" style="--i:8"/><rect class="b" x="124.4" y="142" width="3" height="8" style="--i:9"/><rect class="b" x="136.0" y="136" width="3" height="14" style="--i:10"/><rect class="b" x="147.6" y="146" width="3" height="4" style="--i:11"/><rect class="b" x="159.2" y="136" width="3" height="14" style="--i:12"/><rect class="b" x="170.8" y="144" width="3" height="6" style="--i:13"/><rect class="b" x="182.4" y="146" width="3" height="4" style="--i:14"/><rect class="b" x="194.0" y="146" width="3" height="4" style="--i:15"/><rect class="b" x="205.6" y="140" width="3" height="10" style="--i:16"/><rect class="b" x="217.2" y="140" width="3" height="10" style="--i:17"/><rect class="b" x="228.8" y="146" width="3" height="4" style="--i:18"/><rect class="b" x="240.4" y="144" width="3" height="6" style="--i:19"/><rect class="b" x="252.0" y="146" width="3" height="4" style="--i:20"/><rect class="b" x="263.6" y="136" width="3" height="14" style="--i:21"/><rect class="b" x="275.2" y="140" width="3" height="10" style="--i:22"/><rect class="b" x="286.8" y="146" width="3" height="4" style="--i:23"/><rect class="b" x="298.4" y="143" width="3" height="7" style="--i:24"/><rect class="b" x="310.0" y="136" width="3" height="14" style="--i:25"/><rect class="b" x="321.6" y="146" width="3" height="4" style="--i:26"/><rect class="b" x="333.2" y="144" width="3" height="6" style="--i:27"/><rect class="b" x="344.8" y="145" width="3" height="5" style="--i:28"/><rect class="b" x="356.4" y="145" width="3" height="5" style="--i:29"/><rect class="b" x="402.8" y="136" width="3" height="14" style="--i:33"/><rect class="b" x="414.4" y="146" width="3" height="4" style="--i:34"/><rect class="b" x="426.0" y="136" width="3" height="14" style="--i:35"/><rect class="b" x="437.6" y="136" width="3" height="14" style="--i:36"/><rect class="b" x="449.2" y="140" width="3" height="10" style="--i:37"/><rect class="b" x="460.8" y="146" width="3" height="4" style="--i:38"/><rect class="b" x="472.4" y="144" width="3" height="6" style="--i:39"/><rect class="b" x="484.0" y="146" width="3" height="4" style="--i:40"/><rect class="b" x="495.6" y="136" width="3" height="14" style="--i:41"/><rect class="b" x="507.2" y="143" width="3" height="7" style="--i:42"/><rect class="b" x="518.8" y="144" width="3" height="6" style="--i:43"/><rect class="b" x="530.4" y="142" width="3" height="8" style="--i:44"/><rect class="b" x="542.0" y="140" width="3" height="10" style="--i:45"/><rect class="b main" x="378.5" y="18" width="4" height="132" style="--i:30"/><rect class="b" x="396" y="118" width="3" height="32" style="--i:31"/><rect class="b" x="412" y="138" width="3" height="12" style="--i:32"/>
-            <line class="tgt" x1="380.5" y1="0" x2="380.5" y2="152"/>
-            <g class="tick"><text x="0" y="170">400</text><text x="180" y="170">900</text><text x="370" y="170">1419.5</text><text x="520" y="170">m/z</text></g>
-            <g class="pk"><text x="392" y="10">expected 1419.5 Da</text></g></svg></div>
-          <div class="stamp" aria-hidden="true"><span>Published</span><b>R2611-01</b></div>
-        </div>
-        <div class="rep-foot">
-          <div data-on="1"><span>Purity (HPLC)</span><b><span class="cnt" data-to="99.2" data-d="1">0.0</span> %</b></div>
-          <div data-on="2"><span>Mass (MS)</span><b>1419.5 Da <i class="okk" aria-label="matches expected"></i></b></div>
-          <div data-on="3"><span>Net peptide</span><b><span class="cnt" data-to="87">0</span> %</b></div>
-          <div data-on="3"><span>Status</span><b class="st">Public</b></div>
-        </div>
-      </figure>
-    </div>
+<section class="pb8" id="proof" aria-labelledby="proofh">
+<div class="wrap"><div class="pb8-band">
+  <div class="pb8-lat" aria-hidden="true"></div>
+  <div class="pb8-copy">
+    <p class="pb8-tag">Lab proof <i></i> Lot R2611-01 <span class="exb">Example</span></p>
+    <h2 class="h2" id="proofh">One dominant peak.<span class="lt">Every lot, published.</span></h2>
+    <p class="lede">HPLC purity and mass-spec identity from an independent lab, with the lab and test date named.</p>
+    <p class="pb8-k">Read a report in this order</p>
+    <ol class="pb8-anat"><li><button type="button" data-k="lab"><span class="n">1</span><span class="t"><b>Lab name</b><span><span>The independent lab that ran the test, named on every report.</span></span></span></button></li><li><button type="button" data-k="date"><span class="n">2</span><span class="t"><b>Test date</b><span><span>When this lot was tested. Stock is retested each quarter.</span></span></span></button></li><li><button type="button" data-k="trace"><span class="n">3</span><span class="t"><b>HPLC trace</b><span><span>One dominant peak means one dominant molecule. Purity is the peak’s share of the area.</span></span></span></button></li><li><button type="button" data-k="ms"><span class="n">4</span><span class="t"><b>MS identity</b><span><span>The measured mass matches the compound named on the label.</span></span></span></button></li><li><button type="button" data-k="net"><span class="n">5</span><span class="t"><b>Net peptide content</b><span><span>How much of the powder is the peptide itself, reported beside purity.</span></span></span></button></li></ol>
+    <div class="pb8-links"><a class="link" href="how-to-read-a-peptide-coa.html">How to read a peptide COA <span>→</span></a><a class="link" href="lab-testing.html#lookup">Every published COA <span>→</span></a></div>
   </div>
-</section>
+  <figure class="coa8" id="coa8" aria-labelledby="coacap">
+    <div class="c8-top"><span>Certificate of analysis</span><b>BPC-157 10 mg</b><em>RP-HPLC · ESI-MS</em></div>
+    <div class="c8-meta">
+      <div data-k="lab"><span>Lab</span><b><span class="pendb">Named lab</span></b></div>
+      <div data-k="date"><span>Tested</span><b>Nov 2026</b></div>
+      <div><span>Lot</span><b class="c8-lot">R2611-01</b></div>
+    </div>
+    <div class="c8-chart" data-k="trace">
+      <svg viewBox="0 -14 560 190" role="img" aria-labelledby="c8t"><title id="c8t">Example HPLC chromatogram: one main peak at 10.4 minutes, 99.2 percent purity by area.</title>
+        <defs><linearGradient id="c8g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#233766" stop-opacity=".28"/><stop offset="1" stop-color="#233766" stop-opacity="0"/></linearGradient></defs>
+        <g class="c8-grid"><line x1="140" y1="0" x2="140" y2="152"/><line x1="280" y1="0" x2="280" y2="152"/><line x1="420" y1="0" x2="420" y2="152"/></g>
+        <line class="c8-axis" x1="0" y1="152" x2="560" y2="152"/>
+        <path class="c8-fill" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/>
+        <path class="c8-trace" id="c8tr" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4"/>
+        <g class="c8-pk"><line x1="364" y1="16" x2="364" y2="2"/><text x="372" y="6">main peak · 10.4 min</text></g>
+        <g class="c8-tick"><text x="0" y="170">0</text><text x="140" y="170">4</text><text x="280" y="170">8</text><text x="420" y="170">12</text><text x="540" y="170">min</text></g>
+        <rect class="c8-scan" x="0" y="-14" width="40" height="166"/>
+      </svg>
+    </div>
+    <div class="c8-foot">
+      <div data-k="trace"><span>Purity</span><b><span class="cnt" data-to="99.2" data-d="1">0</span> %</b></div>
+      <div data-k="ms"><span>Mass</span><b><span class="cnt" data-to="1419.5" data-d="1">0</span> Da <i class="ok" aria-label="matches expected"></i></b></div>
+      <div data-k="net"><span>Net peptide</span><b><span class="cnt" data-to="87" data-d="0">0</span> %</b></div>
+    </div>
+    <figcaption id="coacap"><span class="exb">Example layout</span> Each lot’s real report names the lab that tested it.</figcaption>
+  </figure>
+</div></div></section>
 
-<section class="shop7" id="families" aria-labelledby="famh">
+<section class="cat8" id="families" aria-labelledby="famh">
 <div class="wrap">
-  <div class="s7-head">
-    <h2 class="h2" id="famh">Nineteen compounds.<span class="lt">Four families, one code.</span></h2>
-    <p class="lede">The family code on each vial, carton and listing is the same. Prices are in CAD per vial, and they drop at 5 and 10 vials of the same compound.</p>
-  </div>
-  <div class="s7-tabs" role="tablist" aria-label="Families"><button role="tab" aria-selected="true" data-f="RX-01" style="--c:var(--amber)"><i></i><span class="k">RX-01</span><span class="n">Repair &amp; recovery</span><span class="q">8</span></button><button role="tab" aria-selected="false" data-f="RX-02" style="--c:var(--teal)"><i></i><span class="k">RX-02</span><span class="n">Metabolic &amp; longevity</span><span class="q">7</span></button><button role="tab" aria-selected="false" data-f="RX-03" style="--c:var(--violet)"><i></i><span class="k">RX-03</span><span class="n">Cognitive</span><span class="q">3</span></button><button role="tab" aria-selected="false" data-f="RX-04" style="--c:var(--coral)"><i></i><span class="k">RX-04</span><span class="n">Aesthetic &amp; wellness</span><span class="q">1</span></button><span class="s7-ink" aria-hidden="true"></span></div>
-  <div class="s7-grid" id="s7g"><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-bpc-157.html" aria-label="BPC-157 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/bpc-157.webp" alt="RYXA Labs BPC-157 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157.html">BPC-157</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$85</b><span class="sc-lad"><i>5+ <em>$80</em></i><i>10+ <em>$75</em></i></span></div>
-<button class="sc-add" data-add="bpc-157" aria-label="Add BPC-157 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-tb-500.html" aria-label="TB-500 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/tb-500.webp" alt="RYXA Labs TB-500 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-tb-500.html">TB-500</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$85</em></i><i>10+ <em>$80</em></i></span></div>
-<button class="sc-add" data-add="tb-500" aria-label="Add TB-500 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-bpc-157-tb-500-5-5.html" aria-label="BPC-157 + TB-500 5 + 5 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/bpc-tb-5.webp" alt="RYXA Labs BPC-157 + TB-500 5 + 5 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157-tb-500-5-5.html">BPC-157 + TB-500</a></h3><span class="sc-st">5 + 5 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-bpc-157-tb-500-5-5.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-bpc-157-tb-500-10-10.html" aria-label="BPC-157 + TB-500 10 + 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/bpc-tb-10.webp" alt="RYXA Labs BPC-157 + TB-500 10 + 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157-tb-500-10-10.html">BPC-157 + TB-500</a></h3><span class="sc-st">10 + 10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$85</em></i><i>10+ <em>$80</em></i></span></div>
-<button class="sc-add" data-add="bpc-157-tb-500-10-10" aria-label="Add BPC-157 + TB-500 10 + 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-kpv.html" aria-label="KPV 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/kpv.webp" alt="RYXA Labs KPV 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-kpv.html">KPV</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
-<button class="sc-add" data-add="kpv" aria-label="Add KPV 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-glow.html" aria-label="GLOW 70 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/glow.webp" alt="RYXA Labs GLOW 70 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-glow.html">GLOW</a></h3><span class="sc-st">70 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-glow.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-klow.html" aria-label="KLOW 80 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/klow.webp" alt="RYXA Labs KLOW 80 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-klow.html">KLOW</a></h3><span class="sc-st">80 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$175</b><span class="sc-lad"><i>5+ <em>$165</em></i><i>10+ <em>$150</em></i></span></div>
-<button class="sc-add" data-add="klow" aria-label="Add KLOW 80 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
-<a class="sc-v" href="p-vip.html" aria-label="VIP 5 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/vip-5mg.webp" alt="RYXA Labs VIP 5 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-vip.html">VIP</a></h3><span class="sc-st">5 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-vip.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
-<a class="sc-v" href="p-retatrutide.html" aria-label="Retatrutide 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/retatrutide.webp" alt="RYXA Labs Retatrutide 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-retatrutide.html">Retatrutide</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$120</b><span class="sc-lad"><i>5+ <em>$110</em></i><i>10+ <em>$100</em></i></span></div>
-<button class="sc-add" data-add="retatrutide" aria-label="Add Retatrutide 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
-<a class="sc-v" href="p-mots-c.html" aria-label="MOTS-c 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/mots-c.webp" alt="RYXA Labs MOTS-c 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-mots-c.html">MOTS-c</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
-<button class="sc-add" data-add="mots-c" aria-label="Add MOTS-c 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
-<a class="sc-v" href="p-nad.html" aria-label="NAD+ 500 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/nad.webp" alt="RYXA Labs NAD+ 500 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-nad.html">NAD+</a></h3><span class="sc-st">500 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$80</em></i><i>10+ <em>$70</em></i></span></div>
-<button class="sc-add" data-add="nad" aria-label="Add NAD+ 500 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
-<a class="sc-v" href="p-tesamorelin.html" aria-label="Tesamorelin 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/tesamorelin.webp" alt="RYXA Labs Tesamorelin 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-tesamorelin.html">Tesamorelin</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-tesamorelin.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
-<a class="sc-v" href="p-cjc-1295-dac.html" aria-label="CJC-1295 with DAC 5 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/cjcdac-5mg.webp" alt="RYXA Labs CJC-1295 with DAC 5 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-cjc-1295-dac.html">CJC-1295 with DAC</a></h3><span class="sc-st">5 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-cjc-1295-dac.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
-<a class="sc-v" href="p-cjc-1295-no-dac.html" aria-label="CJC-1295 no DAC 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/cjc-1295-no-dac.webp" alt="RYXA Labs CJC-1295 no DAC 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-cjc-1295-no-dac.html">CJC-1295 no DAC</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-cjc-1295-no-dac.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
-<a class="sc-v" href="p-epitalon.html" aria-label="Epitalon 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/epitalon.webp" alt="RYXA Labs Epitalon 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-epitalon.html">Epitalon</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-epitalon.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-03" style="--c:var(--violet)">
-<a class="sc-v" href="p-semax.html" aria-label="Semax 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/semax.webp" alt="RYXA Labs Semax 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-03</span><h3><a href="p-semax.html">Semax</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$60</b><span class="sc-lad"><i>5+ <em>$50</em></i><i>10+ <em>$40</em></i></span></div>
-<button class="sc-add" data-add="semax" aria-label="Add Semax 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-03" style="--c:var(--violet)">
-<a class="sc-v" href="p-selank.html" aria-label="Selank 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/selank.webp" alt="RYXA Labs Selank 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-03</span><h3><a href="p-selank.html">Selank</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$60</em></i><i>10+ <em>$50</em></i></span></div>
-<button class="sc-add" data-add="selank" aria-label="Add Selank 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-03" style="--c:var(--violet)">
-<a class="sc-v" href="p-dsip.html" aria-label="DSIP 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/dsip.webp" alt="RYXA Labs DSIP 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-03</span><h3><a href="p-dsip.html">DSIP</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$75</b><span class="sc-lad"><i>5+ <em>$70</em></i><i>10+ <em>$65</em></i></span></div>
-<button class="sc-add" data-add="dsip" aria-label="Add DSIP 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-04" style="--c:var(--coral)">
-<a class="sc-v" href="p-ghk-cu.html" aria-label="GHK-Cu 50 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/ghk-cu.webp" alt="RYXA Labs GHK-Cu 50 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
-<div class="sc-m"><span class="sc-code">RX-04</span><h3><a href="p-ghk-cu.html">GHK-Cu</a></h3><span class="sc-st">50 mg<span class="ly"> · lyophilized</span></span></div>
-<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
-<button class="sc-add" data-add="ghk-cu" aria-label="Add GHK-Cu 50 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article></div>
-  <div class="s7-foot"><a class="btn btn-ghost" href="shop.html">See the full catalogue</a><p>Every lot has a public certificate of analysis. Laboratory research use only.</p></div>
+  <div class="cat8-head"><h2 class="h2" id="famh">Catalogue by family.</h2><a class="vd8" href="shop.html"><span>Browse the catalogue</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+  <div class="fc8-row" role="tablist" aria-label="Families"><button class="fc8" role="tab" aria-selected="true" aria-controls="shelf8" data-f="RX-01" style="--c:var(--amber);--m:url(v/bpc-157.webp)">
+<span class="fc8-lat" aria-hidden="true"></span><span class="fc8-chip">RX-01</span><span class="fc8-h">Repair &amp; recovery</span><span class="fc8-n">8 compounds · lot-tested</span>
+<span class="fc8-v" aria-hidden="true"><span class="fc8-bob"><img src="v/bpc-157.webp" alt="" width="800" height="1000"><span class="sc8-shine"></span></span></span>
+<span class="fc8-go">View family <span>→</span></span></button><button class="fc8" role="tab" aria-selected="false" aria-controls="shelf8" data-f="RX-02" style="--c:var(--teal);--m:url(v/mots-c.webp)">
+<span class="fc8-lat" aria-hidden="true"></span><span class="fc8-chip">RX-02</span><span class="fc8-h">Metabolic &amp; longevity</span><span class="fc8-n">7 compounds · lot-tested</span>
+<span class="fc8-v" aria-hidden="true"><span class="fc8-bob"><img src="v/mots-c.webp" alt="" width="800" height="1000"><span class="sc8-shine"></span></span></span>
+<span class="fc8-go">View family <span>→</span></span></button><button class="fc8" role="tab" aria-selected="false" aria-controls="shelf8" data-f="RX-03" style="--c:var(--violet);--m:url(v/semax.webp)">
+<span class="fc8-lat" aria-hidden="true"></span><span class="fc8-chip">RX-03</span><span class="fc8-h">Cognitive</span><span class="fc8-n">3 compounds · lot-tested</span>
+<span class="fc8-v" aria-hidden="true"><span class="fc8-bob"><img src="v/semax.webp" alt="" width="800" height="1000"><span class="sc8-shine"></span></span></span>
+<span class="fc8-go">View family <span>→</span></span></button><button class="fc8" role="tab" aria-selected="false" aria-controls="shelf8" data-f="RX-04" style="--c:var(--coral);--m:url(v/ghk-cu.webp)">
+<span class="fc8-lat" aria-hidden="true"></span><span class="fc8-chip">RX-04</span><span class="fc8-h">Aesthetic &amp; wellness</span><span class="fc8-n">1 compound · lot-tested</span>
+<span class="fc8-v" aria-hidden="true"><span class="fc8-bob"><img src="v/ghk-cu.webp" alt="" width="800" height="1000"><span class="sc8-shine"></span></span></span>
+<span class="fc8-go">View family <span>→</span></span></button></div>
+  <div class="shelf8" id="shelf8" role="tabpanel"><div class="sh8" data-f="RX-01" ><div class="sh8-h"><span class="fc8-chip" style="--c:var(--amber)">RX-01</span><b>Repair &amp; recovery</b><a class="vd8 sm" href="shop.html#rx-01"><span>All of RX-01 in the catalogue</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+<div class="sh8-row"><article class="sc8" style="--c:var(--amber);--m:url(v/bpc-157.webp)">
+<a class="sc8-v" href="p-bpc-157.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157.html">BPC-157</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$85</b><span class="sc-lad"><i>5+ <em>$80</em></i><i>10+ <em>$75</em></i></span></div>
+<button class="add8" data-fly="bpc-157" aria-label="Add BPC-157 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--amber);--m:url(v/tb-500.webp)">
+<a class="sc8-v" href="p-tb-500.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/tb-500.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-tb-500.html">TB-500</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$85</em></i><i>10+ <em>$80</em></i></span></div>
+<button class="add8" data-fly="tb-500" aria-label="Add TB-500 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--amber);--m:url(v/bpc-tb-5.webp)">
+<a class="sc8-v" href="p-bpc-157-tb-500-5-5.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/bpc-tb-5.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157-tb-500-5-5.html">BPC-157 + TB-500</a></h3><span class="sc-st">5 + 5 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="vd8" href="p-bpc-157-tb-500-5-5.html"><span>View details</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div></article><article class="sc8" style="--c:var(--amber);--m:url(v/bpc-tb-10.webp)">
+<a class="sc8-v" href="p-bpc-157-tb-500-10-10.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/bpc-tb-10.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157-tb-500-10-10.html">BPC-157 + TB-500</a></h3><span class="sc-st">10 + 10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$85</em></i><i>10+ <em>$80</em></i></span></div>
+<button class="add8" data-fly="bpc-157-tb-500-10-10" aria-label="Add BPC-157 + TB-500 10 + 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--amber);--m:url(v/kpv.webp)">
+<a class="sc8-v" href="p-kpv.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/kpv.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-kpv.html">KPV</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
+<button class="add8" data-fly="kpv" aria-label="Add KPV 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--amber);--m:url(v/glow.webp)">
+<a class="sc8-v" href="p-glow.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/glow.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-glow.html">GLOW</a></h3><span class="sc-st">70 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="vd8" href="p-glow.html"><span>View details</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div></article><article class="sc8" style="--c:var(--amber);--m:url(v/klow.webp)">
+<a class="sc8-v" href="p-klow.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/klow.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-klow.html">KLOW</a></h3><span class="sc-st">80 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$175</b><span class="sc-lad"><i>5+ <em>$165</em></i><i>10+ <em>$150</em></i></span></div>
+<button class="add8" data-fly="klow" aria-label="Add KLOW 80 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--amber);--m:url(v/vip-5mg.webp)">
+<a class="sc8-v" href="p-vip.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/vip-5mg.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-01</span><h3><a href="p-vip.html">VIP</a></h3><span class="sc-st">5 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="vd8" href="p-vip.html"><span>View details</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div></article></div></div><div class="sh8" data-f="RX-02" hidden><div class="sh8-h"><span class="fc8-chip" style="--c:var(--teal)">RX-02</span><b>Metabolic &amp; longevity</b><a class="vd8 sm" href="shop.html#rx-02"><span>All of RX-02 in the catalogue</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+<div class="sh8-row"><article class="sc8" style="--c:var(--teal);--m:url(v/mots-c.webp)">
+<a class="sc8-v" href="p-mots-c.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/mots-c.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-02</span><h3><a href="p-mots-c.html">MOTS-c</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
+<button class="add8" data-fly="mots-c" aria-label="Add MOTS-c 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--teal);--m:url(v/nad.webp)">
+<a class="sc8-v" href="p-nad.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/nad.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-02</span><h3><a href="p-nad.html">NAD+</a></h3><span class="sc-st">500 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$80</em></i><i>10+ <em>$70</em></i></span></div>
+<button class="add8" data-fly="nad" aria-label="Add NAD+ 500 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--teal);--m:url(v/tesamorelin.webp)">
+<a class="sc8-v" href="p-tesamorelin.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/tesamorelin.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-02</span><h3><a href="p-tesamorelin.html">Tesamorelin</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="vd8" href="p-tesamorelin.html"><span>View details</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div></article><article class="sc8" style="--c:var(--teal);--m:url(v/cjcdac-5mg.webp)">
+<a class="sc8-v" href="p-cjc-1295-dac.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/cjcdac-5mg.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-02</span><h3><a href="p-cjc-1295-dac.html">CJC-1295 with DAC</a></h3><span class="sc-st">5 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="vd8" href="p-cjc-1295-dac.html"><span>View details</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div></article><article class="sc8" style="--c:var(--teal);--m:url(v/cjc-1295-no-dac.webp)">
+<a class="sc8-v" href="p-cjc-1295-no-dac.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/cjc-1295-no-dac.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-02</span><h3><a href="p-cjc-1295-no-dac.html">CJC-1295 no DAC</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="vd8" href="p-cjc-1295-no-dac.html"><span>View details</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div></article><article class="sc8" style="--c:var(--teal);--m:url(v/epitalon.webp)">
+<a class="sc8-v" href="p-epitalon.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/epitalon.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-02</span><h3><a href="p-epitalon.html">Epitalon</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="vd8" href="p-epitalon.html"><span>View details</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div></article><article class="sc8" style="--c:var(--teal);--m:url(v/retatrutide.webp)">
+<a class="sc8-v" href="p-retatrutide.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/retatrutide.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-02</span><h3><a href="p-retatrutide.html">Retatrutide</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$120</b><span class="sc-lad"><i>5+ <em>$110</em></i><i>10+ <em>$100</em></i></span></div>
+<button class="add8" data-fly="retatrutide" aria-label="Add Retatrutide 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article></div></div><div class="sh8" data-f="RX-03" hidden><div class="sh8-h"><span class="fc8-chip" style="--c:var(--violet)">RX-03</span><b>Cognitive</b><a class="vd8 sm" href="shop.html#rx-03"><span>All of RX-03 in the catalogue</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+<div class="sh8-row"><article class="sc8" style="--c:var(--violet);--m:url(v/semax.webp)">
+<a class="sc8-v" href="p-semax.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/semax.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-03</span><h3><a href="p-semax.html">Semax</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$60</b><span class="sc-lad"><i>5+ <em>$50</em></i><i>10+ <em>$40</em></i></span></div>
+<button class="add8" data-fly="semax" aria-label="Add Semax 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--violet);--m:url(v/selank.webp)">
+<a class="sc8-v" href="p-selank.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/selank.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-03</span><h3><a href="p-selank.html">Selank</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$60</em></i><i>10+ <em>$50</em></i></span></div>
+<button class="add8" data-fly="selank" aria-label="Add Selank 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc8" style="--c:var(--violet);--m:url(v/dsip.webp)">
+<a class="sc8-v" href="p-dsip.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/dsip.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-03</span><h3><a href="p-dsip.html">DSIP</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$75</b><span class="sc-lad"><i>5+ <em>$70</em></i><i>10+ <em>$65</em></i></span></div>
+<button class="add8" data-fly="dsip" aria-label="Add DSIP 10 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article></div></div><div class="sh8" data-f="RX-04" hidden><div class="sh8-h"><span class="fc8-chip" style="--c:var(--coral)">RX-04</span><b>Aesthetic &amp; wellness</b><a class="vd8 sm" href="shop.html#rx-04"><span>All of RX-04 in the catalogue</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+<div class="sh8-row"><article class="sc8" style="--c:var(--coral);--m:url(v/ghk-cu.webp)">
+<a class="sc8-v" href="p-ghk-cu.html" tabindex="-1" aria-hidden="true"><span class="sc8-glow"></span><span class="sc8-floor"></span><span class="sc8-bob"><img src="v/ghk-cu.webp" alt="" width="800" height="1000" loading="lazy"><span class="sc8-shine"></span></span></a>
+<div class="sc8-m"><span class="sc-code">RX-04</span><h3><a href="p-ghk-cu.html">GHK-Cu</a></h3><span class="sc-st">50 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc8-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
+<button class="add8" data-fly="ghk-cu" aria-label="Add GHK-Cu 50 mg to cart"><span class="a-t">Add to cart</span><span class="a-ok" aria-hidden="true">Added</span><svg class="a-i" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article></div></div></div>
 </div></section>
-<section class="ord7" id="ordering" aria-labelledby="ordh">
-<div class="wrap">
-  <div class="o7-head"><h2 class="h2" id="ordh">From cart to bench<span class="lt">in three steps.</span></h2>
-  <p class="lede">No cards and no stored payment details. You pay by Interac e-Transfer or crypto, and the order ships once payment clears.</p></div>
-  <ol class="o7">
-    <li class="o7-s"><div class="o7-ui o7-a" aria-hidden="true">
-        <div class="ui-row"><img src="v/bpc-157.webp" alt=""><div><b>BPC-157</b><span>10 mg · RX-01</span></div><em>5 × $80</em></div>
-        <div class="ui-row"><img src="v/tb-500.webp" alt=""><div><b>TB-500</b><span>10 mg · RX-01</span></div><em>1 × $90</em></div>
-        <label class="ui-att"><i class="ui-box"></i>Research use only, 19+</label></div>
-      <span class="o7-n">1</span><h3>Add vials, confirm research use</h3><p>Pack pricing applies on its own at 5 and 10 vials. The research-use confirmation is required and saved with the order.</p></li>
-    <li class="o7-s"><div class="o7-ui o7-b" aria-hidden="true">
-        <div class="ui-pay on"><i></i><div><b>Interac e-Transfer</b><span>to sales@ryxalabs.com</span></div></div>
-        <div class="ui-pay"><i></i><div><b>Bitcoin or USDT</b><span>BTCPay invoice, 30 min rate lock</span></div></div>
-        <div class="ui-ref">Reference <b>RX-48217</b></div></div>
-      <span class="o7-n">2</span><h3>Pay by e-Transfer or crypto</h3><p>Your order number is the e-Transfer message. Crypto orders get a BTCPay invoice. Either way, you get an email the moment it clears.</p></li>
-    <li class="o7-s"><div class="o7-ui o7-c" aria-hidden="true">
-        <div class="ui-trk"><span class="d on">Paid</span><span class="d on">Packed</span><span class="d on cur">Shipped</span><span class="d">Delivered</span><i class="ui-line"><i></i></i></div>
-        <div class="ui-ship"><b>Tracked, Canada Post</b><span>Lot R2611-01 · COA linked</span></div></div>
-      <span class="o7-n">3</span><h3>Ships Monday to Thursday</h3><p>Packed in a sealed, rigid mailer from British Columbia, tracked to your door. Free over $200. The lot on every vial links to its report.</p></li>
-  </ol>
-</div></section>
+
 
 <section class="anat-s" id="standard" aria-labelledby="stdh">
   <div class="wrap">
@@ -1568,6 +1693,35 @@ document.fonts&&document.fonts.ready.then(()=>place(sel));
 document.addEventListener('click',e=>{const a=e.target.closest('.sc-add[data-add]');if(!a)return;a.classList.add('ok');setTimeout(()=>a.classList.remove('ok'),1200)});
 /* ordering steps animate once in view */
 const o=$('.ord7');if(o)new IntersectionObserver((es,ob)=>{if(es[0].isIntersecting){o.classList.add('in');ob.disconnect()}},{threshold:.35}).observe(o);
+})();
+</script>
+<script>
+(()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* lab proof: draw the trace, count the values, then walk the anatomy */
+const coa=$('#coa8');if(coa){const tr=$('#c8tr'),L=tr.getTotalLength();if(!reduce){tr.style.strokeDasharray=L;tr.style.strokeDashoffset=L}
+  const btns=$$('.pb8-anat button');let k=0,user=false,tm=0;
+  const hl=key=>{btns.forEach(b=>b.classList.toggle('on',b.dataset.k===key));$$('#coa8 [data-k]').forEach(e=>e.classList.toggle('hl',e.dataset.k===key))};
+  btns.forEach((b,i)=>{const go=()=>{user=true;k=i;hl(b.dataset.k)};b.addEventListener('click',go);b.addEventListener('pointerenter',go);b.addEventListener('focus',go)});
+  $('.pb8-anat').addEventListener('pointerleave',()=>{user=false});
+  const count=el=>{const to=+el.dataset.to,d=+el.dataset.d;if(reduce){el.textContent=to.toFixed(d);return}const t0=performance.now();const f=n=>{const q=Math.min(1,(n-t0)/1400),e=1-Math.pow(1-q,4);el.textContent=(to*e).toFixed(d);if(q<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+  new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();coa.classList.add('in');
+    if(!reduce)tr.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:1700,easing:'cubic-bezier(.25,1,.5,1)',fill:'forwards'});
+    $$('#coa8 .cnt').forEach(count);hl(btns[0].dataset.k);
+    tm=setInterval(()=>{if(user)return;k=(k+1)%btns.length;hl(btns[k].dataset.k)},2800)},{threshold:.35}).observe(coa);}
+/* catalogue by family: the four cards pick the shelf */
+const fcs=$$('.fc8'),shs=$$('.sh8');fcs.forEach((c,i)=>c.style.setProperty('--d',i));
+const pick=(f,anim)=>{fcs.forEach(c=>c.setAttribute('aria-selected',c.dataset.f===f));shs.forEach(s=>{const on=s.dataset.f===f;s.hidden=!on;s.classList.remove('in');if(on){s.querySelectorAll('.sc8').forEach((c,j)=>c.style.setProperty('--k',j));if(anim){void s.offsetWidth;s.classList.add('in')}}})};
+fcs.forEach(c=>c.addEventListener('click',()=>{pick(c.dataset.f,true);const sh=$('#shelf8');const r=sh.getBoundingClientRect();if(r.top>innerHeight*.75||r.bottom<0)sh.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'})}));
+const cat=$('#families');if(cat)new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();pick('RX-01',true)}},{threshold:.2}).observe(cat);
+/* add to cart: the vial flies to the cart, the button says Added */
+document.addEventListener('click',e=>{const b=e.target.closest('.add8');if(!b)return;e.preventDefault();e.stopPropagation();
+  const slug=b.dataset.fly,img=b.closest('.sc8').querySelector('img'),cart=$('header .pill-b')||$('.pill-b');b.classList.add('done');setTimeout(()=>b.classList.remove('done'),1600);
+  const finish=()=>{cart&&cart.classList.remove('bump');cart&&void cart.offsetWidth;cart&&cart.classList.add('bump');window.ryxaCart&&setTimeout(()=>ryxaCart.add(slug,1),reduce?0:260)};
+  if(reduce||!cart||!img){finish();return}
+  const a=img.getBoundingClientRect(),z=cart.getBoundingClientRect(),f=img.cloneNode();f.className='fly8';document.body.appendChild(f);
+  const x0=a.left+a.width/2-30,y0=a.top+a.height/2-37,x1=z.left+z.width/2-30,y1=z.top+z.height/2-37;
+  f.animate([{transform:`translate(${x0}px,${y0}px) scale(1.4)`,opacity:1},{transform:`translate(${(x0+x1)/2}px,${Math.min(y0,y1)-120}px) scale(.9) rotate(-12deg)`,opacity:1,offset:.5},{transform:`translate(${x1}px,${y1}px) scale(.25) rotate(-20deg)`,opacity:.2}],{duration:800,easing:'cubic-bezier(.5,0,.4,1)'}).onfinish=()=>{f.remove();finish()};
+},true);
 })();
 </script>
 </body>
