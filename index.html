@@ -825,6 +825,121 @@ footer .lat.live{bottom:0!important}
 .qa-a>div{overflow:hidden}.qa-a p{margin:0 0 22px;color:var(--mute);max-width:62ch}
 @media (max-width:900px){.fq-grid{grid-template-columns:1fr}.fq-side{position:static}}
 @media (prefers-reduced-motion:reduce){.lp-c,.scr,.fp,.fp-vials img,.an-lines path,.qa-a,.fp-more{transition:none!important}.scan,.cal-g .c-last::after,.an-lines .ring{animation:none!important}}
+
+/* 3D molecular field (lib/mol.js) */
+.lat.mol .molcanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .lat.mol{-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.14) 38%,#000 64%),linear-gradient(to bottom,#000 70%,transparent 100%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.14) 38%,#000 64%),linear-gradient(to bottom,#000 70%,transparent 100%);mask-composite:intersect}
+footer .lat.mol{-webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.45) 34%,#000 56%,#000 70%,transparent 86%);mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.45) 34%,#000 56%,#000 70%,transparent 86%)}
+@media(max-width:900px){.hero .lat.mol{-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.25) 0%,rgba(0,0,0,.25) 38%,#000 60%,#000 85%,transparent);mask-image:linear-gradient(to bottom,rgba(0,0,0,.25) 0%,rgba(0,0,0,.25) 38%,#000 60%,#000 85%,transparent)}}
+
+/* ===== round 7: one continuous Ink page ===== */
+body{background:var(--ink);color:var(--bone)}
+main{--mute:#9EA2AB;--line:#262930;--bone2:#17191D}
+main .h2 .lt{color:#8E929B}
+main .lede{color:#B4B7BF}
+main .btn-ink{background:var(--bone);color:var(--ink)}main .btn-ink:hover{background:#fff}
+main>section{position:relative}
+main>section+section::before{content:"";position:absolute;top:0;left:max(32px,calc(50% - 660px));right:max(32px,calc(50% - 660px));height:1px;background:linear-gradient(90deg,transparent,#2A2D33 18%,#2A2D33 82%,transparent)}
+main>section.hero+section::before,main>section.lp::before,main>section.lp+section::before{display:none}
+
+/* catalogue */
+.shop7{padding:clamp(96px,10vw,150px) 0 clamp(80px,8vw,120px);overflow:clip}
+.s7-head{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:end;margin-bottom:44px}.s7-head .lede{margin:0;max-width:46ch}
+.s7-tabs{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #262930;border-radius:16px;padding:6px;gap:6px;background:#15171A;margin-bottom:28px}
+.s7-tabs button{all:unset;position:relative;z-index:1;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:14px 16px;border-radius:11px;transition:background .3s}
+.s7-tabs button:hover{background:#1B1D22}
+.s7-tabs button:focus-visible{outline:2px solid var(--tint);outline-offset:-2px}
+.s7-tabs i{grid-row:1/3;width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px color-mix(in oklab,var(--c) 18%,transparent)}
+.s7-tabs .k{font:500 12px var(--mono);color:#868A93}
+.s7-tabs .n{grid-column:2;font:600 15px var(--display);font-stretch:112%;color:#D9DBE0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s7-tabs .q{grid-row:1/3;grid-column:3;font:500 13px var(--mono);color:#6F737C;padding:3px 8px;border:1px solid #2A2D33;border-radius:999px}
+.s7-tabs button[aria-selected=true] .n{color:#fff}.s7-tabs button[aria-selected=true] .q{color:var(--bone);border-color:var(--c)}
+.s7-ink{position:absolute;z-index:0;top:6px;bottom:6px;left:6px;border-radius:11px;background:#20232A;box-shadow:inset 0 0 0 1px #30343D;transition:transform .55s var(--ease-out),width .55s var(--ease-out)}
+.s7-ink::after{content:"";position:absolute;left:16px;right:16px;bottom:-1px;height:2px;border-radius:2px;background:var(--c,var(--amber));transition:background .4s}
+.s7-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sc{position:relative;display:grid;grid-template-rows:auto 1fr auto;border:1px solid #23262C;border-radius:18px;background:#16181C;overflow:hidden;transition:border-color .4s,transform .6s var(--ease-out),opacity .45s var(--ease-out)}
+.sc[hidden]{display:none}
+.sc.in{animation:scIn .7s var(--ease-out) both;animation-delay:calc(var(--k)*55ms)}
+@keyframes scIn{from{opacity:0;transform:translateY(18px) scale(.985)}}
+.sc:hover{border-color:color-mix(in oklab,var(--c) 45%,#23262C)}
+.sc-v{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;isolation:isolate}
+.sc-glow{position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 50% at 50% 78%,color-mix(in oklab,var(--c) 26%,transparent),transparent 72%);opacity:.55;transition:opacity .6s}
+.sc-floor{position:absolute;left:22%;right:22%;bottom:11%;height:16px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.65),transparent);z-index:-1;transition:transform .7s var(--ease-out),opacity .7s}
+.sc-v img{position:absolute;left:50%;bottom:8%;height:84%;width:auto;transform:translateX(-50%);transition:transform .8s var(--ease-out);filter:drop-shadow(0 18px 20px rgba(0,0,0,.45))}
+.sc:hover .sc-glow{opacity:1}.sc:hover .sc-v img{transform:translateX(-50%) translateY(-5%) rotate(-2deg)}.sc:hover .sc-floor{transform:scale(.82);opacity:.7}
+.sc-m{padding:4px 20px 0}
+.sc-code{display:inline-block;font:600 11.5px var(--mono);color:var(--ink);background:var(--c);padding:3px 7px;border-radius:5px}
+.sc h3{margin:10px 0 2px;font:600 clamp(18px,1.5vw,21px)/1.15 var(--display);font-stretch:115%}
+.sc h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.sc-st{font:400 13px var(--mono);color:#868A93}
+.sc-buy{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:10px;padding:16px 20px 20px}
+.sc-pr b{display:block;font:500 22px var(--mono);letter-spacing:-.01em}
+.sc-lad{display:flex;gap:10px;margin-top:4px}.sc-lad i{font:400 12px var(--mono);font-style:normal;color:#6F737C}.sc-lad em{font-style:normal;color:#B4B7BF}
+.sc-soon{font-size:13px;color:#868A93}
+.sc-add{all:unset;box-sizing:border-box;cursor:pointer;height:42px;min-width:42px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 13px;background:var(--bone);color:var(--ink);font:600 14px var(--body);transition:background .25s,transform .15s,padding .35s var(--ease-out)}
+.sc-add .t1{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .45s var(--ease-out)}
+.sc:hover .sc-add .t1,.sc-add:focus-visible .t1{max-width:110px}
+.sc-add:hover{background:#fff}.sc-add:active{transform:scale(.95)}
+.sc-add:focus-visible{outline:2px solid var(--tint);outline-offset:3px}
+.sc-add.ghost{background:none;border:1px solid #33363E;color:var(--bone)}.sc-add.ghost .t1{max-width:none}
+.sc-add.ok{background:#6FCF97}
+.s7-foot{display:flex;align-items:center;gap:28px;margin-top:36px}.s7-foot p{margin:0;color:#868A93;font-size:14px}
+
+/* how ordering works */
+.ord7{padding:clamp(88px,9vw,140px) 0}
+.o7-head{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:48px}.o7-head .lede{margin:0;max-width:46ch}
+.o7{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:o}
+.o7-s{position:relative;border:1px solid #23262C;border-radius:20px;padding:20px 22px 26px;background:linear-gradient(180deg,#17191D,#141518)}
+.o7-ui{height:196px;border-radius:14px;background:#101113;border:1px solid #22252B;padding:16px;margin-bottom:24px;display:flex;flex-direction:column;gap:8px;justify-content:center;overflow:hidden}
+.o7-n{font:500 12px var(--mono);color:var(--tint);border:1px solid #33384A;border-radius:999px;padding:3px 9px}
+.o7 h3{text-wrap:balance;margin:14px 0 8px;font:600 clamp(19px,1.6vw,23px)/1.2 var(--display);font-stretch:115%}
+.o7 p{margin:0;color:#A3A6AD;font-size:15px;line-height:1.6}
+.ui-row{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;padding:8px 10px;border-radius:10px;background:#17191D}
+.ui-row img{height:38px;width:auto;justify-self:center}.ui-row b{display:block;font:600 13px var(--display);font-stretch:110%}.ui-row span{font:400 11px var(--mono);color:#6F737C}.ui-row em{font:500 12px var(--mono);font-style:normal;color:#C9CBD0}
+.ui-att{display:flex;align-items:center;gap:10px;font-size:12.5px;color:#C9CBD0;padding:6px 10px}
+.ui-box{width:16px;height:16px;border-radius:4px;border:1.5px solid #6F737C;position:relative;transition:background .3s,border-color .3s}
+.ord7.in .ui-box{background:var(--tint);border-color:var(--tint);transition-delay:.9s}
+.ui-box::after{content:"";position:absolute;left:4.5px;top:1.5px;width:4px;height:8px;border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);transition:transform .3s var(--ease-out) 1s}
+.ord7.in .ui-box::after{transform:rotate(45deg) scale(1)}
+.ui-pay{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;border:1px solid #23262C}
+.ui-pay i{width:16px;height:16px;border-radius:50%;border:1.5px solid #4A4F5A;position:relative}
+.ui-pay.on{border-color:var(--tint);background:#171B26}.ui-pay.on i{border-color:var(--tint)}.ui-pay.on i::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--tint)}
+.ui-pay b{display:block;font:600 13px var(--display);font-stretch:110%}.ui-pay span{font:400 11px var(--mono);color:#6F737C}
+.ui-ref{font:400 12px var(--mono);color:#6F737C;padding:2px 12px}.ui-ref b{color:var(--bone);font-weight:500}
+.ui-trk{position:relative;display:grid;grid-template-columns:repeat(4,1fr);padding:22px 4px 10px}
+.ui-trk .d{position:relative;z-index:1;font:400 11px var(--mono);color:#6F737C;text-align:center;padding-top:20px}
+.ui-trk .d::before{content:"";position:absolute;left:50%;top:0;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#101113;border:1.5px solid #3A3E47}
+.ui-trk .d.on::before{background:var(--tint);border-color:var(--tint)}.ui-trk .d.on{color:#C9CBD0}
+.ui-trk .d.cur::before{box-shadow:0 0 0 5px rgba(154,168,207,.18)}
+.ui-line{position:absolute;left:12.5%;right:12.5%;top:27px;height:2px;background:#2A2D33}.ui-line i{display:block;height:100%;width:0;background:var(--tint);transition:width 1.6s var(--ease-out) .4s}
+.ord7.in .ui-line i{width:66.6%}
+.ui-ship{padding:10px 12px;border-radius:10px;background:#17191D}.ui-ship b{display:block;font:600 13px var(--display);font-stretch:110%}.ui-ship span{font:400 11px var(--mono);color:#6F737C}
+
+/* the rest of the page on Ink */
+.vanat-s .an-v img{filter:drop-shadow(0 40px 50px rgba(0,0,0,.6))}
+.an-lines path{stroke:#4F5460}.an-lines circle{fill:var(--ink);stroke:var(--tint)}.an-lines g.hot path{stroke:var(--tint)}.an-lines .ring{stroke:var(--tint)}
+.po-doc{--mute:#5B5E66;--line:#D9D6CF;color:var(--ink)}
+.po-terms li{border-color:#262930}
+.wt,.pk{background:#16181C;border:1px solid #23262C}
+.jr-a{background:#16181C;border:1px solid #23262C}.jr-big{background:#16181C}
+.fq-tabs button[aria-pressed=true]{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.qa.open .pm{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.sign{background:#16181C;border:1px solid #23262C}.sign .lat{background-image:url(a/lat-ink.svg)!important;opacity:.5}
+.sign h2 .lt{color:#8E929B}
+@media (max-width:1100px){.s7-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.s7-tabs .n{font-size:14px}}
+@media (max-width:900px){
+  .s7-head,.o7-head{grid-template-columns:1fr;gap:14px}
+  .s7-tabs{display:flex;overflow-x:auto;scrollbar-width:none;border-radius:14px;margin:0 -8px 20px}.s7-tabs::-webkit-scrollbar{display:none}
+  .s7-tabs button{flex:none;padding:12px 14px}.s7-ink{display:none}.s7-tabs button[aria-selected=true]{background:#20232A;box-shadow:inset 0 -2px 0 var(--c)}
+  .s7-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .sc{border-radius:14px}.sc-m{padding:2px 14px 0}.sc-buy{padding:12px 14px 14px;flex-direction:column;align-items:stretch}.sc-pr b{font-size:19px}
+  .sc-lad{gap:8px}.sc-lad i{font-size:11px}.sc-add .t1{max-width:110px}.sc-add{height:40px}
+  .sc-st .ly{display:none}.sc h3{font-size:17px}
+  .s7-foot{flex-direction:column;align-items:flex-start;gap:14px}
+  .o7{grid-template-columns:1fr}.o7-ui{height:auto;min-height:160px}
+}
+@media (prefers-reduced-motion:reduce){.sc,.sc-v img,.s7-ink,.ui-line i,.ui-box,.ui-box::after{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -926,49 +1041,106 @@ footer .lat.live{bottom:0!important}
   </div>
 </section>
 
-<section class="fam2" id="families" aria-labelledby="famh">
-  <div class="wrap">
-    <div class="f2-head"><h2 class="h2" id="famh">Four families, one colour code.</h2>
-      <p class="lede">The RX code in the catalogue is the code on the vial label. Pick a family to see what is in it.</p></div>
-    <div class="fpanels"><div class="fp open" style="--c:#E8A33D" data-i="0">
-  <button class="fp-hit" type="button" aria-expanded="true" aria-controls="fp0"><span class="sr">Show Repair & recovery</span></button>
-  <div class="fp-glow" aria-hidden="true"></div>
-  <div class="fp-vials" aria-hidden="true"><img src="v/tb-500.webp" alt="" width="800" height="1000" loading="lazy" style="--j:-1.0"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy" style="--j:0.0"><img src="v/kpv.webp" alt="" width="800" height="1000" loading="lazy" style="--j:1.0"></div>
-  <div class="fp-in">
-    <span class="fp-code">RX-01</span>
-    <h3>Repair & recovery</h3><span class="fp-n">8 compounds</span>
-    <div class="fp-more" id="fp0"><ul><li><a href="p-bpc-157.html">BPC-157 <small>10 mg</small></a></li><li><a href="p-tb-500.html">TB-500 <small>10 mg</small></a></li><li><a href="p-bpc-157-tb-500-5-5.html">BPC-157 + TB-500 <small>5 + 5 mg</small></a></li><li><a href="p-bpc-157-tb-500-10-10.html">BPC-157 + TB-500 <small>10 + 10 mg</small></a></li><li><a href="p-kpv.html">KPV <small>10 mg</small></a></li><li><a href="p-glow.html">GLOW <small>70 mg</small></a></li><li><a href="p-klow.html">KLOW <small>80 mg</small></a></li><li><a href="p-vip.html">VIP <small>5 mg</small></a></li></ul><a class="fp-go" href="shop.html#rx-01">Shop repair & recovery</a></div>
+<section class="shop7" id="families" aria-labelledby="famh">
+<div class="wrap">
+  <div class="s7-head">
+    <h2 class="h2" id="famh">Nineteen compounds.<span class="lt">Four families, one code.</span></h2>
+    <p class="lede">The family code on each vial, carton and listing is the same. Prices are in CAD per vial, and they drop at 5 and 10 vials of the same compound.</p>
   </div>
-</div><div class="fp" style="--c:#2FA39A" data-i="1">
-  <button class="fp-hit" type="button" aria-expanded="false" aria-controls="fp1"><span class="sr">Show Metabolic & longevity</span></button>
-  <div class="fp-glow" aria-hidden="true"></div>
-  <div class="fp-vials" aria-hidden="true"><img src="v/nad.webp" alt="" width="800" height="1000" loading="lazy" style="--j:-1.0"><img src="v/mots-c.webp" alt="" width="800" height="1000" loading="lazy" style="--j:0.0"><img src="v/retatrutide.webp" alt="" width="800" height="1000" loading="lazy" style="--j:1.0"></div>
-  <div class="fp-in">
-    <span class="fp-code">RX-02</span>
-    <h3>Metabolic & longevity</h3><span class="fp-n">7 compounds</span>
-    <div class="fp-more" id="fp1"><ul><li><a href="p-retatrutide.html">Retatrutide <small>10 mg</small></a></li><li><a href="p-mots-c.html">MOTS-c <small>10 mg</small></a></li><li><a href="p-nad.html">NAD+ <small>500 mg</small></a></li><li><a href="p-tesamorelin.html">Tesamorelin <small>10 mg</small></a></li><li><a href="p-cjc-1295-dac.html">CJC-1295 with DAC <small>5 mg</small></a></li><li><a href="p-cjc-1295-no-dac.html">CJC-1295 no DAC <small>10 mg</small></a></li><li><a href="p-epitalon.html">Epitalon <small>10 mg</small></a></li></ul><a class="fp-go" href="shop.html#rx-02">Shop metabolic & longevity</a></div>
-  </div>
-</div><div class="fp" style="--c:#8F7BE8" data-i="2">
-  <button class="fp-hit" type="button" aria-expanded="false" aria-controls="fp2"><span class="sr">Show Cognitive</span></button>
-  <div class="fp-glow" aria-hidden="true"></div>
-  <div class="fp-vials" aria-hidden="true"><img src="v/selank.webp" alt="" width="800" height="1000" loading="lazy" style="--j:-1.0"><img src="v/semax.webp" alt="" width="800" height="1000" loading="lazy" style="--j:0.0"><img src="v/dsip.webp" alt="" width="800" height="1000" loading="lazy" style="--j:1.0"></div>
-  <div class="fp-in">
-    <span class="fp-code">RX-03</span>
-    <h3>Cognitive</h3><span class="fp-n">3 compounds</span>
-    <div class="fp-more" id="fp2"><ul><li><a href="p-semax.html">Semax <small>10 mg</small></a></li><li><a href="p-selank.html">Selank <small>10 mg</small></a></li><li><a href="p-dsip.html">DSIP <small>10 mg</small></a></li></ul><a class="fp-go" href="shop.html#rx-03">Shop cognitive</a></div>
-  </div>
-</div><div class="fp" style="--c:#E0735A" data-i="3">
-  <button class="fp-hit" type="button" aria-expanded="false" aria-controls="fp3"><span class="sr">Show Aesthetic & wellness</span></button>
-  <div class="fp-glow" aria-hidden="true"></div>
-  <div class="fp-vials" aria-hidden="true"><img src="v/ghk-cu.webp" alt="" width="800" height="1000" loading="lazy" style="--j:0.0"></div>
-  <div class="fp-in">
-    <span class="fp-code">RX-04</span>
-    <h3>Aesthetic & wellness</h3><span class="fp-n">1 compound</span>
-    <div class="fp-more" id="fp3"><ul><li><a href="p-ghk-cu.html">GHK-Cu <small>50 mg</small></a></li></ul><a class="fp-go" href="shop.html#rx-04">Shop aesthetic & wellness</a></div>
-  </div>
-</div></div>
-  </div>
-</section>
+  <div class="s7-tabs" role="tablist" aria-label="Families"><button role="tab" aria-selected="true" data-f="RX-01" style="--c:var(--amber)"><i></i><span class="k">RX-01</span><span class="n">Repair &amp; recovery</span><span class="q">8</span></button><button role="tab" aria-selected="false" data-f="RX-02" style="--c:var(--teal)"><i></i><span class="k">RX-02</span><span class="n">Metabolic &amp; longevity</span><span class="q">7</span></button><button role="tab" aria-selected="false" data-f="RX-03" style="--c:var(--violet)"><i></i><span class="k">RX-03</span><span class="n">Cognitive</span><span class="q">3</span></button><button role="tab" aria-selected="false" data-f="RX-04" style="--c:var(--coral)"><i></i><span class="k">RX-04</span><span class="n">Aesthetic &amp; wellness</span><span class="q">1</span></button><span class="s7-ink" aria-hidden="true"></span></div>
+  <div class="s7-grid" id="s7g"><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-bpc-157.html" aria-label="BPC-157 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/bpc-157.webp" alt="RYXA Labs BPC-157 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157.html">BPC-157</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$85</b><span class="sc-lad"><i>5+ <em>$80</em></i><i>10+ <em>$75</em></i></span></div>
+<button class="sc-add" data-add="bpc-157" aria-label="Add BPC-157 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-tb-500.html" aria-label="TB-500 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/tb-500.webp" alt="RYXA Labs TB-500 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-tb-500.html">TB-500</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$85</em></i><i>10+ <em>$80</em></i></span></div>
+<button class="sc-add" data-add="tb-500" aria-label="Add TB-500 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-bpc-157-tb-500-5-5.html" aria-label="BPC-157 + TB-500 5 + 5 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/bpc-tb-5.webp" alt="RYXA Labs BPC-157 + TB-500 5 + 5 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157-tb-500-5-5.html">BPC-157 + TB-500</a></h3><span class="sc-st">5 + 5 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-bpc-157-tb-500-5-5.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-bpc-157-tb-500-10-10.html" aria-label="BPC-157 + TB-500 10 + 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/bpc-tb-10.webp" alt="RYXA Labs BPC-157 + TB-500 10 + 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-bpc-157-tb-500-10-10.html">BPC-157 + TB-500</a></h3><span class="sc-st">10 + 10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$85</em></i><i>10+ <em>$80</em></i></span></div>
+<button class="sc-add" data-add="bpc-157-tb-500-10-10" aria-label="Add BPC-157 + TB-500 10 + 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-kpv.html" aria-label="KPV 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/kpv.webp" alt="RYXA Labs KPV 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-kpv.html">KPV</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
+<button class="sc-add" data-add="kpv" aria-label="Add KPV 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-glow.html" aria-label="GLOW 70 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/glow.webp" alt="RYXA Labs GLOW 70 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-glow.html">GLOW</a></h3><span class="sc-st">70 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-glow.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-klow.html" aria-label="KLOW 80 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/klow.webp" alt="RYXA Labs KLOW 80 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-klow.html">KLOW</a></h3><span class="sc-st">80 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$175</b><span class="sc-lad"><i>5+ <em>$165</em></i><i>10+ <em>$150</em></i></span></div>
+<button class="sc-add" data-add="klow" aria-label="Add KLOW 80 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-01" style="--c:var(--amber)">
+<a class="sc-v" href="p-vip.html" aria-label="VIP 5 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/vip-5mg.webp" alt="RYXA Labs VIP 5 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-01</span><h3><a href="p-vip.html">VIP</a></h3><span class="sc-st">5 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-vip.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
+<a class="sc-v" href="p-retatrutide.html" aria-label="Retatrutide 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/retatrutide.webp" alt="RYXA Labs Retatrutide 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-retatrutide.html">Retatrutide</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$120</b><span class="sc-lad"><i>5+ <em>$110</em></i><i>10+ <em>$100</em></i></span></div>
+<button class="sc-add" data-add="retatrutide" aria-label="Add Retatrutide 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
+<a class="sc-v" href="p-mots-c.html" aria-label="MOTS-c 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/mots-c.webp" alt="RYXA Labs MOTS-c 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-mots-c.html">MOTS-c</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
+<button class="sc-add" data-add="mots-c" aria-label="Add MOTS-c 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
+<a class="sc-v" href="p-nad.html" aria-label="NAD+ 500 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/nad.webp" alt="RYXA Labs NAD+ 500 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-nad.html">NAD+</a></h3><span class="sc-st">500 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$90</b><span class="sc-lad"><i>5+ <em>$80</em></i><i>10+ <em>$70</em></i></span></div>
+<button class="sc-add" data-add="nad" aria-label="Add NAD+ 500 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
+<a class="sc-v" href="p-tesamorelin.html" aria-label="Tesamorelin 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/tesamorelin.webp" alt="RYXA Labs Tesamorelin 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-tesamorelin.html">Tesamorelin</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-tesamorelin.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
+<a class="sc-v" href="p-cjc-1295-dac.html" aria-label="CJC-1295 with DAC 5 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/cjcdac-5mg.webp" alt="RYXA Labs CJC-1295 with DAC 5 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-cjc-1295-dac.html">CJC-1295 with DAC</a></h3><span class="sc-st">5 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-cjc-1295-dac.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
+<a class="sc-v" href="p-cjc-1295-no-dac.html" aria-label="CJC-1295 no DAC 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/cjc-1295-no-dac.webp" alt="RYXA Labs CJC-1295 no DAC 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-cjc-1295-no-dac.html">CJC-1295 no DAC</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-cjc-1295-no-dac.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-02" style="--c:var(--teal)">
+<a class="sc-v" href="p-epitalon.html" aria-label="Epitalon 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/epitalon.webp" alt="RYXA Labs Epitalon 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-02</span><h3><a href="p-epitalon.html">Epitalon</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><span class="sc-soon">Price published at launch</span></div><a class="sc-add ghost" href="p-epitalon.html"><span class="t1">View details</span></a></div></article><article class="sc" data-f="RX-03" style="--c:var(--violet)">
+<a class="sc-v" href="p-semax.html" aria-label="Semax 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/semax.webp" alt="RYXA Labs Semax 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-03</span><h3><a href="p-semax.html">Semax</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$60</b><span class="sc-lad"><i>5+ <em>$50</em></i><i>10+ <em>$40</em></i></span></div>
+<button class="sc-add" data-add="semax" aria-label="Add Semax 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-03" style="--c:var(--violet)">
+<a class="sc-v" href="p-selank.html" aria-label="Selank 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/selank.webp" alt="RYXA Labs Selank 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-03</span><h3><a href="p-selank.html">Selank</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$60</em></i><i>10+ <em>$50</em></i></span></div>
+<button class="sc-add" data-add="selank" aria-label="Add Selank 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-03" style="--c:var(--violet)">
+<a class="sc-v" href="p-dsip.html" aria-label="DSIP 10 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/dsip.webp" alt="RYXA Labs DSIP 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-03</span><h3><a href="p-dsip.html">DSIP</a></h3><span class="sc-st">10 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$75</b><span class="sc-lad"><i>5+ <em>$70</em></i><i>10+ <em>$65</em></i></span></div>
+<button class="sc-add" data-add="dsip" aria-label="Add DSIP 10 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article><article class="sc" data-f="RX-04" style="--c:var(--coral)">
+<a class="sc-v" href="p-ghk-cu.html" aria-label="GHK-Cu 50 mg"><span class="sc-glow"></span><span class="sc-floor"></span><img src="v/ghk-cu.webp" alt="RYXA Labs GHK-Cu 50 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></a>
+<div class="sc-m"><span class="sc-code">RX-04</span><h3><a href="p-ghk-cu.html">GHK-Cu</a></h3><span class="sc-st">50 mg<span class="ly"> · lyophilized</span></span></div>
+<div class="sc-buy"><div class="sc-pr"><b>$70</b><span class="sc-lad"><i>5+ <em>$65</em></i><i>10+ <em>$60</em></i></span></div>
+<button class="sc-add" data-add="ghk-cu" aria-label="Add GHK-Cu 50 mg to cart"><span class="t1">Add to cart</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></button></div></article></div>
+  <div class="s7-foot"><a class="btn btn-ghost" href="shop.html">See the full catalogue</a><p>Every lot has a public certificate of analysis. Laboratory research use only.</p></div>
+</div></section>
+<section class="ord7" id="ordering" aria-labelledby="ordh">
+<div class="wrap">
+  <div class="o7-head"><h2 class="h2" id="ordh">From cart to bench<span class="lt">in three steps.</span></h2>
+  <p class="lede">No cards and no stored payment details. You pay by Interac e-Transfer or crypto, and the order ships once payment clears.</p></div>
+  <ol class="o7">
+    <li class="o7-s"><div class="o7-ui o7-a" aria-hidden="true">
+        <div class="ui-row"><img src="v/bpc-157.webp" alt=""><div><b>BPC-157</b><span>10 mg · RX-01</span></div><em>5 × $80</em></div>
+        <div class="ui-row"><img src="v/tb-500.webp" alt=""><div><b>TB-500</b><span>10 mg · RX-01</span></div><em>1 × $90</em></div>
+        <label class="ui-att"><i class="ui-box"></i>Research use only, 19+</label></div>
+      <span class="o7-n">1</span><h3>Add vials, confirm research use</h3><p>Pack pricing applies on its own at 5 and 10 vials. The research-use confirmation is required and saved with the order.</p></li>
+    <li class="o7-s"><div class="o7-ui o7-b" aria-hidden="true">
+        <div class="ui-pay on"><i></i><div><b>Interac e-Transfer</b><span>to sales@ryxalabs.com</span></div></div>
+        <div class="ui-pay"><i></i><div><b>Bitcoin or USDT</b><span>BTCPay invoice, 30 min rate lock</span></div></div>
+        <div class="ui-ref">Reference <b>RX-48217</b></div></div>
+      <span class="o7-n">2</span><h3>Pay by e-Transfer or crypto</h3><p>Your order number is the e-Transfer message. Crypto orders get a BTCPay invoice. Either way, you get an email the moment it clears.</p></li>
+    <li class="o7-s"><div class="o7-ui o7-c" aria-hidden="true">
+        <div class="ui-trk"><span class="d on">Paid</span><span class="d on">Packed</span><span class="d on cur">Shipped</span><span class="d">Delivered</span><i class="ui-line"><i></i></i></div>
+        <div class="ui-ship"><b>Tracked, Canada Post</b><span>Lot R2611-01 · COA linked</span></div></div>
+      <span class="o7-n">3</span><h3>Ships Monday to Thursday</h3><p>Packed in a sealed, rigid mailer from British Columbia, tracked to your door. Free over $200. The lot on every vial links to its report.</p></li>
+  </ol>
+</div></section>
 
 <section class="anat-s" id="standard" aria-labelledby="stdh">
   <div class="wrap">
@@ -1287,14 +1459,14 @@ new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect()
 </script>
 <script type="module">
 import {mountChain} from './lib/chain.js';
+import {mountMol} from './lib/mol.js';
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches,phone=matchMedia('(max-width:900px)').matches;
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const ss=(a,b,x)=>{const t=Math.min(1,Math.max(0,(x-a)/(b-a)));return t*t*(3-2*t)};
 
 /* living lattice: hero (kept off the headline), lab proof, footer */
-const hl=$('#heroLat');if(hl){hl.classList.add('live');mountChain(hl,{pointerZone:$('.hero'),pulses:phone?4:8,
-  mask:phone?((x,y)=>.55*ss(.05,.35,y)*(1-ss(.6,.95,y))):((x,y)=>ss(.42,.72,x)*(1-ss(.85,1,y))+.10*(1-ss(.42,.72,x)))})}
-const fl=$('#footLat');if(fl){fl.classList.add('live');mountChain(fl,{pointerZone:$('footer'),pulses:6,mask:(x,y)=>ss(.15,.6,y)*.9})}
+const hl=$('#heroLat');if(hl){hl.classList.add('live','mol');try{mountMol(hl,{pointerZone:$('.hero'),side:'right'})}catch(e){hl.classList.remove('live')}}
+const fl=$('#footLat');if(fl){fl.classList.add('live','mol');try{mountMol(fl,{pointerZone:$('footer'),side:'center',chains:phone?5:9,spread:12,zNear:-6,zFar:-34,pulses:phone?2:3,tilt:.08})}catch(e){fl.classList.remove('live')}}
 const pc=$('#proofChain');if(pc)mountChain(pc,{pointerZone:$('#proof'),pulses:5,gap:40,mask:(x,y)=>phone?.3:(.06+.6*ss(.45,1,x))*(1-ss(.85,1,y))*ss(0,.1,y)});
 
 /* lab proof: each chapter switches the report */
@@ -1351,5 +1523,21 @@ const qas=$$('.qa');qas.forEach(q=>q.querySelector('h3 button').addEventListener
 $$('.fq-tabs button').forEach(b=>b.addEventListener('click',()=>{$$('.fq-tabs button').forEach(x=>x.setAttribute('aria-pressed',x===b));const t=b.dataset.t;qas.forEach(q=>q.hidden=!(t==='all'||q.dataset.t===t))}));
 </script>
 
+<script src="lib/catalog.js"></script><script src="lib/cart.js"></script>
+<script>
+(()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* catalogue tabs with a sliding indicator */
+const tabs=$$('.s7-tabs button'),ink=$('.s7-ink'),cards=$$('.sc');
+const place=b=>{if(!ink||!b)return;const r=b.getBoundingClientRect(),p=b.parentElement.getBoundingClientRect();ink.style.width=r.width+'px';ink.style.transform='translateX('+(r.left-p.left-6)+'px)';ink.style.setProperty('--c',getComputedStyle(b).getPropertyValue('--c'))};
+const pick=(b,anim)=>{tabs.forEach(x=>x.setAttribute('aria-selected',x===b));place(b);let k=0;cards.forEach(c=>{const on=c.dataset.f===b.dataset.f;c.hidden=!on;c.classList.remove('in');if(on&&anim){c.style.setProperty('--k',k++);void c.offsetWidth;c.classList.add('in')}})};
+tabs.forEach(b=>b.addEventListener('click',()=>pick(b,true)));
+const sel=tabs.find(b=>b.getAttribute('aria-selected')==='true')||tabs[0];pick(sel,false);addEventListener('resize',()=>place(tabs.find(b=>b.getAttribute('aria-selected')==='true')));
+document.fonts&&document.fonts.ready.then(()=>place(sel));
+/* add-to-cart confirmation on the card */
+document.addEventListener('click',e=>{const a=e.target.closest('.sc-add[data-add]');if(!a)return;a.classList.add('ok');setTimeout(()=>a.classList.remove('ok'),1200)});
+/* ordering steps animate once in view */
+const o=$('.ord7');if(o)new IntersectionObserver((es,ob)=>{if(es[0].isIntersecting){o.classList.add('in');ob.disconnect()}},{threshold:.35}).observe(o);
+})();
+</script>
 </body>
 </html>

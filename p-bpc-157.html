@@ -623,7 +623,7 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
 }
 </style>
 </head>
-<body>
+<body data-slug="bpc-157">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <radialGradient id="mb" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#8ea2dc"/><stop offset=".55" stop-color="#2c4590"/><stop offset="1" stop-color="#14224d"/></radialGradient>
@@ -772,5 +772,6 @@ bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.setAttribute('aria
 if(!document.documentElement.classList.contains('gl'))return;
 new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();import('./lib/boxes.js').then(m=>{api=m.mountBoxes(st,'a/');st.classList.add('on')}).catch(()=>{})},{rootMargin:'400px'}).observe(st);})();
 </script>
+<script src="lib/catalog.js"></script><script src="lib/cart.js"></script>
 </body>
 </html>
