@@ -1981,6 +1981,131 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
 }
 @media (max-width:420px){.pf14-top span{display:none}.pf14-f dd{font-size:13px}}
 
+/* ===== round 14: for institutions, lot reservation, wholesale body ===== */
+.lr14,.lr14w,.lr14b{--lr14-p:clamp(72px,7.5vw,116px);--lr14-gap:clamp(32px,4.6vw,72px)}
+/* shared: benefit rows */
+.lr14-dl{margin:0;border-top:1px solid var(--lr14-rule)}
+.lr14-dl>div{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--lr14-rule)}
+.lr14-dl dt{font:600 16px/1.4 var(--display);font-stretch:112%;color:var(--lr14-dt)}
+.lr14-dl dd{margin:0;font:400 16px/1.55 var(--body);color:var(--lr14-dd)}
+.lr14-h{margin:0;font:700 clamp(28px,2.8vw,42px)/1.06 var(--display);font-stretch:122%;letter-spacing:-.015em;text-wrap:balance}
+/* home band: Navy copy, Ink stage running off the right edge */
+.lr14{position:relative;isolation:isolate;overflow:hidden;background:var(--navy);color:var(--bone);--lr14-rule:rgba(245,243,238,.17);--lr14-dt:var(--bone);--lr14-dd:#C9D1EA}
+.lr14-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto auto 1fr;grid-template-areas:"head fig" "list fig" "cta fig"}
+.lr14-g>*{min-width:0}
+.lr14-head{grid-area:head;padding:var(--lr14-p) var(--lr14-gap) 0 0}
+.lr14 .h2{color:var(--bone)}.lr14 .lede{margin:22px 0 0;color:#D5DAEA;max-width:44ch}
+.lr14-list{grid-area:list;padding:36px var(--lr14-gap) 0 0}
+.lr14-cta{grid-area:cta;align-self:end;display:flex;align-items:center;flex-wrap:wrap;gap:14px 20px;padding:32px var(--lr14-gap) var(--lr14-p) 0}
+.lr14-cta span{font-size:14px;color:#C9D1EA}
+.lr14-btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 24px;border-radius:999px;background:var(--bone);color:var(--ink);font:600 15px var(--body);text-decoration:none;white-space:nowrap;transition:background-color .2s,transform .15s var(--ease-out)}
+.lr14-btn svg{transition:transform .3s var(--ease-out)}
+@media (hover:hover){.lr14-btn:hover{background:#fff}.lr14-btn:hover svg{transform:translateX(4px)}}
+.lr14-btn:active{transform:scale(.97)}.lr14-btn:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+/* the figure */
+.lr14-fig{position:relative;margin:0;display:flex;flex-direction:column;color:var(--bone);min-width:0}
+.lr14-bleed{grid-area:fig;padding:var(--lr14-p) 0 var(--lr14-p) var(--lr14-gap)}
+.lr14-bleed::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:0;right:-50vw;background:var(--ink)}
+.lr14-ft{margin:0;font:600 clamp(20px,1.7vw,24px)/1.2 var(--display);font-stretch:118%;color:var(--bone)}
+.lr14-fp{margin:10px 0 0;max-width:40ch;font:400 16px/1.55 var(--body);color:#B9BCC4}
+.lr14-stage{position:relative;aspect-ratio:1.62;margin:auto 0 0}
+.lr14-3d,.lr14-3d .stcanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lr14-3d,.lr14-still{-webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.lr14-still{position:absolute;inset:0;transition:opacity .5s ease}
+.lr14-still img{display:block;width:100%;height:100%;object-fit:contain}
+.lr14-stage.lr14-live .lr14-still{opacity:0}
+.lr14-log{margin-top:4px}
+.lr14-lh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(245,243,238,.2);font:600 14px/1.3 var(--body);color:var(--bone)}
+.lr14-ct{font-weight:400;color:#9DA1AA;font-variant-numeric:tabular-nums}.lr14-ct b{font-weight:600;color:var(--bone)}
+.lr14-log ol{list-style:none;margin:0;padding:0;display:grid;grid-template-rows:repeat(4,auto);grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);column-gap:clamp(20px,2.6vw,40px)}
+.lr14-log li{display:flex;justify-content:space-between;align-items:center;gap:10px;height:40px;border-bottom:1px solid rgba(245,243,238,.1)}
+.lr14-ex{font:400 14px/1 var(--body);color:#858992;white-space:nowrap;transition:color .3s}
+.lr14-slot{position:relative;flex:none}
+.lr14-slot::before{content:"";position:absolute;right:0;top:50%;width:22px;height:1px;background:#4A4E58;transition:opacity .2s}
+.lr14-slot b{display:block;font:500 14px/1 var(--mono);color:var(--bone);opacity:0;transition:opacity .2s}
+.lr14-done .lr14-ex{color:#C9CBD0}.lr14-done .lr14-slot b{opacity:1}.lr14-done .lr14-slot::before{opacity:0}
+.lr14-now .lr14-ex{color:var(--bone)}
+.lr14-chip{position:absolute;left:0;top:0;z-index:3;pointer-events:none;padding:5px 7px;border-radius:4px;background:var(--bone);color:var(--ink);font:500 14px/1 var(--mono);white-space:nowrap;opacity:0;transform:translateY(6px);transition:opacity .22s ease,transform .3s var(--ease-out)}
+.lr14-chip::after{content:"";position:absolute;left:50%;top:100%;width:1px;height:9px;background:rgba(245,243,238,.55);transition:opacity .15s}
+.lr14-chip.lr14-in{opacity:1;transform:none}
+.lr14-chip.lr14-fly{transition:transform .62s cubic-bezier(.77,0,.175,1)}.lr14-chip.lr14-fly::after{opacity:0}
+.lr14-chip.lr14-out{opacity:0;transition:opacity .16s ease}
+/* wholesale: benefits on Bone, the figure as one wide Ink panel */
+.lr14w{background:var(--bone);color:var(--ink);padding:clamp(56px,6.4vw,100px) 0 var(--lr14-p);--lr14-rule:#DDD9CF;--lr14-dt:var(--ink);--lr14-dd:#4E525A}
+.lr14w-g{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:28px clamp(28px,5vw,80px);align-items:start}
+.lr14w .lr14-dl{border-top:1.5px solid var(--ink)}
+.lr14w .lr14-dl>div{grid-template-columns:minmax(0,4fr) minmax(0,7fr)}
+.lr14w .lr14-dl dt{font-size:17px}
+.lr14w mark.tbc,.lr14b mark.tbc{font:inherit;color:inherit;background:none;padding:0;border-bottom:1px dotted currentColor;cursor:help}
+.lr14-wide{margin-top:clamp(40px,4.6vw,72px);padding:clamp(28px,3.4vw,52px);border-radius:24px;background:var(--ink);overflow:hidden}
+@media (min-width:1000px){
+  .lr14-wide{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);grid-template-rows:auto 1fr;grid-template-areas:"fh stage" "log stage";column-gap:clamp(24px,3.6vw,56px)}
+  .lr14-wide .lr14-fh{grid-area:fh}.lr14-wide .lr14-stage{grid-area:stage;align-self:center;margin:-12px 0}
+  .lr14-wide .lr14-log{grid-area:log;align-self:end;margin-top:32px}
+  .lr14-wide .lr14-log ol{grid-template-rows:none;grid-auto-flow:row}
+  .lr14-wide .lr14-log li{height:38px}
+}
+/* wholesale: who qualifies (Navy) beside the application (Bone) */
+.lr14b{position:relative;isolation:isolate;overflow:hidden;overflow:clip;background:var(--bone);color:var(--ink)}
+.lr14b-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.lr14b-g>*{min-width:0}
+.lr14b-q{position:relative;padding:var(--lr14-p) var(--lr14-gap) var(--lr14-p) 0;color:var(--bone)}
+.lr14b-qi{position:sticky;top:124px}
+.lr14b-q::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:0;left:-50vw;background:var(--navy)}
+.lr14b-who{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid rgba(245,243,238,.2)}
+.lr14b-who li{padding:22px 0;border-bottom:1px solid rgba(245,243,238,.2);font:600 clamp(19px,1.65vw,23px)/1.25 var(--display);font-stretch:114%}
+.lr14b-n{margin-top:32px;display:grid;gap:12px}
+.lr14b-n p{margin:0;max-width:42ch;font:400 16px/1.6 var(--body);color:#C9D1EA}
+.lr14b-a{padding:var(--lr14-p) 0 var(--lr14-p) var(--lr14-gap);scroll-margin-top:76px}
+.lr14-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;margin-top:36px}
+.lr14-full{grid-column:1/-1}
+.lr14-f{display:grid;gap:8px;align-content:start;min-width:0}
+.lr14-f label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:600 14px/1.3 var(--body);color:var(--ink)}
+.lr14-f label small{font:400 13px/1.3 var(--body);color:#6B6E75}
+.lr14-f input,.lr14-f select,.lr14-f textarea{box-sizing:border-box;width:100%;height:54px;margin:0;padding:0 16px;border:1px solid #C9C5BB;border-radius:10px;background:#FDFCFA;color:var(--ink);font:400 16px/1.4 var(--body);-webkit-appearance:none;appearance:none;transition:border-color .15s ease,box-shadow .15s ease}
+.lr14-f textarea{height:132px;min-height:96px;padding:14px 16px;line-height:1.5;resize:vertical}
+.lr14-f select{padding-right:44px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23121316' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.lr14-f select:invalid{color:#6B6E75}.lr14-f select option{color:var(--ink)}
+@media (hover:hover){.lr14-f input:hover,.lr14-f select:hover,.lr14-f textarea:hover{border-color:#8A8D94}}
+.lr14-f input:focus-visible,.lr14-f select:focus-visible,.lr14-f textarea:focus-visible{outline:0;border-color:var(--navy);box-shadow:0 0 0 3px rgba(35,55,102,.24)}
+.lr14-f [aria-invalid="true"]{border-color:#A63A26;box-shadow:0 0 0 3px rgba(166,58,38,.13)}
+.lr14-err{margin:0;min-height:20px;font:400 14px/20px var(--body);color:#A63A26}
+.lr14-chk{display:grid;grid-template-columns:24px minmax(0,1fr);gap:4px 12px;align-items:start}
+.lr14-chk input{box-sizing:border-box;width:24px;height:24px;margin:0;border:1.5px solid #8A8D94;border-radius:6px;background:#FDFCFA;-webkit-appearance:none;appearance:none;cursor:pointer;transition:background-color .15s ease,border-color .15s ease,box-shadow .15s ease}
+.lr14-chk input:checked{border-color:var(--navy);background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='11' viewBox='0 0 14 11' fill='none' stroke='%23F5F3EE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 5.5l3.8 3.8L12.5 1.6'/%3E%3C/svg%3E") center no-repeat}
+.lr14-chk input:focus-visible{outline:0;border-color:var(--navy);box-shadow:0 0 0 3px rgba(35,55,102,.24)}
+.lr14-chk input[aria-invalid="true"]{border-color:#A63A26;box-shadow:0 0 0 3px rgba(166,58,38,.13)}
+.lr14-chk label{padding-top:1px;font:400 16px/1.5 var(--body);color:#2C2F35;cursor:pointer}
+.lr14-chk .lr14-err{grid-column:2}
+.lr14-send{display:flex;align-items:center;flex-wrap:wrap;gap:14px 22px;padding-top:28px;border-top:1px solid #DDD9CF;margin-top:8px}
+.lr14-send button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;border-radius:999px;background:var(--ink);color:var(--bone);font:600 16px var(--body);white-space:nowrap;transition:background-color .2s ease,transform .15s var(--ease-out)}
+@media (hover:hover){.lr14-send button:hover{background:var(--navy)}}
+.lr14-send button:active{transform:scale(.97)}.lr14-send button:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.lr14-send p{margin:0;font:400 15px/1.5 var(--body);color:#4E525A}
+.lr14-ok{margin:10px 0 0;min-height:22px;font:500 15px/22px var(--body);color:var(--navy)}
+@media (max-width:999px){
+  .lr14-g{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-template-areas:"head" "fig" "list" "cta"}
+  .lr14-head{padding:clamp(64px,10vw,88px) 0 0}.lr14-list{padding:36px 0 0}.lr14-cta{padding:28px 0 clamp(64px,10vw,88px)}
+  .lr14-bleed,.lr14-wide{margin:40px calc(var(--gut)*-1) 0;padding:40px var(--gut) 32px;border-radius:0}
+  .lr14-bleed::before{right:0}
+  .lr14-stage{margin-top:8px}
+  .lr14w-g{grid-template-columns:minmax(0,1fr)}
+  .lr14w{padding-bottom:0}
+  .lr14b-g{grid-template-columns:minmax(0,1fr)}
+  .lr14b-q{margin:0 calc(var(--gut)*-1);padding:clamp(56px,9vw,80px) var(--gut)}.lr14b-q::before{left:0}.lr14b-qi{position:static}
+  .lr14b-a{padding:clamp(56px,9vw,80px) 0 clamp(40px,7vw,64px)}
+}
+@media (max-width:699px){
+  .lr14-stage{aspect-ratio:1.06}
+  .lr14-bleed .lr14-stage,.lr14-wide .lr14-stage{margin-left:-8px;margin-right:-8px}
+  .lr14-dl>div,.lr14w .lr14-dl>div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .lr14-log ol{column-gap:20px}.lr14-ex,.lr14-slot b,.lr14-chip{font-size:13.5px}
+  .lr14-form{grid-template-columns:minmax(0,1fr);gap:4px}
+  .lr14-send button{width:100%}
+}
+@media (max-width:379px){.lr14-log ol{grid-template-rows:none;grid-auto-flow:row}}
+@media (prefers-reduced-motion:reduce){.lr14-chip,.lr14-still,.lr14-btn,.lr14-btn svg,.lr14-send button{transition:none}}
+
 /* ===== round 14: four notes in the utility strip ===== */
 .strip .wrap{gap:clamp(24px,3.4vw,56px)}
 @media (max-width:1040px){.strip span:nth-child(n+2){display:none}.strip .wrap{justify-content:center}}
@@ -2142,21 +2267,25 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
 </div></div>
 </section>
 
-<section class="xin" id="institutions" aria-labelledby="inh">
-<div class="wrap xin-g">
-  <div class="xin-copy">
-    <h2 class="h2" id="inh">Supply for labs that plan ahead.</h2>
-    <p class="lede">RYXA Labs works with universities, research institutes, contract research organizations and businesses that need consistent, documented material.</p>
-    <dl class="xin-dl"><div><dt>Purchase orders and invoicing</dt><dd>With net-30 terms after approval.</dd></div><div><dt>Lot reservation</dt><dd>Hold a single lot for the length of a study, so every experiment uses the same material.</dd></div><div><dt>Documentation packs</dt><dd>COAs, and handling and storage information for your QA records.</dd></div><div><dt>A named contact</dt><dd>For quotes, stock and lead times.</dd></div><div><dt>Founding-lab credit</dt><dd>For verified institutional accounts, opened by 18 December.</dd></div></dl>
-    <div class="xin-cta"><a class="xin-btn" href="wholesale.html#apply">Apply for an account <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><span>We reply within 2 business days.</span></div>
+<section class="lr14" id="institutions" aria-labelledby="inh">
+<div class="wrap lr14-g">
+  <div class="lr14-head"><h2 class="h2" id="inh">Supply for labs that plan ahead.</h2>
+    <p class="lede">RYXA Labs works with universities, research institutes, contract research organizations and businesses that need consistent, documented material.</p></div>
+  <figure class="lr14-fig lr14-bleed" aria-label="Lot reservation. Eight vials of lot R2611-01 are held in a tray for one study. Each experiment draws one vial, and every vial carries the same lot number.">
+  <figcaption class="lr14-fh"><h3 class="lr14-ft">Lot reservation</h3>
+    <p class="lr14-fp">Hold a single lot for the length of a study, so every experiment uses the same material.</p></figcaption>
+  <div class="lr14-stage">
+    <picture class="lr14-still"><source media="(max-width:699px)" srcset="a/lr14-rack-m.webp"><img src="a/lr14-rack.webp" alt="" width="1408" height="870" loading="lazy" decoding="async"></picture>
+    <div class="lr14-3d" aria-hidden="true"></div>
   </div>
-  <figure class="xin-fig" aria-label="Lot reservation: ten vials from lot R2611-01 held for one study; each run of the study uses a vial from the same lot">
-    <div class="xin-fh"><span>Lot reservation</span><b>BPC-157 10 mg · Lot R2611-01</b></div>
-    <div class="xin-tray"><div class="xin-3d" id="xin3d" aria-hidden="true"></div><div class="xin-still" aria-hidden="true"><img src="v/bpc-157.webp" alt="RYXA Labs BPC-157 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="RYXA Labs BPC-157 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="RYXA Labs BPC-157 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="RYXA Labs BPC-157 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="RYXA Labs BPC-157 10 mg research vial, lot-coded label" width="800" height="1000" loading="lazy"></div></div>
-    <div class="xin-study"><div class="xin-sh"><span>Study</span><span class="xin-ct"><b>0</b> of 10 vials used</span></div>
-      <ol class="xin-runs" aria-hidden="true"><li style="--i:0"><span class="n">1</span><b>R2611-01</b></li><li style="--i:1"><span class="n">2</span><b>R2611-01</b></li><li style="--i:2"><span class="n">3</span><b>R2611-01</b></li><li style="--i:3"><span class="n">4</span><b>R2611-01</b></li><li style="--i:4"><span class="n">5</span><b>R2611-01</b></li><li style="--i:5"><span class="n">6</span><b>R2611-01</b></li><li style="--i:6"><span class="n">7</span><b>R2611-01</b></li><li style="--i:7"><span class="n">8</span><b>R2611-01</b></li><li style="--i:8"><span class="n">9</span><b>R2611-01</b></li><li style="--i:9"><span class="n">10</span><b>R2611-01</b></li></ol></div>
-    <figcaption>Hold a single lot for the length of a study, so every experiment uses the same material.</figcaption>
-  </figure>
+  <div class="lr14-log">
+    <div class="lr14-lh"><span>Study</span><span class="lr14-ct"><b>3</b> of 8 vials used</span></div>
+    <ol aria-hidden="true"><li class="lr14-done"><span class="lr14-ex">Experiment 1</span><span class="lr14-slot"><b>R2611-01</b></span></li><li class="lr14-done"><span class="lr14-ex">Experiment 2</span><span class="lr14-slot"><b>R2611-01</b></span></li><li class="lr14-done"><span class="lr14-ex">Experiment 3</span><span class="lr14-slot"><b>R2611-01</b></span></li><li><span class="lr14-ex">Experiment 4</span><span class="lr14-slot"><b>R2611-01</b></span></li><li><span class="lr14-ex">Experiment 5</span><span class="lr14-slot"><b>R2611-01</b></span></li><li><span class="lr14-ex">Experiment 6</span><span class="lr14-slot"><b>R2611-01</b></span></li><li><span class="lr14-ex">Experiment 7</span><span class="lr14-slot"><b>R2611-01</b></span></li><li><span class="lr14-ex">Experiment 8</span><span class="lr14-slot"><b>R2611-01</b></span></li></ol>
+  </div>
+  <span class="lr14-chip" aria-hidden="true">R2611-01</span>
+</figure>
+  <div class="lr14-list"><dl class="lr14-dl"><div><dt>Purchase orders and invoicing</dt><dd>With net-30 terms after approval.</dd></div><div><dt>Documentation packs</dt><dd>COAs, and handling and storage information for your QA records.</dd></div><div><dt>A named contact</dt><dd>For quotes, stock and lead times.</dd></div><div><dt>Founding-lab credit</dt><dd>For verified institutional accounts, opened by 18 December.</dd></div></dl></div>
+  <div class="lr14-cta"><a class="lr14-btn" href="wholesale.html#apply">Apply for an account <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><span>We reply within 2 business days.</span></div>
 </div></section>
 
 <section class="xwn" id="winter" aria-labelledby="wnh">
@@ -2746,6 +2875,38 @@ const fq=$('#faq.xfq');if(fq){const tabs=$$('.xfq-tabs button',fq),ind=$('.xfq-t
 (()=>{const s=document.querySelector('.pf14');if(!s)return;s.classList.add('js');
 if(!('IntersectionObserver' in window)){s.classList.add('in');return}
 new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){o.disconnect();s.classList.add('in')}},{threshold:.3}).observe(s.querySelector('.pf14-coa'))})();
+</script>
+<script type="module">
+/* round 14: lot reservation figure */
+{const fig=document.querySelector('.lr14-fig');if(fig){
+const N=8,START=3,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const stage=fig.querySelector('.lr14-stage'),host=fig.querySelector('.lr14-3d'),rows=[...fig.querySelectorAll('.lr14-log li')],ct=fig.querySelector('.lr14-ct b'),chip=fig.querySelector('.lr14-chip');
+const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getContext('webgl2')||c.getContext('webgl'))}catch(e){return false}})();
+let st=null,n=START,seen=false,busy=false;
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+const show=k=>{rows.forEach((r,j)=>r.classList.toggle('lr14-done',j<k));ct.textContent=k};
+const clearChip=()=>{chip.style.transition='none';chip.className='lr14-chip';chip.style.transform='';void chip.offsetWidth;chip.style.transition=''};
+async function run(){if(busy||!st||reduce)return;busy=true;
+  while(seen){
+    if(n>=N){await wait(2600);if(!seen)break;st.reset();n=0;show(0);await wait(1500);continue}
+    const i=n,row=rows[i];row.classList.add('lr14-now');st.draw(i);
+    await wait(620);
+    const p=st.point(i);if(p){const w=chip.offsetWidth,h=chip.offsetHeight;chip.style.left=Math.round(stage.offsetLeft+p.x-w/2)+'px';chip.style.top=Math.round(stage.offsetTop+p.y-h-9)+'px';chip.classList.add('lr14-in')}
+    await wait(850);
+    if(p){const f=fig.getBoundingClientRect(),c=chip.getBoundingClientRect(),b=row.querySelector('b').getBoundingClientRect();chip.classList.add('lr14-fly');
+      chip.style.transform='translate('+Math.round(b.left-7-c.left)+'px,'+Math.round(b.top-(c.height-b.height)/2-c.top)+'px)'}
+    st.take(i);
+    await wait(640);
+    n=i+1;show(n);row.classList.remove('lr14-now');chip.classList.add('lr14-out');
+    await wait(200);clearChip();
+    await wait(520);
+  }
+  busy=false}
+new IntersectionObserver(es=>{seen=es[0].isIntersecting;if(seen)run()},{threshold:.4}).observe(stage);
+if(gl)new IntersectionObserver(async(es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();try{const {mountStage}=await import('./lib/stage.js');
+  st=await mountStage(host,{mode:'rack',cols:4,instant:true,rim:'#9AA8CF',rackLabel:'R2611-01',pointerZone:stage,vials:Array.from({length:N},()=>({name:'BPC-157',mg:'10 mg',rx:'RX-01',lot:'R2611-01',chip:'#E8A33D',rotY:0}))});
+  st.fill(START);requestAnimationFrame(()=>requestAnimationFrame(()=>{stage.classList.add('lr14-live');if(seen)setTimeout(run,900)}))}catch(e){console.warn(e)}},{rootMargin:'400px'}).observe(fig);
+}}
 </script>
 </body>
 </html>
