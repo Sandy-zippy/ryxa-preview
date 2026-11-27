@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>RYXA Labs home</title>
+<title>RYXA Labs | Documented to the lot.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,300..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -29,7 +29,7 @@ button,input{font:inherit;color:inherit}
 .wrap{max-width:calc(var(--wrap) + var(--gut)*2);margin:0 auto;padding:0 var(--gut)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .mono{font-family:var(--mono)}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--tint);margin:0 0 22px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:0;text-transform:none;color:var(--tint);margin:0 0 22px}
 .h2{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:clamp(34px,4.2vw,58px);line-height:1.02;letter-spacing:-.02em;margin:0;text-wrap:balance}
 .h2 .lt{display:block;font-weight:350;color:var(--mute)}
 .on-ink .h2 .lt{color:var(--silver)}
@@ -209,7 +209,7 @@ nav.main a:hover{color:#fff}
 .seg button{position:relative;z-index:1;height:44px;border:0;background:none;cursor:pointer;font:500 14px var(--body);color:var(--mute);transition:color .25s ease}
 .seg button[aria-pressed=true]{color:var(--bone)}
 .price{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;margin-top:22px;gap:12px}
-.price span{font:400 11.5px var(--mono);color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.price span{font:400 11.5px var(--mono);color:var(--mute);letter-spacing:0;text-transform:none}
 .price b{display:block;font-family:var(--mono);font-size:24px;font-weight:500;margin-top:2px;transition:filter .2s ease,opacity .2s ease}
 .price b.sw{filter:blur(3px);opacity:.3}
 .ladder .fine{grid-column:1/-1;margin:0;font-size:13px;color:var(--mute);border-top:1px solid #D2CFC8;padding-top:16px}
@@ -269,7 +269,7 @@ footer .lat{left:0;right:0;bottom:96px;height:58%;background-image:url(a/lat-foo
   -webkit-mask-image:linear-gradient(to top,#000 10%,rgba(0,0,0,.5) 45%,transparent 90%);mask-image:linear-gradient(to top,#000 10%,rgba(0,0,0,.5) 45%,transparent 90%)}
 .fcols{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px;padding-top:88px}
 .fcols p{margin:16px 0 0;max-width:34ch;font-size:15px}
-.fcols h4{margin:0 0 14px;font:400 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--tint)}
+.fcols h4{margin:0 0 14px;font:400 12px var(--mono);letter-spacing:0;text-transform:none;color:var(--tint)}
 .fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15px}
 .fcols a:hover{color:#fff}
 .fcontact{margin-top:22px}
@@ -1425,6 +1425,426 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
 .fq9-i.open .fq9-a{grid-template-rows:1fr}
 @media (max-width:900px){.fq9-g{grid-template-columns:1fr}.fq9-side{position:static}}
 @media (prefers-reduced-motion:reduce){.sd9 *,.in9 *,.wn9 *,.jr9 *{transition:none!important;animation:none!important}.lotk .k1{opacity:1}.a-lot .s1{background:var(--navy)}}
+
+/* ===== round 10: catalogue by family (Mockup A) on Bone ===== */
+.x8c{background:var(--bone);color:var(--ink);padding:clamp(80px,8vw,128px) 0;position:relative}
+.x8c .h2{color:var(--ink)}
+.x8-h{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:clamp(28px,3vw,44px)}
+.x8-o{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink);font:600 14px var(--body);text-decoration:none;white-space:nowrap;
+  background:linear-gradient(var(--ink),var(--ink)) 0 0/0 100% no-repeat;transition:background-size .45s var(--ease-out),color .3s}
+.x8-o svg{transition:transform .3s var(--ease-out)}.x8-o:hover{background-size:100% 100%;color:var(--bone)}.x8-o:hover svg{transform:translateX(4px)}
+.x8-fams{display:flex;gap:14px;height:clamp(560px,44vw,640px)}
+.x8-f{position:relative;flex:1 1 0;min-width:0;border-radius:20px;background:var(--ink);color:var(--bone);overflow:hidden;isolation:isolate;
+  transition:flex-grow .85s cubic-bezier(.7,0,.2,1),box-shadow .4s;box-shadow:0 30px 60px -40px rgba(18,19,22,.7)}
+.x8-f::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--c);z-index:3}
+.x8-f.on{flex-grow:4.4}
+.x8-hit{all:unset;position:absolute;inset:0;z-index:5;cursor:pointer;border-radius:20px}
+.x8-hit:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+.x8-f.on .x8-hit{display:none}
+.x8-lat{position:absolute;left:0;right:0;top:28%;height:46%;z-index:-1;background:url(a/lat-card.svg) center/cover;opacity:.55;-webkit-mask:radial-gradient(60% 70% at 50% 40%,#000,transparent);mask:radial-gradient(60% 70% at 50% 40%,#000,transparent)}
+.x8-glow{position:absolute;left:10%;right:10%;bottom:4%;height:46%;z-index:-1;background:radial-gradient(50% 50% at 50% 70%,color-mix(in srgb,var(--c) 34%,transparent),transparent 70%);transition:opacity .6s}
+.x8-hd{position:absolute;left:24px;right:24px;top:28px;z-index:2}
+.x8-chip{display:inline-block;font:600 12px/1 var(--mono);color:var(--ink);background:var(--c);padding:6px 8px 5px;border-radius:5px}
+.x8-hd h3{margin:16px 0 0;font:600 clamp(18px,1.5vw,22px)/1.14 var(--display);font-stretch:118%;letter-spacing:-.01em;color:var(--bone);text-wrap:balance}
+.x8-hd p{margin:10px 0 0;font:400 13px var(--mono);color:var(--silver)}
+.x8-lead{position:absolute;left:50%;bottom:58px;height:min(46%,280px);width:auto;transform:translateX(-50%);transition:opacity .45s,transform .7s cubic-bezier(.25,1,.5,1);filter:drop-shadow(0 26px 22px rgba(0,0,0,.55))}
+.x8-go{position:absolute;left:24px;bottom:22px;display:inline-flex;align-items:center;gap:8px;font:600 14px var(--body);color:var(--bone);transition:opacity .3s,gap .3s}
+@media (hover:hover) and (pointer:fine){.x8-f:not(.on):hover .x8-lead{transform:translateX(-50%) translateY(-12px)}.x8-f:not(.on):hover .x8-go{gap:12px}.x8-f:not(.on):hover{box-shadow:0 40px 70px -36px rgba(18,19,22,.85)}}
+.x8-f.on .x8-lead,.x8-f.on .x8-go{opacity:0;pointer-events:none}
+.x8-p{position:absolute;inset:0;z-index:4;display:grid;grid-template-rows:112px minmax(0,1fr) auto auto;padding:0 24px 22px;opacity:0;visibility:hidden;transition:opacity .45s .35s,visibility 0s .8s}
+.x8-f.on .x8-p{opacity:1;visibility:visible;transition:opacity .5s .45s,visibility 0s}
+.x8-f.on .x8-glow{opacity:0}.x8-f.on .x8-hd h3{font-size:clamp(22px,1.9vw,28px)}
+.x8-ls{grid-row:3;list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}.x8-ls::-webkit-scrollbar{display:none}
+.x8-ls button{all:unset;cursor:pointer;font:500 11.5px/1 var(--mono);color:#A3A6AD;padding:6px 9px;border-radius:999px;box-shadow:inset 0 0 0 1px #33363E;white-space:nowrap;transition:color .25s,box-shadow .25s,background .25s}
+.x8-ls button:hover{color:var(--bone);box-shadow:inset 0 0 0 1px #5A5E68}
+.x8-ls button[aria-current=true]{color:var(--ink);background:var(--c);box-shadow:none}
+.x8-ls button:focus-visible{outline:2px solid var(--c);outline-offset:2px}
+.x8-st{grid-row:2;position:relative;margin:0 -24px}
+.x8-st .stcanvas,.x8-3d{position:absolute;inset:0;width:100%;height:100%;display:block}
+.x8-still{position:absolute;inset:6% 4% 0;display:flex;align-items:flex-end;justify-content:center;gap:0;transition:opacity .6s}
+.x8-still img{height:72%;width:auto;margin:0 -2.2%;filter:drop-shadow(0 18px 16px rgba(0,0,0,.5))}
+.x8-st.on .x8-still{opacity:0}
+.x8-in{grid-row:4;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;column-gap:24px;row-gap:10px;align-items:end;border-top:1px solid #2A2D33;padding-top:16px}
+.x8-nm{grid-row:1/3;align-self:center}.x8-lad,.x8-soon{grid-column:2;grid-row:1;justify-self:end}.x8-act{grid-column:2;grid-row:2;justify-self:end}
+.x8-nm{min-width:0}
+.x8-nm a{display:block;font:600 clamp(24px,2.3vw,34px)/1.05 var(--display);font-stretch:120%;letter-spacing:-.01em;color:var(--bone);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x8-nm a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.x8-nm p{margin:10px 0 0;font:400 13px var(--mono);color:#A3A6AD;white-space:nowrap}.x8-nm p b{font-weight:500;color:var(--bone)}.x8-nm p a{display:inline;font:inherit;color:var(--tint);text-decoration:underline;text-underline-offset:3px}
+.x8-lad{display:flex;gap:6px}
+.x8-lad div{min-width:70px;padding:6px 10px;border-radius:10px;background:#1E2024;box-shadow:inset 0 0 0 1px #2E3138}
+.x8-lad div:first-child{box-shadow:inset 0 0 0 1.5px var(--c)}
+.x8-lad span{display:block;font:500 10.5px var(--mono);color:#8E929B}.x8-lad b{font:600 16px var(--display);font-stretch:108%;color:var(--bone)}
+.x8-soon{font:500 13px var(--mono);color:#A3A6AD;padding-bottom:8px}
+.x8-act{display:flex;gap:8px}
+.x8-add,.x8-vd{all:unset;box-sizing:border-box;cursor:pointer;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 18px;border-radius:999px;font:600 14px var(--body);white-space:nowrap}
+.x8-add{background:var(--bone);color:var(--ink);transition:background .2s,transform .15s}
+.x8-add:hover{background:#fff}.x8-add:active{transform:scale(.97)}
+.x8-add .x8-ok{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;background:var(--navy);color:var(--bone);transform:translateY(101%);transition:transform .35s cubic-bezier(.25,1,.5,1)}
+.x8-add.done .x8-ok{transform:none}
+.x8-vd{color:var(--bone);box-shadow:inset 0 0 0 1px #4A4E58;background:linear-gradient(var(--bone),var(--bone)) 0 0/0 100% no-repeat;transition:background-size .45s var(--ease-out),color .3s}
+.x8-vd:hover{background-size:100% 100%;color:var(--ink)}
+.x8-vd svg,.x8-add svg{transition:transform .3s var(--ease-out)}.x8-vd:hover svg{transform:translateX(4px)}
+.x8-add:focus-visible,.x8-vd:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+.x8-in.swp>*{animation:x8in .5s cubic-bezier(.25,1,.5,1) both}.x8-in.swp>*:nth-child(2){animation-delay:.05s}.x8-in.swp>*:nth-child(3){animation-delay:.1s}
+@keyframes x8in{from{opacity:0;transform:translateY(8px)}}
+.fly8{position:fixed;left:0;top:0;width:60px;height:75px;object-fit:contain;z-index:200;pointer-events:none}
+@media (max-width:1100px){
+  .x8-in{grid-template-columns:1fr}.x8-nm{grid-row:auto}.x8-lad,.x8-soon,.x8-act{grid-column:1;grid-row:auto;justify-self:start}
+
+}
+@media (max-width:900px){
+  .x8-h{flex-direction:column;align-items:flex-start}
+  .x8-fams{flex-direction:column;height:auto;gap:10px}
+  .x8-f{flex:none;height:104px;transition:height .7s cubic-bezier(.7,0,.2,1)}
+  .x8-f.on{height:620px}
+  .x8-f::before{height:3px}
+  .x8-hd{top:22px;left:20px;right:96px}.x8-hd h3{margin-top:10px;font-size:19px}.x8-hd p{display:none}
+  .x8-f.on .x8-hd{max-width:none;right:20px}.x8-f.on .x8-hd p{display:block}
+  .x8-lead{left:auto;right:18px;bottom:-30px;height:120px;transform:none}
+  .x8-go{display:none}
+  .x8-lat{top:20%}
+  .x8-p{padding:0 20px 20px;grid-template-rows:96px minmax(0,1fr) auto auto}
+  .x8-st{margin:0 -20px}
+  .x8-ls{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin-right:-20px;padding-right:20px}
+  .x8-act{justify-self:stretch!important;width:100%}.x8-act>*{flex:1;justify-content:center}
+}
+
+/* ===== round 10: our standard, the annotated vial on Bone ===== */
+.x9s{position:relative;background:var(--bone);color:var(--ink);height:calc(100vh * 3.4)}
+.x9s::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:#E2DED5}
+.x9-pin{position:sticky;top:76px;height:calc(100vh - 76px);min-height:620px;overflow:hidden;
+  background:radial-gradient(40% 50% at 50% 62%,rgba(154,168,207,.28),transparent 70%),var(--bone)}
+.x9-pin::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background:url(a/lat-bone.svg) center/1200px auto;-webkit-mask:radial-gradient(34% 46% at 50% 60%,#000,transparent 75%);mask:radial-gradient(34% 46% at 50% 60%,#000,transparent 75%)}
+.x9-in{height:100%;display:flex;flex-direction:column;padding-top:clamp(28px,4vh,56px);padding-bottom:clamp(20px,3vh,36px);position:relative;z-index:1}
+.x9-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,64px);align-items:end}
+.x9-head .h2{color:var(--ink)}.x9-head .lede{margin:0;color:#4E525A;max-width:54ch}
+.x9-stage{position:relative;flex:1;min-height:0;margin-top:clamp(12px,2vh,28px)}
+.x9-vial{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);aspect-ratio:.62}
+.x9-vial .stcanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.x9-still{position:absolute;left:50%;top:50%;height:86%;width:auto;transform:translate(-50%,-50%);transition:opacity .6s}
+.x9-vial.on .x9-still{opacity:0}
+.x9-co{position:absolute;width:min(27%,330px);transform:translateY(-14px);transition:opacity .4s}
+.x9-l{left:0}.x9-r{right:0}
+.x9-co h3{margin:0;font:600 clamp(18px,1.45vw,22px)/1.15 var(--display);font-stretch:118%;color:#9A9DA4;transition:color .4s}
+.x9-co p{margin:8px 0 0;font-size:15px;line-height:1.55;color:#9A9DA4;transition:color .4s;max-width:36ch}
+.x9-r h3,.x9-r p{margin-left:auto;text-align:right}
+.x9-co.on h3{color:var(--ink)}.x9-co.on p{color:#3E4148}
+.x9-co.done h3{color:#5B5E66}.x9-co.done p{color:#7A7E86}
+/* leader line: from the copy to the vial; drawn when its commitment is current */
+.x9-ln{position:absolute;top:14px;height:2px;pointer-events:none}
+.x9-l .x9-ln{left:calc(100% + 18px)}.x9-r .x9-ln{right:calc(100% + 18px)}
+.x9-ln::before{content:"";position:absolute;inset:0;background:var(--navy);transform:scaleX(0);transition:transform .7s cubic-bezier(.65,0,.35,1)}
+.x9-l .x9-ln::before{transform-origin:left}.x9-r .x9-ln::before{transform-origin:right}
+.x9-ln::after{content:"";position:absolute;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--bone);box-shadow:inset 0 0 0 2px #B7BBC4;transition:box-shadow .3s,background .3s}
+.x9-l .x9-ln::after{left:-4px}.x9-r .x9-ln::after{right:-4px}
+.x9-ln i{position:absolute;top:50%;width:13px;height:13px;margin-top:-6.5px;border-radius:50%;background:var(--navy);transform:scale(0);transition:transform .4s cubic-bezier(.34,1.56,.64,1) .55s;box-shadow:0 0 0 5px rgba(35,55,102,.16)}
+.x9-l .x9-ln i{right:-6px}.x9-r .x9-ln i{left:-6px}
+.x9-co.on .x9-ln::before,.x9-co.done .x9-ln::before{transform:none}.x9-co.done .x9-ln::before{background:#B7BBC4}
+.x9-co.on .x9-ln::after{background:var(--navy);box-shadow:none}
+.x9-co.on .x9-ln i{transform:none}
+.x9-foot{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.x9-prog{list-style:none;margin:0;padding:0;display:flex;gap:6px}
+.x9-prog li{width:28px;height:3px;border-radius:2px;background:#D8D4CB;transition:background .3s}
+.x9-prog li.on{background:var(--navy)}
+@media (max-width:1100px){.x9-co{width:30%}.x9-co p{font-size:14px}}
+@media (max-width:900px){
+  .x9s{height:auto}
+  .x9-pin{position:relative;top:0;height:auto;min-height:0;overflow:visible;padding:72px 0}
+  .x9-head{grid-template-columns:1fr;gap:16px}
+  .x9-stage{display:flex;flex-direction:column;gap:22px}
+  .x9-vial{position:relative;left:auto;transform:none;height:380px;align-self:center}
+  .x9-co{position:relative;width:auto;top:auto!important;transform:none;padding-left:22px}
+  .x9-co h3,.x9-co p{color:var(--ink)!important;text-align:left!important;margin-left:0!important}.x9-co p{color:#4E525A!important}
+  .x9-ln{display:none}.x9-co::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:var(--navy)}
+  .x9-prog{display:none}.x9-foot{margin-top:28px}
+}
+
+/* ===== round 10: supply for labs, on Navy ===== */
+.xin{background:var(--navy);color:var(--bone);padding:clamp(80px,8vw,128px) 0;position:relative;overflow:hidden;isolation:isolate}
+.xin::before{content:"";position:absolute;right:-10%;top:-20%;width:70%;height:140%;z-index:-1;background:radial-gradient(50% 50% at 50% 50%,rgba(154,168,207,.22),transparent 70%)}
+.xin-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,88px);align-items:center}
+.xin .h2{color:var(--bone)}.xin .lede{color:#D5DAEA;max-width:46ch}
+.xin-dl{margin:32px 0 0;border-top:1px solid rgba(245,243,238,.16)}
+.xin-dl div{display:grid;grid-template-columns:minmax(0,13ch) 1fr;gap:20px;padding:15px 0;border-bottom:1px solid rgba(245,243,238,.16)}
+.xin-dl dt{font:600 15px/1.4 var(--display);font-stretch:112%;color:var(--bone)}.xin-dl dd{margin:0;font-size:15px;line-height:1.55;color:#C9D1EA}
+.xin-dl div:last-child dt{color:var(--tint)}
+.xin-cta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;margin-top:30px}.xin-cta span{font-size:14px;color:#C9D1EA}
+.xin-btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 24px;border-radius:999px;background:var(--bone);color:var(--ink);font:600 15px var(--body);text-decoration:none;transition:background .2s,transform .15s}
+.xin-btn svg{transition:transform .3s var(--ease-out)}.xin-btn:hover{background:#fff}.xin-btn:hover svg{transform:translateX(4px)}.xin-btn:active{transform:scale(.97)}
+.xin-btn:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+.xin-fig{margin:0;border-radius:22px;background:#1A2A52;box-shadow:inset 0 0 0 1px rgba(245,243,238,.1),0 40px 80px -40px rgba(6,10,24,.8);padding:clamp(20px,2.2vw,30px);overflow:hidden}
+.xin-fh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.xin-fh span{font:600 18px var(--display);font-stretch:115%;color:var(--bone)}.xin-fh b{font:500 13px var(--mono);color:var(--tint)}
+.xin-tray{position:relative;height:clamp(220px,20vw,280px);margin:4px -10px 0}
+.xin-3d .stcanvas,.xin-3d{position:absolute;inset:0;width:100%;height:100%;display:block}
+.xin-still{position:absolute;inset:14% 6% 4%;display:flex;justify-content:center;align-items:flex-end;transition:opacity .6s}
+.xin-still img{height:80%;width:auto;margin:0 -1%}
+.xin-tray.on .xin-still{opacity:0}
+.xin-study{margin-top:6px;border-top:1px solid rgba(245,243,238,.12);padding-top:16px}
+.xin-sh{display:flex;justify-content:space-between;font:500 12px var(--mono);color:#AEB8D8;margin-bottom:10px}.xin-ct b{color:var(--bone);font-weight:500}
+.xin-runs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}
+.xin-runs li{position:relative;height:58px;border-radius:9px;background:rgba(245,243,238,.05);box-shadow:inset 0 0 0 1px rgba(245,243,238,.12);overflow:hidden}
+.xin-runs .n{position:absolute;left:8px;top:7px;font:500 11px var(--mono);color:#8F9BC3}
+.xin-runs b{position:absolute;left:0;right:0;bottom:7px;text-align:center;font:500 10.5px var(--mono);color:var(--ink);opacity:0;transform:translateY(6px);transition:opacity .3s,transform .4s cubic-bezier(.25,1,.5,1)}
+.xin-runs li::before{content:"";position:absolute;inset:0;background:var(--bone);transform:scaleY(0);transform-origin:bottom;transition:transform .45s cubic-bezier(.25,1,.5,1)}
+.xin-runs li.on::before{transform:none}.xin-runs li.on .n{color:#5B5E66}.xin-runs li.on b{opacity:1;transform:none}
+.xin-runs li.now{box-shadow:inset 0 0 0 1.5px var(--tint),0 0 0 4px rgba(154,168,207,.18)}
+.xin-fig figcaption{margin-top:16px;font-size:14px;line-height:1.5;color:#C9D1EA}
+@media (max-width:1100px){.xin-g{grid-template-columns:1fr}}
+@media (max-width:600px){
+  .xin-dl div{grid-template-columns:1fr;gap:4px}
+  .xin-runs{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .xin-tray{height:230px}
+}
+
+/* ===== round 10: winter shipping, the dispatch board on Bone ===== */
+.xwn{background:var(--bone);color:var(--ink);padding:clamp(80px,8vw,128px) 0;border-top:1px solid #E2DED5}
+.xwn-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,88px);align-items:center}
+.xwn .h2{color:var(--ink)}
+.xwn-g>*{min-width:0}
+.xwn-p{margin:22px 0 0;font-size:17px;line-height:1.6;color:#4E525A;max-width:48ch}
+.xwn-ind{margin:30px 0 0;padding:20px 22px 18px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px #E3E0D8}
+.xwn-ih{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.xwn-ih p{margin:0;font:600 17px var(--display);font-stretch:115%}
+.xwn-read{font:500 13px var(--mono)!important;color:#6B6E75;white-space:nowrap}.xwn-read b{font-size:22px;font-weight:500;color:var(--navy)}
+.xwn-scale{position:relative;height:28px;margin:16px 0 30px;border-radius:7px;background:linear-gradient(90deg,rgba(154,168,207,.6),#EEECE6 44%,#EEECE6 62%,rgba(224,115,90,.55))}
+.xwn-scale .band{position:absolute;top:0;bottom:0;left:48.9%;width:13.3%;border-radius:4px;background:var(--navy);transform:scaleX(0);transition:transform .9s var(--ease-out) .2s}
+.xwn-scale .mk{position:absolute;top:-5px;bottom:-5px;left:53%;width:2px;border-radius:2px;background:var(--ink);opacity:0;transition:opacity .4s 1s}
+.xwn-scale i{position:absolute;top:calc(100% + 7px);transform:translateX(-50%);font:400 11px var(--mono);font-style:normal;color:#6B6E75;white-space:nowrap}
+.xwn-scale i:first-of-type{transform:none}.xwn-scale i:last-of-type{transform:translateX(-100%)}
+.xwn.in .xwn-scale .band{transform:none}.xwn.in .xwn-scale .mk{opacity:1;animation:xwnmk 6s ease-in-out 1.4s infinite}
+@keyframes xwnmk{0%,100%{left:52%}50%{left:58%}}
+.xwn-ind figcaption{font-size:14px;line-height:1.5;color:#5B5E66}
+.xwn-links{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:28px}
+.xwn-l{font:600 14px var(--body);color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+/* the board */
+.xwn-board{border-radius:24px;background:var(--ink);color:var(--bone);padding:clamp(24px,2.8vw,40px);box-shadow:0 50px 90px -50px rgba(18,19,22,.9);display:flex;flex-direction:column;gap:clamp(18px,2vw,26px)}
+.xwn-row{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.xwn-k{font:500 13px var(--mono);color:var(--tint)}.xwn-v{font:500 14px var(--mono);color:var(--silver)}
+.fl,.fl-gap{display:inline-block}
+.fl{position:relative;width:1.2ch;margin-right:.1ch;text-align:center;font-family:var(--mono);font-weight:500;color:var(--bone);background:linear-gradient(#2B2E35 0 49.5%,#202227 50.5% 100%);border-radius:.1em;line-height:1.22;transform-origin:50% 50%;box-shadow:0 2px 0 rgba(0,0,0,.35)}
+.fl::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.55)}
+.fl.f{animation:flp .09s linear}
+@keyframes flp{from{transform:rotateX(70deg);filter:brightness(1.6)}to{transform:none}}
+.fl-gap{width:.5ch}
+.xwn-big{font-size:clamp(44px,5.3vw,86px);white-space:nowrap;letter-spacing:0}
+.xwn-cd{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(16px,2.2vw,32px);padding-top:6px;border-top:1px solid #2A2D33}
+.xwn-cd>div{display:flex;flex-direction:column;gap:8px;padding-top:18px}
+.xwn-n{font-size:clamp(30px,3vw,46px)}.xwn-n .fl{background:linear-gradient(#2C3E6E 0 49.4%,#233766 50.6% 100%)}
+.xwn-cd span:not(.xwn-n):not(.fl){font:400 12px var(--mono);color:#8E929B}
+.xwn-re{border-top:1px solid #2A2D33;padding-top:20px}
+.xwn-sm{font-size:clamp(20px,1.8vw,26px);white-space:nowrap}
+.xwn-wk ol{list-style:none;margin:0;padding:0;display:flex;gap:6px}
+.xwn-wk li{width:44px;padding:8px 0;text-align:center;border-radius:8px;font:500 12px var(--mono);color:#5D616A;background:repeating-linear-gradient(135deg,#1E2024 0 5px,#191B1F 5px 10px)}
+.xwn-wk li.go{color:var(--bone);background:var(--navy)}
+@media (max-width:1100px){.xwn-g{grid-template-columns:1fr}}
+@media (max-width:600px){.xwn-wk li{width:34px}.xwn-row{flex-wrap:wrap}.xwn-big{font-size:min(60px,calc((100vw - 92px)/7.2))}.xwn-board{padding:22px 20px}.xwn-cd{gap:14px}}
+
+/* ===== round 10: journal on Bone ===== */
+.xjr{background:var(--bone);color:var(--ink);padding:clamp(80px,8vw,128px) 0;border-top:1px solid #E2DED5}
+.xjr .h2{color:var(--ink)}
+.xjr-h{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:clamp(28px,3vw,44px)}
+.xjr-g{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:16px}
+.jx{position:relative;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;text-decoration:none;color:inherit;isolation:isolate;transition:transform .5s cubic-bezier(.25,1,.5,1),box-shadow .5s}
+.jx-1{grid-row:1/3;background:var(--ink);color:var(--bone)}
+.jx-2{background:var(--navy);color:var(--bone)}
+.jx-3{background:#fff;box-shadow:inset 0 0 0 1px #E3E0D8}
+@media (hover:hover) and (pointer:fine){.jx:hover{transform:translateY(-4px);box-shadow:0 34px 60px -36px rgba(18,19,22,.55)}.jx:hover .jx-go svg{transform:translateX(4px)}}
+.jx:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.jx-m{padding:clamp(20px,2vw,30px);display:flex;flex-direction:column;gap:10px;margin-top:auto}
+.jx-k{font:500 12px var(--mono);color:var(--tint)}.jx-3 .jx-k{color:var(--navy)}
+.jx h3{margin:0;font:600 clamp(20px,1.7vw,26px)/1.12 var(--display);font-stretch:118%;letter-spacing:-.01em}
+.jx-1 h3{font-size:clamp(26px,2.4vw,36px)}
+.jx p{margin:0;font-size:15px;line-height:1.55;color:#B9BCC4;max-width:52ch}.jx-2 p{color:#D5DAEA}.jx-3 p{color:#4E525A}
+.jx-go{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font:600 14px var(--body)}.jx-go svg{transition:transform .3s var(--ease-out)}
+/* the COA, with its five checks pinned on */
+.jx-coa{position:relative;flex:1;min-height:340px;margin:clamp(20px,2.4vw,36px) clamp(20px,2.4vw,36px) 0}
+.jx-sheet{position:absolute;inset:0 0 0 0;border-radius:12px;background:var(--bone);color:var(--ink);padding:18px 20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.jx-top{display:flex;gap:10px;align-items:baseline;font-size:12px;color:#5B5E66}.jx-top b{font:600 15px var(--display);font-stretch:112%;color:var(--ink)}
+.jx-meta{display:flex;gap:8px;flex-wrap:wrap}.jx-meta span{font:500 12px var(--mono);padding:6px 9px;border-radius:7px;background:#ECEAE4;color:#4E525A}.jx-meta b{font-weight:500;color:var(--ink)}
+.jx-tr{flex:1;width:100%;height:100%;min-height:0;border-radius:8px;background:linear-gradient(180deg,#EEF0F6,#E9E8E3)}
+.jx-tr .f{fill:rgba(35,55,102,.12)}.jx-tr .t{fill:none;stroke:var(--navy);stroke-width:1.8;vector-effect:non-scaling-stroke;stroke-dasharray:100;stroke-dashoffset:100}
+.xjr.in .jx-tr .t{transition:stroke-dashoffset 2.2s cubic-bezier(.25,1,.5,1) .3s;stroke-dashoffset:0}
+.jx-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.jx-foot span{font:500 11px var(--mono);color:#6B6E75;padding:8px 10px;border-radius:7px;background:#ECEAE4}.jx-foot b{display:block;font:600 17px var(--display);font-stretch:108%;color:var(--ink)}
+.jx-meta span,.jx-foot span{position:relative}
+.jx-trw{position:relative;flex:1;min-height:0;display:flex}
+.jp{position:absolute;top:-9px;right:-9px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--bone);font:600 11px/1 var(--mono);font-style:normal;box-shadow:0 0 0 3px var(--bone);transform:scale(0);transition:transform .45s cubic-bezier(.34,1.56,.64,1);transition-delay:calc(1.4s + var(--i)*.2s)}
+.jp-pk{top:auto;right:auto;left:65%;top:9%;margin-left:-26px;box-shadow:0 0 0 3px #EEF0F6}
+.xjr.in .jp{transform:none}
+.jx-key{list-style:none;margin:16px clamp(20px,2.4vw,36px) 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;font:500 12px var(--mono);color:#B9BCC4}
+.jx-key li{display:flex;align-items:center;gap:7px;opacity:0;transition:opacity .4s;transition-delay:calc(1.4s + var(--i)*.2s)}
+.jx-key b{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--bone);font-size:10px;font-weight:600}
+.xjr.in .jx-key li{opacity:1}
+@media (hover:hover) and (pointer:fine){.jx-1:hover .jx-sheet{transform:translateY(-3px) rotate(-.4deg)}}
+.jx-sheet{transition:transform .6s cubic-bezier(.25,1,.5,1)}
+/* lot code decoded, using the article's own example */
+.jx-lot{padding:clamp(22px,2.4vw,32px) clamp(20px,2vw,30px) 0}
+.jx-code{display:flex;gap:2px;font:500 clamp(36px,3.4vw,52px)/1 var(--mono);letter-spacing:.01em}
+.jx-code span{padding:6px 6px;border-radius:8px;transition:background .45s,color .45s}
+.jx-keys{display:flex;flex-direction:column;gap:6px;margin-top:14px;font:500 12px var(--mono);color:#AEB8D8}
+.jx-keys span{display:flex;align-items:center;gap:8px;opacity:.5;transition:opacity .45s,color .45s}.jx-keys i{width:8px;height:8px;border-radius:2px;background:currentColor}
+.jx-says{margin:16px 0 0;font:500 13px var(--mono);color:var(--bone);opacity:0;transition:opacity .45s}
+.jx-lot[data-k=b] .jx-code .b,.jx-lot[data-k=c] .jx-code .c,.jx-lot[data-k=all] .jx-code span{background:var(--bone);color:var(--navy)}
+.jx-lot[data-k=all] .jx-code{gap:0}.jx-lot[data-k=all] .jx-code span{border-radius:0}.jx-lot[data-k=all] .jx-code .a{border-radius:8px 0 0 8px}.jx-lot[data-k=all] .jx-code .c{border-radius:0 8px 8px 0}
+.jx-lot[data-k=b] .jx-keys .b,.jx-lot[data-k=c] .jx-keys .c,.jx-lot[data-k=all] .jx-keys span{opacity:1;color:var(--bone)}
+.jx-lot[data-k=all] .jx-says{opacity:1}
+/* winter: the dispatch week */
+.jx-win{padding:clamp(22px,2.4vw,32px) clamp(20px,2vw,30px) 0;display:flex;flex-direction:column;gap:12px}
+.jx-win ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.jx-win li{height:44px;display:grid;place-items:center;border-radius:9px;font:500 12px var(--mono);color:#9A9DA4;background:repeating-linear-gradient(135deg,#F1EFE9 0 5px,#E8E5DE 5px 10px);transform:translateY(8px);opacity:0;transition:transform .5s cubic-bezier(.25,1,.5,1),opacity .4s;transition-delay:calc(.2s + var(--i)*.07s)}
+.jx-win li.go{background:var(--navy);color:var(--bone)}
+.xjr.in .jx-win li{transform:none;opacity:1}
+.jx-wn{margin:0;font:500 12px var(--mono);color:var(--navy)}
+/* ===== lot updates: Mockup C, Bone with the lattice at 20 % ===== */
+.xsg{background:var(--bone);padding:0 0 clamp(80px,8vw,128px)}
+.xsg-b{position:relative;overflow:hidden;isolation:isolate;border-radius:24px;background:#ECE9E2;box-shadow:inset 0 0 0 1px #DEDAD0;padding:clamp(28px,3.4vw,52px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:clamp(20px,4vw,64px);align-items:center}
+.xsg-lat{position:absolute;inset:0;z-index:-1;background:url(a/lat-bone.svg) right center/900px auto;opacity:.22;-webkit-mask:linear-gradient(90deg,transparent 30%,#000 75%);mask:linear-gradient(90deg,transparent 30%,#000 75%);animation:xsgd 40s linear infinite}
+@keyframes xsgd{to{background-position:calc(100% + 900px) center}}
+.xsg h2{margin:0;font:700 clamp(28px,3vw,46px)/1.04 var(--display);font-stretch:125%;letter-spacing:-.02em;color:var(--ink)}.xsg h2 span{color:var(--silver)}
+.xsg-c p{margin:12px 0 0;font-size:16px;color:#4E525A}
+.xsg-f{display:flex;flex-wrap:wrap;gap:8px;padding:6px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px #DEDAD0,0 20px 40px -30px rgba(18,19,22,.4);transition:box-shadow .3s}
+.xsg-f:focus-within{box-shadow:inset 0 0 0 1.5px var(--navy),0 20px 40px -30px rgba(18,19,22,.4)}
+.xsg-f input{flex:1;min-width:0;border:0;outline:0;background:none;padding:0 18px;font:400 16px var(--body);color:var(--ink)}
+.xsg-f button{all:unset;cursor:pointer;position:relative;overflow:hidden;height:50px;padding:0 22px;border-radius:999px;background:var(--ink);color:var(--bone);font:600 15px var(--body);white-space:nowrap;transition:background .2s}
+.xsg-f button:hover{background:var(--navy)}.xsg-f button:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.xsg-f .d{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;background:var(--navy);transform:translateY(101%);transition:transform .4s cubic-bezier(.25,1,.5,1)}
+.xsg-f.ok .d{transform:none}
+.xsg-msg{flex-basis:100%;margin:0;padding:0 18px;font-size:13px;color:#B5462E;min-height:0}
+.xsg-msg:empty{display:none}
+/* ===== FAQ on Ink ===== */
+.xfq{background:var(--ink);color:var(--bone);padding:clamp(80px,8vw,128px) 0}
+.xfq .h2{color:var(--bone)}
+.xfq-g{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,5vw,88px);align-items:start}
+.xfq-g>*{min-width:0}
+.xfq-side{position:sticky;top:110px;display:flex;flex-direction:column;gap:22px}
+.xfq-s{display:flex;align-items:center;gap:10px;height:50px;padding:0 18px;border-radius:999px;background:#1B1D22;box-shadow:inset 0 0 0 1px #33363E;color:#8E929B;transition:box-shadow .3s}
+.xfq-s:focus-within{box-shadow:inset 0 0 0 1.5px var(--tint)}
+.xfq-s input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--bone);font:400 15px var(--body)}.xfq-s input::placeholder{color:#6E727B}
+.xfq-ct{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.xfq-ct a{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;background:var(--graphite);box-shadow:inset 0 0 0 1px #2A2D33;color:var(--bone);text-decoration:none;font:500 15px var(--body);transition:background .25s,box-shadow .25s}
+.xfq-ct a svg{flex:none;color:var(--tint)}.xfq-ct small{display:block;font:400 12px var(--mono);color:#8E929B;margin-bottom:2px}
+.xfq-ct a:hover{background:#24272D;box-shadow:inset 0 0 0 1px #3A3E47}
+.xfq-all{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--body);color:var(--bone);text-decoration:none}.xfq-all svg{transition:transform .3s}.xfq-all:hover svg{transform:translateX(4px)}
+.xfq-tabs{position:relative;display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;border-radius:999px;background:#1B1D22;box-shadow:inset 0 0 0 1px #2A2D33;margin-bottom:22px}
+.xfq-tabs .ind{position:absolute;top:4px;left:0;height:calc(100% - 8px);border-radius:999px;background:var(--bone);transition:transform .45s cubic-bezier(.25,1,.5,1),width .45s cubic-bezier(.25,1,.5,1);z-index:0}
+.xfq-tabs button{all:unset;position:relative;z-index:1;cursor:pointer;height:38px;padding:0 16px;border-radius:999px;font:500 14px var(--body);color:#B9BCC4;transition:color .3s;white-space:nowrap}
+.xfq-tabs button.on{color:var(--ink)}.xfq-tabs button:focus-visible{outline:2px solid var(--tint);outline-offset:2px}
+.xfq-list{display:flex;flex-direction:column;gap:8px}
+.xfq-i{border-radius:16px;background:var(--graphite);box-shadow:inset 0 0 0 1px #2A2D33;transition:background .3s,box-shadow .3s}
+.xfq-i.open{background:#22252B;box-shadow:inset 0 0 0 1px #3A3E47}
+.xfq-i[hidden]{display:none}
+.xfq-i h3{margin:0}
+.xfq-i h3 button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 22px;font:600 clamp(16px,1.25vw,18px)/1.3 var(--display);font-stretch:110%;color:var(--bone)}
+.xfq-i h3 button:focus-visible{outline:2px solid var(--tint);outline-offset:-2px;border-radius:16px}
+.xfq-i h3 i{flex:none;position:relative;width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1px #4A4E58;transition:background .3s,box-shadow .3s,transform .45s cubic-bezier(.25,1,.5,1)}
+.xfq-i h3 i::before,.xfq-i h3 i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.6px;margin:-.8px 0 0 -5.5px;background:currentColor}
+.xfq-i h3 i::after{transform:rotate(90deg)}
+.xfq-i.open h3 i{transform:rotate(45deg);background:var(--bone);color:var(--ink);box-shadow:none}
+.xfq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.25,1,.5,1)}
+.xfq-a>div{overflow:hidden;min-height:0}
+.xfq-a p{margin:0;padding:0 22px 22px;font-size:16px;line-height:1.6;color:#C9CBD0;max-width:64ch;opacity:0;transform:translateY(-4px);transition:opacity .3s,transform .4s}
+.xfq-a a{color:var(--bone);text-decoration:underline;text-underline-offset:3px}
+.xfq-i.open .xfq-a{grid-template-rows:1fr}.xfq-i.open .xfq-a p{opacity:1;transform:none;transition-delay:.1s}
+.xfq-none{margin:18px 0 0;color:#B9BCC4}.xfq-none a{color:var(--bone)}
+@media (max-width:1100px){.xjr-g{grid-template-columns:1fr 1fr}.jx-1{grid-column:1/-1;grid-row:auto}.jx-coa{min-height:320px}.xsg-b{grid-template-columns:1fr}}
+@media (max-width:900px){.xfq-g{grid-template-columns:1fr}.xfq-side{position:static}.xfq-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;border-radius:16px}.xfq-tabs::-webkit-scrollbar{display:none}}
+@media (max-width:700px){.xjr-g{grid-template-columns:1fr}.xjr-h{flex-direction:column;align-items:flex-start}.jx-coa{min-height:300px}.jp em{display:none}.xsg-f{border-radius:20px}.xsg-f input{height:48px;flex-basis:100%}.xsg-f button{flex:1;text-align:center}}
+
+/* ===== round 10: lab proof on Bone, an Ink instrument ===== */
+.xpf{background:var(--bone);color:var(--ink);padding:clamp(80px,8vw,128px) 0}
+.xpf .h2{color:var(--ink);margin:0}.xpf .h2 .lt{display:block;color:#8A8D94}
+.xpf-h{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(32px,3.4vw,52px)}
+.xpf .lede{color:#4E525A;margin:0;max-width:44ch}
+.xpf-links{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:22px}
+.xpf-ins{position:relative;isolation:isolate;overflow:hidden;border-radius:28px;background:var(--ink);color:var(--bone);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);grid-template-rows:auto auto;box-shadow:0 60px 100px -60px rgba(18,19,22,.75)}
+.xpf-ins>*{min-width:0}
+.xpf-ins::before{content:"";position:absolute;left:-10%;top:-10%;width:60%;height:120%;z-index:-1;background:radial-gradient(50% 50% at 50% 50%,rgba(35,55,102,.85),transparent 70%)}
+/* the vial and the scan that reads its label */
+.xpf-vial{position:relative;min-height:420px}
+.xpf-3d,.xpf-3d .stcanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.xpf-still{position:absolute;left:50%;top:50%;height:74%;width:auto;transform:translate(-50%,-50%);transition:opacity .6s}
+.xpf-vial.on .xpf-still{opacity:0}
+.xpf-scan{position:absolute;left:28%;right:28%;top:44%;height:2px;border-radius:2px;background:var(--tint);box-shadow:0 0 18px 4px rgba(154,168,207,.55);opacity:0;pointer-events:none}
+.xpf.reading .xpf-scan{animation:xpfscan 1.1s cubic-bezier(.45,0,.55,1) 2 alternate}
+@keyframes xpfscan{0%{opacity:0;top:44%}12%{opacity:1}88%{opacity:1}100%{opacity:0;top:82%}}
+/* lookup and report */
+.xpf-r{padding:clamp(22px,2.6vw,40px) clamp(22px,2.6vw,40px) 0 0;display:flex;flex-direction:column;gap:14px}
+.xpf-q{display:flex;align-items:center;gap:14px;height:56px;padding:0 10px 0 20px;border-radius:14px;background:#1B1D22;box-shadow:inset 0 0 0 1px #33363E}
+.xpf-q .k{font:500 12px var(--mono);color:#8E929B}
+.xpf-q .v{flex:1;display:flex;align-items:center;font:500 18px var(--mono);color:var(--bone);letter-spacing:.04em;min-height:1em}
+.xpf-q .car{width:2px;height:22px;margin-left:3px;background:var(--tint);animation:xpfcar 1s steps(1) infinite}
+@keyframes xpfcar{50%{opacity:0}}
+.xpf.found .xpf-q .car{display:none}
+.xpf-q .m{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:10px;background:var(--navy);color:var(--bone);font:500 13px var(--body);opacity:0;transform:translateX(8px);transition:opacity .35s,transform .45s cubic-bezier(.25,1,.5,1)}
+.xpf.found .xpf-q .m{opacity:1;transform:none}
+.xcoa{position:relative;margin:0;background:var(--bone);color:var(--ink);border-radius:16px 16px 0 0;padding:20px 22px 20px}
+.xc-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:13px;color:#5B5E66}.xc-top b{font:600 16px var(--display);font-stretch:112%;color:var(--ink)}.xc-top em{margin-left:auto;font:500 12px var(--mono);font-style:normal;color:var(--navy)}
+.xc-meta,.xc-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.xc-foot{margin:14px 0 0}
+.xc-meta>div,.xc-foot>div{position:relative;overflow:hidden;padding:9px 12px 10px;border-radius:9px;background:#ECEAE4;transition:background .4s var(--ease-out),box-shadow .4s var(--ease-out)}
+.xc-meta span,.xc-foot>div>span{display:block;font:500 11px var(--mono);color:#6B6E75;margin-bottom:3px}
+.xc-meta b{font:500 14px var(--mono);color:var(--ink);white-space:nowrap}
+.xc-foot b{font:600 22px var(--display);font-stretch:108%;color:var(--ink);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.xok circle{fill:var(--navy)}
+.xc-meta>div.hl,.xc-foot>div.hl{background:#DCE1F1;box-shadow:inset 0 0 0 1.5px var(--navy)}
+/* before the lot is read the report is an empty form */
+.xc-meta b,.xc-foot b,.xc-chart>*{transition:opacity .45s var(--ease-out)}
+.xpf:not(.found) .xc-meta b,.xpf:not(.found) .xc-foot b{opacity:0}
+.xpf:not(.found) .xc-meta>div::after,.xpf:not(.found) .xc-foot>div::after{content:"";position:absolute;left:12px;bottom:11px;width:58%;height:12px;border-radius:4px;background:linear-gradient(90deg,#DEDBD3 0,#E9E7E1 50%,#DEDBD3 100%);background-size:200% 100%;animation:xsk 1.2s linear infinite}
+@keyframes xsk{to{background-position:-200% 0}}
+.xc-chart{position:relative;aspect-ratio:560/185;border-radius:10px;background:linear-gradient(180deg,#EEF0F6,#E9E8E3);overflow:hidden}
+.xpf:not(.found) .xc-chart>*{opacity:0!important}
+.xc-chart>svg,.xv-net{position:absolute;inset:0;width:100%;height:100%;padding:12px 14px 4px;box-sizing:border-box;overflow:visible;transition:opacity .5s var(--ease-out),transform .6s var(--ease-out)}
+.xc-grid line{stroke:#D3D5DD;stroke-width:1}.xc-axis,.xv-ms .c9-axis{stroke:#9EA3B0;stroke-width:1}
+.xc-fill{fill:url(#xcg)}.xc-trace{fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linejoin:round}
+.xc-pk text,.xc-tick text,.xv-ms text{font:400 10px var(--mono);fill:#5B5E66}
+.xv-ms .ms-noise line{stroke:#9AA8CF;stroke-width:1.2}.xv-ms .ms-pk{stroke:var(--navy);stroke-width:2.4;transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);transition:transform .8s var(--ease-out) .1s}
+.xcoa[data-view=ms] .xv-ms .ms-pk{transform:none}
+.xv-ms,.xv-net{opacity:0;transform:translateY(8px)}
+.xcoa[data-view=ms] .xv-trace,.xcoa[data-view=net] .xv-trace{opacity:0;transform:translateY(-8px)}
+.xcoa[data-view=ms] .xv-ms,.xcoa[data-view=net] .xv-net{opacity:1;transform:none}
+.xv-net{display:flex;flex-direction:column;justify-content:center;padding:18px 22px}
+.xnet{display:flex;height:64px;border-radius:10px;overflow:hidden;background:#D9D6CF}
+.xnet i{font-style:normal;display:flex;flex-direction:column;justify-content:center;padding:0 14px;min-width:0;white-space:nowrap}
+.xnet span{font:500 11px var(--mono)}.xnet b{font:600 18px var(--display);font-stretch:108%}
+.xnet .p{flex:0 0 87%;background:var(--navy);color:var(--bone);transform-origin:left;transform:scaleX(.001);transition:transform 1s var(--ease-out) .15s}
+.xnet .w{flex:1;color:#3E4148;background:#CFCCC4}
+.xcoa[data-view=net] .xnet .p{transform:none}
+/* the five checks */
+.xpf-steps{grid-column:1/-1;background:var(--bone);color:var(--ink);padding:0 clamp(22px,2.6vw,40px) 26px;border-top:1px solid #E2DED5}
+.xpf-ins .xpf-steps{margin:0}
+.xpf-steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.xpf-steps button{all:unset;box-sizing:border-box;cursor:pointer;position:relative;width:100%;display:flex;align-items:baseline;gap:10px;padding:20px 16px 14px 0}
+.xpf-bar{position:absolute;left:0;right:12px;top:-1px;height:2px;background:#E2DED5;overflow:hidden}
+.xpf-bar::after{content:"";position:absolute;inset:0;background:var(--navy);transform:scaleX(0);transform-origin:left}
+.xpf-steps button.done .xpf-bar::after{transform:none}
+.xpf-steps button.on .xpf-bar::after{animation:xpfbar 4.4s linear forwards}
+.xpf-ins:hover .xpf-steps button.on .xpf-bar::after,.xpf-steps.hold button.on .xpf-bar::after{animation-play-state:paused}
+@keyframes xpfbar{to{transform:none}}
+.xpf-n{font:500 12px var(--mono);color:#8A8D94;transition:color .3s}
+.xpf-steps b{font:600 15px/1.25 var(--display);font-stretch:110%;color:#8A8D94;transition:color .3s}
+.xpf-steps button.on b,.xpf-steps button.done b{color:var(--ink)}.xpf-steps button.on .xpf-n{color:var(--navy)}
+@media (hover:hover) and (pointer:fine){.xpf-steps button:not(.on):hover b{color:#3E4148}}
+.xpf-steps button:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:4px}
+.xpf-desc{margin:4px 0 0;min-height:1.55em;font-size:16px;line-height:1.55;color:#3E4148}
+.xpf-desc.xsw{animation:xpfd .45s var(--ease-out)}
+@keyframes xpfd{from{opacity:0;transform:translateY(5px)}}
+.xpf-note{margin:14px 0 0;font-size:13px;color:#6B6E75}
+@media (max-width:1100px){.xpf-h{grid-template-columns:1fr;align-items:start}.xpf-ins{grid-template-columns:minmax(0,4fr) minmax(0,7fr)}.xpf-steps b{font-size:14px}}
+@media (max-width:800px){
+  .xpf-ins{grid-template-columns:1fr;border-radius:22px}
+  .xpf-vial{min-height:300px}
+  .xc-meta{grid-template-columns:1fr 1fr}.xc-meta>div[data-k=lot]{grid-column:1/-1}
+  .xpf-r{padding:0 16px}
+  .xcoa{padding:16px}.xc-meta b{font-size:12.5px}.xc-foot b{font-size:17px}.xc-foot>div>span{font-size:10.5px;white-space:nowrap}.xc-foot>div,.xc-meta>div{padding:8px 9px}
+  .xc-top em{margin-left:0;width:100%}
+  .xc-foot{gap:6px}.xc-foot>div{padding:8px 8px}.xc-foot b{font-size:15.5px;gap:4px}.xok{width:12px;height:12px}
+  .xc-pk text,.xc-tick text,.xv-ms text{font-size:18px}.xc-chart{aspect-ratio:560/230}
+  .xpf-steps{padding:0 16px 20px}
+  .xpf-steps ol{display:flex;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px;scroll-snap-type:x mandatory}.xpf-steps ol::-webkit-scrollbar{display:none}
+  .xpf-steps li{flex:0 0 auto;scroll-snap-align:start}.xpf-steps button{padding-right:22px;white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){.xpf-steps button.on .xpf-bar::after{animation:none;transform:none}.xc-chart>svg,.xv-net,.xnet .p,.xv-ms .ms-pk{transition:none}.xpf-scan{display:none}}
 </style>
 </head>
 <body>
@@ -1462,7 +1882,7 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
       <p class="lede rv">Research-grade peptides with an independent certificate of analysis for every lot. Scan the vial, see the data.</p>
       <form class="lot rv" id="lot" novalidate>
         <label class="sr" for="lotin">Lot number from the vial label</label>
-        <div class="lotbox"><span class="pre" aria-hidden="true">LOT</span><input id="lotin" name="lot" placeholder="R2611-01" autocomplete="off" spellcheck="false" aria-describedby="lotmsg"><button class="btn btn-bone" type="submit">Check lot</button></div>
+        <div class="lotbox"><span class="pre" aria-hidden="true">Lot</span><input id="lotin" name="lot" placeholder="R2611-01" autocomplete="off" spellcheck="false" aria-describedby="lotmsg"><button class="btn btn-bone" type="submit">Check lot</button></div>
         <a class="btn btn-ghost" href="shop.html">Browse the catalogue</a>
         <p class="lotmsg" id="lotmsg" aria-live="polite"></p>
       </form>
@@ -1485,213 +1905,222 @@ main>section.hero+section::before,main>section.lp::before,main>section.lp+sectio
   <p class="sr">Three RYXA Labs vials: TB-500, BPC-157 and KPV, each labelled RX-01.</p>
 </section>
 
-<section class="pf9" id="proof" aria-labelledby="proofh">
-<div class="wrap pf9-g">
-  <div class="pf9-copy">
-    <p class="pf9-tag">Lab proof · Lot R2611-01</p>
+<section class="xpf" id="proof" aria-labelledby="proofh">
+<div class="wrap">
+  <div class="xpf-h">
     <h2 class="h2" id="proofh">One dominant peak.<span class="lt">Every lot, published.</span></h2>
-    <p class="lede">HPLC purity and mass-spec identity from an independent lab, with the lab and test date named.</p>
-    <ol class="pf9-steps"><li><button type="button" data-k="lab" aria-controls="coa9"><span class="pf9-n">1</span><span class="pf9-t"><b>Lab name</b><span class="pf9-d"><span>Each batch is tested by an independent, named laboratory.</span></span></span><span class="pf9-bar" aria-hidden="true"></span></button></li><li><button type="button" data-k="date" aria-controls="coa9"><span class="pf9-n">2</span><span class="pf9-t"><b>Test date</b><span class="pf9-d"><span>Each COA names the lab, the test date and the lot number.</span></span></span><span class="pf9-bar" aria-hidden="true"></span></button></li><li><button type="button" data-k="trace" aria-controls="coa9"><span class="pf9-n">3</span><span class="pf9-t"><b>HPLC trace</b><span class="pf9-d"><span>One dominant peak is what you want to see.</span></span></span><span class="pf9-bar" aria-hidden="true"></span></button></li><li><button type="button" data-k="ms" aria-controls="coa9"><span class="pf9-n">4</span><span class="pf9-t"><b>MS identity</b><span class="pf9-d"><span>The measured mass should match the expected mass for the compound.</span></span></span><span class="pf9-bar" aria-hidden="true"></span></button></li><li><button type="button" data-k="net" aria-controls="coa9"><span class="pf9-n">5</span><span class="pf9-t"><b>Net peptide content</b><span class="pf9-d"><span>How much actual peptide is in the vial, after water and salts.</span></span></span><span class="pf9-bar" aria-hidden="true"></span></button></li></ol>
-    <div class="pf9-links"><a class="link" href="how-to-read-a-peptide-coa.html">How to read a peptide COA <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><a class="link" href="lab-testing.html#lookup">COA library <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+    <div class="xpf-hr"><p class="lede">HPLC purity and mass-spec identity from an independent lab, with the lab and test date named.</p>
+      <div class="xpf-links"><a class="x8-o" href="how-to-read-a-peptide-coa.html"><span>How to read a peptide COA</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><a class="xwn-l" href="lab-testing.html#lookup">COA library</a></div></div>
   </div>
-  <div class="pf9-stage">
-    <div class="pf9-glow" aria-hidden="true"></div>
-    <div class="pf9-vial" id="pf9v" aria-hidden="true"><img class="pf9-still" src="v/bpc-157.webp" alt="" width="800" height="1000"></div>
-    <figure class="coa9" id="coa9" data-view="trace" aria-label="Example certificate of analysis for BPC-157 10 mg, lot R2611-01">
-      <div class="c9-top"><span>Certificate of analysis</span><b>BPC-157 10 mg</b><em>RP-HPLC · ESI-MS</em></div>
-      <div class="c9-meta">
-        <div data-k="lab"><span>Lab</span><b>Independent lab</b></div>
-        <div data-k="date"><span>Tested</span><b>Nov 2026</b></div>
-        <div data-k="lot"><span>Lot</span><b>R2611-01</b></div>
-      </div>
-      <div class="c9-chart">
-        <svg class="v-trace" viewBox="0 -14 560 190" role="img" aria-label="Example HPLC chromatogram: one main peak at 10.4 minutes, 99.2 percent purity by area.">
-          <defs><linearGradient id="c9g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#233766" stop-opacity=".26"/><stop offset="1" stop-color="#233766" stop-opacity="0"/></linearGradient></defs>
-          <g class="c9-grid"><line x1="140" y1="0" x2="140" y2="152"/><line x1="280" y1="0" x2="280" y2="152"/><line x1="420" y1="0" x2="420" y2="152"/></g>
-          <line class="c9-axis" x1="0" y1="152" x2="560" y2="152"/>
-          <path class="c9-fill" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/>
-          <path class="c9-trace" id="c9tr" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4"/>
-          <g class="c9-pk"><text x="372" y="6">main peak · 10.4 min</text></g>
-          <g class="c9-tick"><text x="0" y="170">0</text><text x="140" y="170">4</text><text x="280" y="170">8</text><text x="420" y="170">12</text><text x="540" y="170">min</text></g>
-        </svg>
-        <svg class="v-ms" viewBox="0 -14 560 190" role="img" aria-label="Example mass spectrum: peaks at m/z 710.8 and 1420.5 match the expected mass of 1419.5 daltons.">
-<line class="c9-axis" x1="0" y1="152" x2="560" y2="152"/><g class="ms-noise"><line x1="132.2" y1="152" x2="132.2" y2="147.1"/><line x1="221.8" y1="152" x2="221.8" y2="146.6"/><line x1="37.2" y1="152" x2="37.2" y2="144.4"/><line x1="514.1" y1="152" x2="514.1" y2="140.8"/><line x1="428.5" y1="152" x2="428.5" y2="146.0"/><line x1="300.5" y1="152" x2="300.5" y2="145.5"/><line x1="96.7" y1="152" x2="96.7" y2="147.0"/><line x1="120.1" y1="152" x2="120.1" y2="139.7"/><line x1="464.2" y1="152" x2="464.2" y2="140.7"/><line x1="448.3" y1="152" x2="448.3" y2="146.3"/><line x1="173.5" y1="152" x2="173.5" y2="142.4"/><line x1="409.9" y1="152" x2="409.9" y2="140.3"/><line x1="492.8" y1="152" x2="492.8" y2="147.2"/><line x1="339.3" y1="152" x2="339.3" y2="142.0"/><line x1="283.3" y1="152" x2="283.3" y2="146.4"/><line x1="265.2" y1="152" x2="265.2" y2="147.2"/><line x1="523.4" y1="152" x2="523.4" y2="140.2"/><line x1="306.7" y1="152" x2="306.7" y2="145.3"/><line x1="509.0" y1="152" x2="509.0" y2="142.8"/><line x1="494.1" y1="152" x2="494.1" y2="140.4"/><line x1="284.7" y1="152" x2="284.7" y2="144.3"/><line x1="335.4" y1="152" x2="335.4" y2="144.1"/><line x1="90.3" y1="152" x2="90.3" y2="145.3"/><line x1="455.1" y1="152" x2="455.1" y2="147.6"/><line x1="25.9" y1="152" x2="25.9" y2="142.4"/><line x1="157.0" y1="152" x2="157.0" y2="143.2"/><line x1="263.9" y1="152" x2="263.9" y2="144.9"/><line x1="558.5" y1="152" x2="558.5" y2="146.2"/><line x1="231.2" y1="152" x2="231.2" y2="146.2"/><line x1="354.3" y1="152" x2="354.3" y2="145.5"/><line x1="199.3" y1="152" x2="199.3" y2="141.3"/><line x1="179.6" y1="152" x2="179.6" y2="143.0"/><line x1="506.4" y1="152" x2="506.4" y2="147.1"/><line x1="34.5" y1="152" x2="34.5" y2="145.9"/></g><g class="ms-peaks"><line class="ms-pk" x1="145.0" y1="152" x2="145.0" y2="24"/><text x="153.0" y="34">[M+2H]²⁺ 710.8</text><line class="ms-pk" x1="476.2" y1="152" x2="476.2" y2="68"/><text x="484.2" y="78">[M+H]⁺ 1420.5</text></g><g class="c9-tick"><text x="0.0" y="170">400</text><text x="186.7" y="170">800</text><text x="373.3" y="170">1200</text><text x="534" y="170">m/z</text></g></svg>
-        <div class="v-net" role="img" aria-label="Example net peptide content: 87 percent peptide, 13 percent water and salts.">
-          <div class="net-bar"><i class="net-p"><span>Peptide</span><b>87 %</b></i><i class="net-w"><span>Water and salts</span><b>13 %</b></i></div>
-          <p>Purity says how much of the peptide is the right molecule. Net peptide says how much of the powder is peptide.</p>
+  <div class="xpf-ins">
+    <div class="xpf-vial" aria-hidden="true"><div class="xpf-3d" id="xpfv"></div><img class="xpf-still" src="v/bpc-157.webp" alt="" width="800" height="1000"><span class="xpf-scan"></span></div>
+    <div class="xpf-r">
+      <div class="xpf-q" aria-hidden="true"><span class="k">Lot</span><span class="v"><span id="xpfq"></span><i class="car"></i></span><span class="m"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="2" fill="none"/></svg>Report found</span></div>
+      <figure class="xcoa" id="xcoa" data-view="trace" aria-label="Example certificate of analysis for BPC-157 10 mg, lot R2611-01">
+        <div class="xc-top"><span>Certificate of analysis</span><b>BPC-157 10 mg</b><em>RP-HPLC, ESI-MS</em></div>
+        <div class="xc-meta">
+          <div data-k="lab"><span>Lab</span><b>Independent lab</b></div>
+          <div data-k="date"><span>Tested</span><b>Nov 2026</b></div>
+          <div data-k="lot"><span>Lot</span><b>R2611-01</b></div>
         </div>
-      </div>
-      <div class="c9-foot">
-        <div data-k="trace"><span>Purity</span><b><span class="cnt" data-to="99.2" data-d="1">99.2</span> %</b></div>
-        <div data-k="ms"><span>Mass</span><b><span class="cnt" data-to="1419.5" data-d="1">1419.5</span> Da <svg class="ok" width="14" height="14" viewBox="0 0 14 14" aria-label="matches expected mass"><circle cx="7" cy="7" r="7"/><path d="M4 7.2l2 2 4-4.2" fill="none" stroke="#F5F3EE" stroke-width="1.6"/></svg></b></div>
-        <div data-k="net"><span>Net peptide</span><b><span class="cnt" data-to="87" data-d="0">87</span> %</b></div>
-      </div>
-    </figure>
-    <p class="coa9-note">Example report. Each lot’s real COA names the lab and the test date.</p>
+        <div class="xc-chart">
+          <svg class="xv-trace" viewBox="0 -14 560 190" role="img" aria-label="Example HPLC chromatogram: one main peak at 10.4 minutes, 99.2 percent purity by area.">
+            <defs><linearGradient id="xcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#233766" stop-opacity=".24"/><stop offset="1" stop-color="#233766" stop-opacity="0"/></linearGradient></defs>
+            <g class="xc-grid"><line x1="140" y1="0" x2="140" y2="152"/><line x1="280" y1="0" x2="280" y2="152"/><line x1="420" y1="0" x2="420" y2="152"/></g>
+            <line class="xc-axis" x1="0" y1="152" x2="560" y2="152"/>
+            <path class="xc-fill" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/>
+            <path class="xc-trace" id="xctr" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4"/>
+            <g class="xc-pk"><text x="380" y="6">Main peak, 10.4 min</text></g>
+            <g class="xc-tick"><text x="0" y="170">0</text><text x="140" y="170">4</text><text x="280" y="170">8</text><text x="420" y="170">12</text><text x="540" y="170">min</text></g>
+          </svg>
+          <svg class="xv-ms" viewBox="0 -14 560 190" role="img" aria-label="Example mass spectrum: peaks at m/z 710.8 and 1420.5 match the expected mass of 1419.5 daltons.">
+<line class="c9-axis" x1="0" y1="152" x2="560" y2="152"/><g class="ms-noise"><line x1="132.2" y1="152" x2="132.2" y2="147.1"/><line x1="221.8" y1="152" x2="221.8" y2="146.6"/><line x1="37.2" y1="152" x2="37.2" y2="144.4"/><line x1="514.1" y1="152" x2="514.1" y2="140.8"/><line x1="428.5" y1="152" x2="428.5" y2="146.0"/><line x1="300.5" y1="152" x2="300.5" y2="145.5"/><line x1="96.7" y1="152" x2="96.7" y2="147.0"/><line x1="120.1" y1="152" x2="120.1" y2="139.7"/><line x1="464.2" y1="152" x2="464.2" y2="140.7"/><line x1="448.3" y1="152" x2="448.3" y2="146.3"/><line x1="173.5" y1="152" x2="173.5" y2="142.4"/><line x1="409.9" y1="152" x2="409.9" y2="140.3"/><line x1="492.8" y1="152" x2="492.8" y2="147.2"/><line x1="339.3" y1="152" x2="339.3" y2="142.0"/><line x1="283.3" y1="152" x2="283.3" y2="146.4"/><line x1="265.2" y1="152" x2="265.2" y2="147.2"/><line x1="523.4" y1="152" x2="523.4" y2="140.2"/><line x1="306.7" y1="152" x2="306.7" y2="145.3"/><line x1="509.0" y1="152" x2="509.0" y2="142.8"/><line x1="494.1" y1="152" x2="494.1" y2="140.4"/><line x1="284.7" y1="152" x2="284.7" y2="144.3"/><line x1="335.4" y1="152" x2="335.4" y2="144.1"/><line x1="90.3" y1="152" x2="90.3" y2="145.3"/><line x1="455.1" y1="152" x2="455.1" y2="147.6"/><line x1="25.9" y1="152" x2="25.9" y2="142.4"/><line x1="157.0" y1="152" x2="157.0" y2="143.2"/><line x1="263.9" y1="152" x2="263.9" y2="144.9"/><line x1="558.5" y1="152" x2="558.5" y2="146.2"/><line x1="231.2" y1="152" x2="231.2" y2="146.2"/><line x1="354.3" y1="152" x2="354.3" y2="145.5"/><line x1="199.3" y1="152" x2="199.3" y2="141.3"/><line x1="179.6" y1="152" x2="179.6" y2="143.0"/><line x1="506.4" y1="152" x2="506.4" y2="147.1"/><line x1="34.5" y1="152" x2="34.5" y2="145.9"/></g><g class="ms-peaks"><line class="ms-pk" x1="145.0" y1="152" x2="145.0" y2="24"/><text x="153.0" y="34">[M+2H]²⁺ 710.8</text><line class="ms-pk" x1="476.2" y1="152" x2="476.2" y2="68"/><text x="484.2" y="78">[M+H]⁺ 1420.5</text></g><g class="c9-tick"><text x="0.0" y="170">400</text><text x="186.7" y="170">800</text><text x="373.3" y="170">1200</text><text x="534" y="170">m/z</text></g></svg>
+          <div class="xv-net" role="img" aria-label="Example net peptide content: 87 percent peptide, 13 percent water and salts.">
+            <div class="xnet"><i class="p"><span>Peptide</span><b>87 %</b></i><i class="w"><span>Water and salts</span><b>13 %</b></i></div>
+          </div>
+        </div>
+        <div class="xc-foot">
+          <div data-k="trace"><span>Purity</span><b><span class="xcnt" data-to="99.2" data-d="1">99.2</span> %</b></div>
+          <div data-k="ms"><span>Mass</span><b><span class="xcnt" data-to="1419.5" data-d="1">1419.5</span> Da <svg class="xok" width="15" height="15" viewBox="0 0 14 14" aria-label="matches expected mass"><circle cx="7" cy="7" r="7"/><path d="M4 7.2l2 2 4-4.2" fill="none" stroke="#F5F3EE" stroke-width="1.6"/></svg></b></div>
+          <div data-k="net"><span>Net peptide</span><b><span class="xcnt" data-to="87" data-d="0">87</span> %</b></div>
+        </div>
+      </figure>
+    </div>
+    <div class="xpf-steps"><ol><li><button type="button" data-k="lab" data-d="Each batch is tested by an independent, named laboratory." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">1</span><b>Lab name</b></button></li><li><button type="button" data-k="date" data-d="Each COA names the lab, the test date and the lot number." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">2</span><b>Test date</b></button></li><li><button type="button" data-k="trace" data-d="One dominant peak is what you want to see." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">3</span><b>HPLC trace</b></button></li><li><button type="button" data-k="ms" data-d="The measured mass should match the expected mass for the compound." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">4</span><b>MS identity</b></button></li><li><button type="button" data-k="net" data-d="How much actual peptide is in the vial, after water and salts." aria-controls="xcoa"><span class="xpf-bar" aria-hidden="true"></span><span class="xpf-n">5</span><b>Net peptide content</b></button></li></ol><p class="xpf-desc" aria-live="polite"></p></div>
   </div>
+  <p class="xpf-note">Example report. Each lot’s real COA names the lab and the test date.</p>
 </div></section>
 
-<section class="ct9" id="families" aria-labelledby="famh">
+<section class="x8c" id="families" aria-labelledby="famh">
 <div class="wrap">
-  <div class="ct9-head"><h2 class="h2" id="famh">Catalogue by family.</h2><a class="vd8" href="shop.html"><span>Browse the catalogue</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
-  <div class="fm9-row" role="tablist" aria-label="Families"><button class="fm9" role="tab" id="tab-RX-01" aria-selected="true" aria-controls="ct9p" data-f="RX-01" style="--c:var(--amber)">
-<span class="fm9-chip">RX-01</span><span class="fm9-h">Repair &amp; recovery</span><span class="fm9-n">8 compounds</span>
-<span class="fm9-v" aria-hidden="true"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"></span></button><button class="fm9" role="tab" id="tab-RX-02" aria-selected="false" aria-controls="ct9p" data-f="RX-02" style="--c:var(--teal)">
-<span class="fm9-chip">RX-02</span><span class="fm9-h">Metabolic &amp; longevity</span><span class="fm9-n">7 compounds</span>
-<span class="fm9-v" aria-hidden="true"><img src="v/mots-c.webp" alt="" width="800" height="1000" loading="lazy"></span></button><button class="fm9" role="tab" id="tab-RX-03" aria-selected="false" aria-controls="ct9p" data-f="RX-03" style="--c:var(--violet)">
-<span class="fm9-chip">RX-03</span><span class="fm9-h">Cognitive</span><span class="fm9-n">3 compounds</span>
-<span class="fm9-v" aria-hidden="true"><img src="v/semax.webp" alt="" width="800" height="1000" loading="lazy"></span></button><button class="fm9" role="tab" id="tab-RX-04" aria-selected="false" aria-controls="ct9p" data-f="RX-04" style="--c:var(--coral)">
-<span class="fm9-chip">RX-04</span><span class="fm9-h">Aesthetic &amp; wellness</span><span class="fm9-n">1 compound</span>
-<span class="fm9-v" aria-hidden="true"><img src="v/ghk-cu.webp" alt="" width="800" height="1000" loading="lazy"></span></button></div>
-  <div class="ct9-p" id="ct9p" role="tabpanel" aria-labelledby="tab-RX-01" style="--c:var(--amber)">
-    <div class="ct9-stage"><div class="ct9-3d" id="ct9s" aria-hidden="true"></div><div class="ct9-still" aria-hidden="true"></div>
-      <div class="ct9-nav"><button type="button" class="ct9-prev" aria-label="Previous compound"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button><span class="ct9-ix" aria-live="polite">1 / 8</span><button type="button" class="ct9-next" aria-label="Next compound"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button></div>
-    </div>
-    <div class="ct9-info" aria-live="polite">
-      <div class="ct9-fam"><span class="fm9-chip">RX-01</span><span class="ct9-fn">Repair &amp; recovery</span></div>
-      <h3 class="ct9-name"><a href="p-bpc-157.html">BPC-157</a></h3>
-      <p class="ct9-st"><span class="ct9-mg">10 mg</span> · lyophilized</p>
-      <p class="ct9-lot">Lot <b>R2611-01</b> <a href="lab-testing.html#lookup">COA</a></p>
-      <div class="ct9-lad"></div>
-      <div class="ct9-act"></div>
-    </div>
-    <ol class="ct9-list" aria-label="Compounds in this family"></ol>
+  <div class="x8-h"><h2 class="h2" id="famh">Catalogue by family.</h2><a class="x8-o" href="shop.html"><span>Browse the catalogue</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+  <div class="x8-fams"><article class="x8-f on" data-f="RX-01" style="--c:#E8A33D">
+  <button class="x8-hit" type="button" aria-expanded="true" aria-controls="x8p-RX-01"><span class="sr">Show Repair &amp; recovery</span></button>
+  <div class="x8-lat" aria-hidden="true"></div><div class="x8-glow" aria-hidden="true"></div>
+  <header class="x8-hd"><span class="x8-chip">RX-01</span><h3>Repair &amp;&nbsp;recovery</h3><p>8 compounds</p></header>
+  <img class="x8-lead" src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy">
+  <span class="x8-go" aria-hidden="true">View family <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+  <div class="x8-p" id="x8p-RX-01">
+    <ol class="x8-ls" aria-label="Compounds in Repair &amp; recovery"></ol>
+    <div class="x8-st"><div class="x8-still" aria-hidden="true"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/tb-500.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/bpc-tb-5.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/bpc-tb-10.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/kpv.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/glow.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/klow.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/vip-5mg.webp" alt="" width="800" height="1000" loading="lazy"></div></div>
+    <div class="x8-in" aria-live="polite"></div>
   </div>
+</article><article class="x8-f" data-f="RX-02" style="--c:#2FA39A">
+  <button class="x8-hit" type="button" aria-expanded="false" aria-controls="x8p-RX-02"><span class="sr">Show Metabolic &amp; longevity</span></button>
+  <div class="x8-lat" aria-hidden="true"></div><div class="x8-glow" aria-hidden="true"></div>
+  <header class="x8-hd"><span class="x8-chip">RX-02</span><h3>Metabolic &amp;&nbsp;longevity</h3><p>7 compounds</p></header>
+  <img class="x8-lead" src="v/mots-c.webp" alt="" width="800" height="1000" loading="lazy">
+  <span class="x8-go" aria-hidden="true">View family <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+  <div class="x8-p" id="x8p-RX-02">
+    <ol class="x8-ls" aria-label="Compounds in Metabolic &amp; longevity"></ol>
+    <div class="x8-st"><div class="x8-still" aria-hidden="true"><img src="v/mots-c.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/nad.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/tesamorelin.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/cjcdac-5mg.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/cjc-1295-no-dac.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/epitalon.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/retatrutide.webp" alt="" width="800" height="1000" loading="lazy"></div></div>
+    <div class="x8-in" aria-live="polite"></div>
+  </div>
+</article><article class="x8-f" data-f="RX-03" style="--c:#8F7BE8">
+  <button class="x8-hit" type="button" aria-expanded="false" aria-controls="x8p-RX-03"><span class="sr">Show Cognitive</span></button>
+  <div class="x8-lat" aria-hidden="true"></div><div class="x8-glow" aria-hidden="true"></div>
+  <header class="x8-hd"><span class="x8-chip">RX-03</span><h3>Cognitive</h3><p>3 compounds</p></header>
+  <img class="x8-lead" src="v/semax.webp" alt="" width="800" height="1000" loading="lazy">
+  <span class="x8-go" aria-hidden="true">View family <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+  <div class="x8-p" id="x8p-RX-03">
+    <ol class="x8-ls" aria-label="Compounds in Cognitive"></ol>
+    <div class="x8-st"><div class="x8-still" aria-hidden="true"><img src="v/semax.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/selank.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/dsip.webp" alt="" width="800" height="1000" loading="lazy"></div></div>
+    <div class="x8-in" aria-live="polite"></div>
+  </div>
+</article><article class="x8-f" data-f="RX-04" style="--c:#E0735A">
+  <button class="x8-hit" type="button" aria-expanded="false" aria-controls="x8p-RX-04"><span class="sr">Show Aesthetic &amp; wellness</span></button>
+  <div class="x8-lat" aria-hidden="true"></div><div class="x8-glow" aria-hidden="true"></div>
+  <header class="x8-hd"><span class="x8-chip">RX-04</span><h3>Aesthetic &amp;&nbsp;wellness</h3><p>1 compound</p></header>
+  <img class="x8-lead" src="v/ghk-cu.webp" alt="" width="800" height="1000" loading="lazy">
+  <span class="x8-go" aria-hidden="true">View family <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>
+  <div class="x8-p" id="x8p-RX-04">
+    <ol class="x8-ls" aria-label="Compounds in Aesthetic &amp; wellness"></ol>
+    <div class="x8-st"><div class="x8-still" aria-hidden="true"><img src="v/ghk-cu.webp" alt="" width="800" height="1000" loading="lazy"></div></div>
+    <div class="x8-in" aria-live="polite"></div>
+  </div>
+</article></div>
 </div>
 <script>window.RYXA_FAM={"RX-01":{"name":"Repair & recovery","col":"#E8A33D","items":[{"s":"bpc-157","n":"BPC-157","mg":"10 mg","img":"bpc-157","lot":"R2611-01","pr":[85,80,75]},{"s":"tb-500","n":"TB-500","mg":"10 mg","img":"tb-500","lot":"R2611-02","pr":[90,85,80]},{"s":"bpc-157-tb-500-5-5","n":"BPC-157 + TB-500","mg":"5 + 5 mg","img":"bpc-tb-5","lot":"R2611-03","pr":null},{"s":"bpc-157-tb-500-10-10","n":"BPC-157 + TB-500","mg":"10 + 10 mg","img":"bpc-tb-10","lot":"R2611-04","pr":[90,85,80]},{"s":"kpv","n":"KPV","mg":"10 mg","img":"kpv","lot":"R2611-05","pr":[70,65,60]},{"s":"glow","n":"GLOW","mg":"70 mg","img":"glow","lot":"R2611-06","pr":null},{"s":"klow","n":"KLOW","mg":"80 mg","img":"klow","lot":"R2611-07","pr":[175,165,150]},{"s":"vip","n":"VIP","mg":"5 mg","img":"vip-5mg","lot":"R2611-08","pr":null}]},"RX-02":{"name":"Metabolic & longevity","col":"#2FA39A","items":[{"s":"mots-c","n":"MOTS-c","mg":"10 mg","img":"mots-c","lot":"R2611-10","pr":[70,65,60]},{"s":"nad","n":"NAD+","mg":"500 mg","img":"nad","lot":"R2611-11","pr":[90,80,70]},{"s":"tesamorelin","n":"Tesamorelin","mg":"10 mg","img":"tesamorelin","lot":"R2611-12","pr":null},{"s":"cjc-1295-dac","n":"CJC-1295 with DAC","mg":"5 mg","img":"cjcdac-5mg","lot":"R2611-13","pr":null},{"s":"cjc-1295-no-dac","n":"CJC-1295 no DAC","mg":"10 mg","img":"cjc-1295-no-dac","lot":"R2611-14","pr":null},{"s":"epitalon","n":"Epitalon","mg":"10 mg","img":"epitalon","lot":"R2611-15","pr":null},{"s":"retatrutide","n":"Retatrutide","mg":"10 mg","img":"retatrutide","lot":"R2611-09","pr":[120,110,100]}]},"RX-03":{"name":"Cognitive","col":"#8F7BE8","items":[{"s":"semax","n":"Semax","mg":"10 mg","img":"semax","lot":"R2611-16","pr":[60,50,40]},{"s":"selank","n":"Selank","mg":"10 mg","img":"selank","lot":"R2611-17","pr":[70,60,50]},{"s":"dsip","n":"DSIP","mg":"10 mg","img":"dsip","lot":"R2611-18","pr":[75,70,65]}]},"RX-04":{"name":"Aesthetic & wellness","col":"#E0735A","items":[{"s":"ghk-cu","n":"GHK-Cu","mg":"50 mg","img":"ghk-cu","lot":"R2611-19","pr":[70,65,60]}]}}</script>
 </section>
 
 
-<section class="sd9" id="standard" aria-labelledby="sdh">
-<div class="wrap">
-  <div class="sd9-head">
-    <h2 class="h2" id="sdh">Our standard.</h2>
-    <p class="lede">If a lot doesn’t pass its specification, it doesn’t ship. If you ever find a RYXA vial that fails its published COA, tell us, and we’ll make it right.</p>
+<section class="x9s" id="standard" aria-labelledby="sdh">
+<div class="x9-pin"><div class="wrap x9-in">
+  <div class="x9-head"><h2 class="h2" id="sdh">Our standard.</h2>
+    <p class="lede">If a lot doesn’t pass its specification, it doesn’t ship. If you ever find a RYXA vial that fails its published COA, tell us, and we’ll make it right.</p></div>
+  <div class="x9-stage">
+    <div class="x9-vial" id="x9v" aria-hidden="true"><img class="x9-still" src="v/bpc-157.webp" alt="" width="800" height="1000"></div>
+    <div class="x9-co x9-l" data-i="0" data-ay="0.56" data-cue="lot"><span class="x9-ln" aria-hidden="true"><i></i></span>
+<h3>Tested by lot</h3><p>Each batch is tested by an independent, named laboratory. The certificate of analysis is published on the product page before you buy.</p></div><div class="x9-co x9-r" data-i="1" data-ay="0.09" data-cue="turn"><span class="x9-ln" aria-hidden="true"><i></i></span>
+<h3>Quarterly retest</h3><p>Each quarter we buy lots back from stock and send them to a second laboratory. Results are published, whatever they show.</p></div><div class="x9-co x9-r" data-i="2" data-ay="0.5" data-cue="lot"><span class="x9-ln" aria-hidden="true"><i></i></span>
+<h3>The named lab</h3><p>Each COA names the lab, the test date and the lot number.</p></div><div class="x9-co x9-l" data-i="3" data-ay="0.955" data-cue="turn"><span class="x9-ln" aria-hidden="true"><i></i></span>
+<h3>Net peptide content</h3><p>How much actual peptide is in the vial, after water and salts.</p></div><div class="x9-co x9-r" data-i="4" data-ay="0.8" data-cue="turn"><span class="x9-ln" aria-hidden="true"><i></i></span>
+<h3>Cold chain</h3><p>Lyophilized products ship in insulated packaging, Monday to Thursday only, so they never sit in a depot over a weekend.</p></div>
   </div>
-  <div class="sd9-grid">
-    <article class="sd9-t t-lot">
-      <div class="sd9-c"><h3>Tested by lot</h3><p>Each batch is tested by an independent, named laboratory. The certificate of analysis is published on the product page before you buy.</p></div>
-      <div class="sd9-v"><p class="lotno">Lot <b>R2611-01</b></p><ol class="tl9"><li style="--i:0"><span class="dot"><svg class="tk" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.4l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Manufactured</b></li><li style="--i:1"><span class="dot"><svg class="tk" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.4l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>HPLC</b></li><li style="--i:2"><span class="dot"><svg class="tk" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.4l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Mass spec</b></li><li style="--i:3"><span class="dot"><svg class="tk" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.4l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>COA public</b></li></ol></div>
-    </article>
-    <article class="sd9-t t-lab">
-      <div class="sd9-c"><h3>The named lab</h3><p>Each COA names the lab, the test date and the lot number.</p></div>
-      <div class="sd9-v"><dl class="lab9"><div style="--i:0"><dt>Lab</dt><dd>Independent lab</dd></div><div style="--i:1"><dt>Tested</dt><dd>Nov 2026</dd></div><div style="--i:2"><dt>Lot</dt><dd>R2611-01</dd></div></dl></div>
-    </article>
-    <article class="sd9-t t-net">
-      <div class="sd9-v"><div class="net9" role="img" aria-label="Example: 87 percent peptide, 13 percent water and salts"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="50"/><circle class="fg" cx="60" cy="60" r="50" pathLength="100"/></svg><b>87<small>%</small></b></div></div>
-      <div class="sd9-c"><h3>Net peptide content</h3><p>How much actual peptide is in the vial, after water and salts.</p></div>
-    </article>
-    <article class="sd9-t t-rt">
-      <div class="sd9-v"><ol class="q9" aria-hidden="true"><li style="--i:0"><b>Q1</b><span class="lab2"><i></i><i></i></span></li><li style="--i:1"><b>Q2</b><span class="lab2"><i></i><i></i></span></li><li style="--i:2"><b>Q3</b><span class="lab2"><i></i><i></i></span></li><li style="--i:3"><b>Q4</b><span class="lab2"><i></i><i></i></span></li></ol></div>
-      <div class="sd9-c"><h3>Quarterly retest</h3><p>Each quarter we buy lots back from stock and send them to a second laboratory. Results are published, whatever they show.</p></div>
-    </article>
-    <article class="sd9-t t-cold">
-      <div class="sd9-v"><ol class="wk9" aria-label="Ships Monday to Thursday"><li class="go" style="--i:0"><span>Mon</span></li><li class="go" style="--i:1"><span>Tue</span></li><li class="go" style="--i:2"><span>Wed</span></li><li class="go" style="--i:3"><span>Thu</span></li><li class="no" style="--i:4"><span>Fri</span></li><li class="no" style="--i:5"><span>Sat</span></li><li class="no" style="--i:6"><span>Sun</span></li></ol></div>
-      <div class="sd9-c"><h3>Cold chain</h3><p>Lyophilized products ship in insulated packaging, Monday to Thursday only, so they never sit in a depot over a weekend.</p></div>
-    </article>
-  </div>
-  <div class="sd9-foot"><a class="link" href="lab-testing.html">Lab testing &amp; COAs <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
-</div></section>
-
-<section class="in9" id="institutions" aria-labelledby="inh">
-<div class="wrap in9-g">
-  <div class="in9-copy">
-    <p class="in9-tag">For institutions</p>
-    <h2 class="h2" id="inh">Supply for labs that plan ahead.</h2>
-    <p class="lede">RYXA Labs works with universities, research institutes, contract research organizations and businesses that need consistent, documented material.</p>
-    <dl class="in9-dl"><div style="--i:0"><dt>Purchase orders and invoicing</dt><dd>With net-30 terms after approval.</dd></div><div style="--i:1"><dt>Lot reservation</dt><dd>Hold a single lot for the length of a study, so every experiment uses the same material.</dd></div><div style="--i:2"><dt>Documentation packs</dt><dd>COAs, and handling and storage information for your QA records.</dd></div><div style="--i:3"><dt>A named contact</dt><dd>For quotes, stock and lead times.</dd></div><div style="--i:4"><dt>Founding-lab credit</dt><dd>For verified institutional accounts, opened by 18 December.</dd></div></dl>
-    <div class="in9-cta"><a class="btn9" href="wholesale.html#apply">Apply for an account <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><span>We reply within 2 business days.</span></div>
-  </div>
-  <figure class="in9-v" aria-label="Lot reservation: ten vials from one lot, held for one study">
-    <div class="in9-vh"><span>Lot reservation</span><b>BPC-157 10 mg · Lot R2611-01</b></div>
-    <ol class="in9-rack"><li style="--i:0"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:1"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:2"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:3"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:4"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:5"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:6"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:7"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:8"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li><li style="--i:9"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><span>R2611-01</span></li></ol>
-    <svg class="in9-frame" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><rect x=".6" y=".6" width="98.8" height="98.8" rx="3" pathLength="100"/></svg>
-    <figcaption><span class="in9-k">10 vials</span><span>One lot for the length of a study.</span></figcaption>
-  </figure>
-</div></section>
-
-<section class="wn9" id="winter" aria-labelledby="wnh">
-<div class="wrap wn9-g">
-  <div class="wn9-copy">
-    <p class="wn9-tag">Winter shipping</p>
-    <h2 class="h2" id="wnh">Last dispatch before the holidays.</h2>
-    <p class="wn9-date"><span>Thu</span> 17 Dec</p>
-    <div class="wn9-cd" aria-label="Time left to the last dispatch, 2 PM Pacific on Thursday 17 December">
-      <div><b data-u="d">00</b><span>days</span></div><div><b data-u="h">00</b><span>hours</span></div><div><b data-u="m">00</b><span>minutes</span></div>
-    </div>
-    <p class="wn9-p">Orders placed before 2:00 PM Pacific on a business day ship within 1–2 business days. We ship Monday to Thursday only, so parcels don’t sit in a depot over the weekend. Dispatch resumes Monday 4 January.</p>
-    <div class="wn9-links"><a class="link" href="shipping-lyophilized-peptides-in-winter.html">Shipping lyophilized peptides in winter <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><a class="link" href="shipping.html">Shipping policy <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
-  </div>
-  <figure class="wn9-v" aria-labelledby="wnind">
-    <div class="wn9-vh"><p class="wn9-vk" id="wnind">Insulated packaging</p><p class="ind9-read"><b id="ind9r">4.0</b> °C</p></div>
-    <div class="ind9" role="img" aria-label="Temperature scale from minus 20 to 25 degrees, with the 2 to 8 degree window lit">
-      <div class="ind9-scale"><span class="band"></span><span class="mk"></span>
-        <i style="left:0%">−20</i><i style="left:44.4%">0</i><i style="left:62.2%">8</i><i style="left:100%">25 °C</i></div>
-      <ol class="ind9-win">
-        <li class="w-frz"><span class="w"></span><b>Frozen</b></li>
-        <li class="w-ok"><span class="w"></span><b>2–8 °C</b></li>
-        <li class="w-hot"><span class="w"></span><b>Too warm</b></li>
-      </ol>
-    </div>
-    <figcaption>In insulated packaging, with cold packs or a temperature indicator when the season and route need it.</figcaption>
-  </figure>
-</div></section>
-
-<section class="jr9" id="journal" aria-labelledby="jrh">
-<div class="wrap">
-  <div class="jr9-head"><h2 class="h2" id="jrh">Journal.</h2><a class="vd8" href="journal.html"><span>All articles</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
-  <div class="jr9-g">
-    <a class="jr9-a a-coa" href="how-to-read-a-peptide-coa.html">
-      <div class="jr9-art" aria-hidden="true"><svg viewBox="0 -14 560 190" preserveAspectRatio="none"><path class="jf" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/><path class="jt" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4" pathLength="100"/></svg></div>
-      <div class="jr9-m"><span class="jr9-k">Lab testing · 6 min</span><h3>How to read a peptide COA</h3><p>A certificate of analysis (COA) is the only evidence you have of what’s in a vial. Here’s how to read one in two minutes.</p><span class="jr9-go">Read <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></div>
-    </a>
-    <a class="jr9-a a-lot" href="how-lot-numbers-work.html">
-      <div class="jr9-art" aria-hidden="true"><div class="lotx"><span class="s1">R</span><span class="s2">2611</span><span class="s3">-01</span></div><div class="lotk"><span class="k1">RYXA</span><span class="k2">year and month of the run</span><span class="k3">run number</span></div></div>
-      <div class="jr9-m"><span class="jr9-k">Lots · 4 min</span><h3>How lot numbers work at RYXA Labs</h3><p>The link between the vial on your bench and the lab report that describes it.</p><span class="jr9-go">Read <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></div>
-    </a>
-    <a class="jr9-a a-win" href="shipping-lyophilized-peptides-in-winter.html">
-      <div class="jr9-art" aria-hidden="true"><div class="wkm"><span>M</span><span>T</span><span>W</span><span>T</span><span class="x">F</span><span class="x">S</span><span class="x">S</span></div></div>
-      <div class="jr9-m"><span class="jr9-k">Shipping · 5 min</span><h3>Shipping lyophilized peptides in winter</h3><p>How we pack orders in a Canadian winter, and what to check when one arrives.</p><span class="jr9-go">Read <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></div>
-    </a>
-  </div>
-</div></section>
-
-
-
-<section aria-labelledby="sh">
-  <div class="wrap">
-    <div class="sign">
-      <div class="lat"></div>
-      <div class="z"><h2 id="sh">New lots. New COAs. <span class="lt">Nothing else.</span></h2><p>One email when a new lot and its report go live.</p></div>
-      <form class="sform z" onsubmit="event.preventDefault();this.querySelector('button').textContent='You’re on the list'"><label class="sr" for="em">Email</label><span class="shine"><input id="em" type="email" placeholder="you@lab.ca" autocomplete="email"></span><button class="btn btn-ink" type="submit">Get lot updates</button></form>
-    </div>
-  </div>
+  <div class="x9-foot"><ol class="x9-prog" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ol><a class="x8-o" href="lab-testing.html"><span>Lab testing &amp; COAs</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+</div></div>
 </section>
 
-<section class="fq9" id="faq" aria-labelledby="fqh">
-<div class="wrap fq9-g">
-  <div class="fq9-side">
-    <h2 class="h2" id="fqh">FAQ.</h2>
-    <dl class="fq9-ct">
-      <div><dt>General and support</dt><dd><a href="mailto:info@ryxalabs.com">info@ryxalabs.com</a></dd></div>
-      <div><dt>Orders, cancellations and claims</dt><dd><a href="mailto:sales@ryxalabs.com">sales@ryxalabs.com</a></dd></div>
-      <div><dt>Phone</dt><dd><a href="tel:+16722303023">672-230-3023</a></dd></div>
-    </dl>
-    <a class="link" href="faq.html">All questions <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+<section class="xin" id="institutions" aria-labelledby="inh">
+<div class="wrap xin-g">
+  <div class="xin-copy">
+    <h2 class="h2" id="inh">Supply for labs that plan ahead.</h2>
+    <p class="lede">RYXA Labs works with universities, research institutes, contract research organizations and businesses that need consistent, documented material.</p>
+    <dl class="xin-dl"><div><dt>Purchase orders and invoicing</dt><dd>With net-30 terms after approval.</dd></div><div><dt>Lot reservation</dt><dd>Hold a single lot for the length of a study, so every experiment uses the same material.</dd></div><div><dt>Documentation packs</dt><dd>COAs, and handling and storage information for your QA records.</dd></div><div><dt>A named contact</dt><dd>For quotes, stock and lead times.</dd></div><div><dt>Founding-lab credit</dt><dd>For verified institutional accounts, opened by 18 December.</dd></div></dl>
+    <div class="xin-cta"><a class="xin-btn" href="wholesale.html#apply">Apply for an account <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><span>We reply within 2 business days.</span></div>
   </div>
-  <div class="fq9-main">
-    <div class="fq9-tabs" role="toolbar" aria-label="Filter questions"><button type="button" class="on" data-g="all">All</button><button type="button" data-g="0">Products and use</button><button type="button" data-g="1">Testing and quality</button><button type="button" data-g="2">Orders and shipping</button><button type="button" data-g="3">Accounts and payment</button></div>
-    <div class="fq9-list"><div class="fq9-i open" data-g="0"><h3><button type="button" aria-expanded="true" aria-controls="fqa0" id="fqq0">Who can buy from RYXA Labs?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa0" role="region" aria-labelledby="fqq0"><div><p>Researchers, laboratories, institutions and businesses aged 19 or older who will use our products for laboratory research only. You confirm this at checkout.</p></div></div></div><div class="fq9-i" data-g="0"><h3><button type="button" aria-expanded="false" aria-controls="fqa1" id="fqq1">Can you tell me how to dose or reconstitute a product?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa1" role="region" aria-labelledby="fqq1"><div><p>No. We do not give dosing, administration or preparation advice, and our team cannot answer these questions. Please refer to published literature and your institution’s protocols for laboratory handling.</p></div></div></div><div class="fq9-i" data-g="0"><h3><button type="button" aria-expanded="false" aria-controls="fqa2" id="fqq2">What form do products come in?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa2" role="region" aria-labelledby="fqq2"><div><p>Lyophilized (freeze-dried) powder in sealed glass vials, labelled with the compound, amount, lot number and storage conditions.</p></div></div></div><div class="fq9-i" data-g="1"><h3><button type="button" aria-expanded="false" aria-controls="fqa3" id="fqq3">How do I know what’s in the vial?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa3" role="region" aria-labelledby="fqq3"><div><p>Every lot is tested by an independent laboratory for purity (HPLC) and identity (mass spectrometry). Scan the QR code on your vial, or search the lot number in our COA Library.</p></div></div></div><div class="fq9-i" data-g="1"><h3><button type="button" aria-expanded="false" aria-controls="fqa4" id="fqq4">What if a lot doesn’t match its COA?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa4" role="region" aria-labelledby="fqq4"><div><p>Contact us within 30 days of delivery with an independent lab report. We’ll replace it, refund it, or reimburse reasonable testing costs, as set out in our Refund &amp; Return Policy.</p></div></div></div><div class="fq9-i" data-g="2"><h3><button type="button" aria-expanded="false" aria-controls="fqa5" id="fqq5">When will my order ship?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa5" role="region" aria-labelledby="fqq5"><div><p>Orders placed before 2:00 PM Pacific on a business day ship within 1–2 business days. We ship Monday to Thursday only, so parcels don’t sit in a depot over the weekend.</p></div></div></div><div class="fq9-i" data-g="2"><h3><button type="button" aria-expanded="false" aria-controls="fqa6" id="fqq6">How are products packed?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa6" role="region" aria-labelledby="fqq6"><div><p>In insulated packaging, with cold packs or a temperature indicator when the season and route need it.</p></div></div></div><div class="fq9-i" data-g="2"><h3><button type="button" aria-expanded="false" aria-controls="fqa7" id="fqq7">Where do you ship?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa7" role="region" aria-labelledby="fqq7"><div><p>Within Canada. See our Shipping Policy for details.</p></div></div></div><div class="fq9-i" data-g="3"><h3><button type="button" aria-expanded="false" aria-controls="fqa8" id="fqq8">What payment methods do you accept?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa8" role="region" aria-labelledby="fqq8"><div><p>Interac e-Transfer, crypto, or invoice for approved accounts. Prices are in CAD.</p></div></div></div><div class="fq9-i" data-g="3"><h3><button type="button" aria-expanded="false" aria-controls="fqa9" id="fqq9">Do you offer institutional accounts or bulk pricing?<span class="pm" aria-hidden="true"></span></button></h3>
-<div class="fq9-a" id="fqa9" role="region" aria-labelledby="fqq9"><div><p>Yes. See Wholesale &amp; Institutional Accounts.</p></div></div></div></div>
+  <figure class="xin-fig" aria-label="Lot reservation: ten vials from lot R2611-01 held for one study; each run of the study uses a vial from the same lot">
+    <div class="xin-fh"><span>Lot reservation</span><b>BPC-157 10 mg · Lot R2611-01</b></div>
+    <div class="xin-tray"><div class="xin-3d" id="xin3d" aria-hidden="true"></div><div class="xin-still" aria-hidden="true"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"><img src="v/bpc-157.webp" alt="" width="800" height="1000" loading="lazy"></div></div>
+    <div class="xin-study"><div class="xin-sh"><span>Study</span><span class="xin-ct"><b>0</b> of 10 vials used</span></div>
+      <ol class="xin-runs" aria-hidden="true"><li style="--i:0"><span class="n">1</span><b>R2611-01</b></li><li style="--i:1"><span class="n">2</span><b>R2611-01</b></li><li style="--i:2"><span class="n">3</span><b>R2611-01</b></li><li style="--i:3"><span class="n">4</span><b>R2611-01</b></li><li style="--i:4"><span class="n">5</span><b>R2611-01</b></li><li style="--i:5"><span class="n">6</span><b>R2611-01</b></li><li style="--i:6"><span class="n">7</span><b>R2611-01</b></li><li style="--i:7"><span class="n">8</span><b>R2611-01</b></li><li style="--i:8"><span class="n">9</span><b>R2611-01</b></li><li style="--i:9"><span class="n">10</span><b>R2611-01</b></li></ol></div>
+    <figcaption>Hold a single lot for the length of a study, so every experiment uses the same material.</figcaption>
+  </figure>
+</div></section>
+
+<section class="xwn" id="winter" aria-labelledby="wnh">
+<div class="wrap xwn-g">
+  <div class="xwn-copy">
+    <h2 class="h2" id="wnh">Last dispatch before the holidays.</h2>
+    <p class="xwn-p">Orders placed before 2:00 PM Pacific on a business day ship within 1–2 business days. We ship Monday to Thursday only, so parcels don’t sit in a depot over the weekend. Dispatch resumes Monday 4 January.</p>
+    <figure class="xwn-ind" aria-labelledby="wnind">
+      <div class="xwn-ih"><p id="wnind">Insulated packaging</p><p class="xwn-read"><b id="xwnr">4.0</b> °C</p></div>
+      <div class="xwn-scale" role="img" aria-label="Temperature scale from minus 20 to 25 degrees, with the 2 to 8 degree window marked">
+        <span class="band"></span><span class="mk"></span><i style="left:0%">−20</i><i style="left:44.4%">0</i><i style="left:62.2%">8</i><i style="left:100%">25 °C</i></div>
+      <figcaption>In insulated packaging, with cold packs or a temperature indicator when the season and route need it.</figcaption>
+    </figure>
+    <div class="xwn-links"><a class="x8-o" href="shipping-lyophilized-peptides-in-winter.html"><span>Shipping lyophilized peptides in winter</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a><a class="xwn-l" href="shipping.html">Shipping policy</a></div>
+  </div>
+  <div class="xwn-board" aria-label="Last dispatch: Thursday 17 December, 2:00 PM Pacific. Dispatch resumes Monday 4 January. We ship Monday to Thursday.">
+    <div class="xwn-row"><span class="xwn-k">Last dispatch</span><span class="xwn-v">2:00 PM Pacific</span></div>
+    <div class="xwn-big" aria-hidden="true"><span class="fl" data-c="T">T</span><span class="fl" data-c="H">H</span><span class="fl" data-c="U">U</span><span class="fl-gap"></span><span class="fl" data-c="1">1</span><span class="fl" data-c="7">7</span><span class="fl-gap"></span><span class="fl" data-c="D">D</span><span class="fl" data-c="E">E</span><span class="fl" data-c="C">C</span></div>
+    <div class="xwn-cd" aria-hidden="true">
+      <div><span class="xwn-n" data-u="d"><span class="fl n" data-c="0">0</span><span class="fl n" data-c="0">0</span></span><span>days</span></div>
+      <div><span class="xwn-n" data-u="h"><span class="fl n" data-c="0">0</span><span class="fl n" data-c="0">0</span></span><span>hours</span></div>
+      <div><span class="xwn-n" data-u="m"><span class="fl n" data-c="0">0</span><span class="fl n" data-c="0">0</span></span><span>minutes</span></div>
+    </div>
+    <div class="xwn-row xwn-re"><span class="xwn-k">Dispatch resumes</span><span class="xwn-sm" aria-hidden="true"><span class="fl s" data-c="M">M</span><span class="fl s" data-c="O">O</span><span class="fl s" data-c="N">N</span><span class="fl-gap"></span><span class="fl s" data-c="4">4</span><span class="fl-gap"></span><span class="fl s" data-c="J">J</span><span class="fl s" data-c="A">A</span><span class="fl s" data-c="N">N</span></span></div>
+    <div class="xwn-row xwn-wk"><span class="xwn-k">Ships</span><ol aria-hidden="true"><li class="go">Mon</li><li class="go">Tue</li><li class="go">Wed</li><li class="go">Thu</li><li class="">Fri</li><li class="">Sat</li><li class="">Sun</li></ol></div>
+  </div>
+</div></section>
+
+<section class="xjr" id="journal" aria-labelledby="jrh">
+<div class="wrap">
+  <div class="xjr-h"><h2 class="h2" id="jrh">Journal.</h2><a class="x8-o" href="journal.html"><span>All articles</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a></div>
+  <div class="xjr-g">
+    <a class="jx jx-1" href="how-to-read-a-peptide-coa.html"><div class="jx-coa" aria-hidden="true"><div class="jx-sheet">
+  <div class="jx-top"><span>Example certificate of analysis</span><b>BPC-157 10 mg</b></div>
+  <div class="jx-meta"><span>Lot <b>R2611-01</b><i class="jp" style="--i:0">1</i></span><span>Independent lab · Nov 2026<i class="jp" style="--i:4">5</i></span></div>
+  <div class="jx-trw"><svg class="jx-tr" viewBox="0 -14 560 190" preserveAspectRatio="none"><path class="f" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4 L560 152 L0 152 Z"/><path class="t" d="M0 150.3 L2 150.5 L4 150.1 L6 150.4 L8 150.5 L10 150.1 L12 149.5 L14 149.6 L16 149.7 L18 150.3 L20 150.0 L22 150.3 L24 150.4 L26 150.5 L28 150.3 L30 149.5 L32 149.6 L34 149.6 L36 149.6 L38 150.4 L40 150.2 L42 149.8 L44 149.7 L46 149.6 L48 149.5 L50 150.5 L52 149.9 L54 149.8 L56 150.0 L58 150.4 L60 150.0 L62 150.5 L64 149.5 L66 149.6 L68 149.9 L70 150.2 L72 149.5 L74 149.9 L76 149.5 L78 149.6 L80 150.0 L82 150.1 L84 149.9 L86 150.1 L88 150.4 L90 150.2 L92 149.6 L94 150.5 L96 150.5 L98 149.8 L100 150.1 L102 149.2 L104 147.9 L106 145.8 L108 143.5 L110 145.0 L112 146.9 L114 149.1 L116 149.5 L118 150.2 L120 150.2 L122 149.7 L124 150.2 L126 149.9 L128 149.5 L130 150.5 L132 150.5 L134 150.3 L136 149.7 L138 149.9 L140 150.3 L142 150.2 L144 150.4 L146 150.0 L148 150.5 L150 149.8 L152 149.5 L154 149.5 L156 149.7 L158 149.4 L160 150.6 L162 150.3 L164 149.4 L166 149.7 L168 150.1 L170 149.5 L172 149.9 L174 149.6 L176 150.2 L178 150.4 L180 150.1 L182 150.4 L184 150.1 L186 149.4 L188 150.2 L190 150.6 L192 150.5 L194 150.4 L196 149.7 L198 150.2 L200 150.3 L202 150.5 L204 149.4 L206 150.1 L208 150.4 L210 150.5 L212 150.5 L214 150.4 L216 149.8 L218 150.4 L220 150.6 L222 150.0 L224 150.3 L226 149.4 L228 150.5 L230 150.0 L232 149.7 L234 150.1 L236 149.4 L238 150.0 L240 150.3 L242 150.1 L244 150.6 L246 150.1 L248 150.3 L250 149.5 L252 149.6 L254 150.0 L256 150.6 L258 150.3 L260 150.2 L262 150.1 L264 149.4 L266 147.3 L268 146.0 L270 143.6 L272 140.7 L274 141.2 L276 142.4 L278 145.7 L280 147.3 L282 148.9 L284 149.4 L286 149.6 L288 150.0 L290 150.5 L292 150.3 L294 149.6 L296 149.5 L298 149.5 L300 150.2 L302 149.8 L304 149.6 L306 149.8 L308 149.6 L310 150.0 L312 149.8 L314 149.8 L316 150.3 L318 149.5 L320 149.5 L322 150.5 L324 149.4 L326 149.4 L328 149.8 L330 150.5 L332 149.5 L334 150.4 L336 149.4 L338 149.8 L340 150.5 L342 150.4 L344 149.8 L346 149.9 L348 149.7 L350 149.5 L352 150.3 L354 150.1 L356 146.0 L358 133.8 L360 97.7 L362 48.4 L364 21.6 L366 47.5 L368 97.7 L370 133.2 L372 146.1 L374 149.7 L376 148.9 L378 147.9 L380 145.0 L382 143.1 L384 143.2 L386 144.8 L388 147.8 L390 149.5 L392 149.6 L394 150.0 L396 149.6 L398 149.9 L400 150.4 L402 150.2 L404 149.7 L406 150.0 L408 150.6 L410 149.6 L412 149.6 L414 150.5 L416 149.9 L418 150.1 L420 149.7 L422 150.2 L424 150.3 L426 150.0 L428 149.4 L430 150.5 L432 150.5 L434 149.9 L436 149.5 L438 150.0 L440 150.0 L442 149.0 L444 148.0 L446 146.6 L448 142.3 L450 140.2 L452 139.3 L454 140.7 L456 144.5 L458 147.0 L460 149.4 L462 149.3 L464 150.3 L466 150.4 L468 150.0 L470 150.2 L472 149.9 L474 149.5 L476 149.7 L478 150.6 L480 150.2 L482 149.9 L484 150.0 L486 149.7 L488 150.0 L490 150.5 L492 150.3 L494 149.6 L496 150.2 L498 149.7 L500 149.4 L502 149.8 L504 149.8 L506 149.9 L508 150.2 L510 149.5 L512 150.0 L514 149.5 L516 150.2 L518 149.6 L520 149.7 L522 149.9 L524 150.1 L526 150.4 L528 149.7 L530 150.2 L532 149.8 L534 150.4 L536 150.5 L538 150.4 L540 149.6 L542 150.4 L544 149.5 L546 150.2 L548 149.9 L550 150.2 L552 149.9 L554 150.5 L556 150.1 L558 149.5 L560 150.4" pathLength="100"/></svg><i class="jp jp-pk" style="--i:2">3</i></div>
+  <div class="jx-foot"><span>Purity <b>99.2 %</b></span><span>Mass <b>1419.5 Da</b><i class="jp" style="--i:1">2</i></span><span>Net <b>87 %</b><i class="jp" style="--i:3">4</i></span></div>
+</div></div><ol class="jx-key" aria-hidden="true"><li style="--i:0"><b>1</b>Lot</li><li style="--i:1"><b>2</b>Identity</li><li style="--i:2"><b>3</b>HPLC trace</li><li style="--i:3"><b>4</b>Net peptide content</li><li style="--i:4"><b>5</b>Lab and date</li></ol>
+      <div class="jx-m"><span class="jx-k">Lab testing</span><h3>How to read a peptide COA</h3><p>A certificate of analysis (COA) is the only evidence you have of what’s in a vial. Here’s how to read one in two minutes.</p><span class="jx-go">Read the article <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></div></a>
+    <a class="jx jx-2" href="how-lot-numbers-work.html"><div class="jx-lot" aria-hidden="true"><div class="jx-code"><span class="a">R</span><span class="b">2612</span><span class="c">-01</span></div>
+  <div class="jx-keys"><span class="b"><i></i>Year and month of the production run</span><span class="c"><i></i>Run number for that month</span></div>
+  <p class="jx-says">R2612-01 is the first run of December 2026.</p></div>
+      <div class="jx-m"><span class="jx-k">Lots</span><h3>How lot numbers work at RYXA Labs</h3><p>The link between the vial on your bench and the lab report that describes it.</p><span class="jx-go">Read the article <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></div></a>
+    <a class="jx jx-3" href="shipping-lyophilized-peptides-in-winter.html"><div class="jx-win" aria-hidden="true"><ol><li class="go" style="--i:0">Mon</li><li class="go" style="--i:1">Tue</li><li class="go" style="--i:2">Wed</li><li class="go" style="--i:3">Thu</li><li class="" style="--i:4">Fri</li><li class="" style="--i:5">Sat</li><li class="" style="--i:6">Sun</li></ol>
+  <p class="jx-wn">We ship Monday to Thursday only.</p></div>
+      <div class="jx-m"><span class="jx-k">Shipping</span><h3>Shipping lyophilized peptides in winter</h3><p>How we pack orders in a Canadian winter, and what to check when one arrives.</p><span class="jx-go">Read the article <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span></div></a>
+  </div>
+</div></section>
+
+
+
+<section class="xsg" id="updates" aria-labelledby="sh"><div class="wrap"><div class="xsg-b">
+  <div class="xsg-lat" aria-hidden="true"></div>
+  <div class="xsg-c"><h2 id="sh">New lots. New COAs. <span>Nothing else.</span></h2><p>One email when a new lot and its report go live.</p></div>
+  <form class="xsg-f" novalidate><label class="sr" for="em">Email</label><input id="em" type="email" placeholder="you@lab.ca" autocomplete="email" required>
+    <button type="submit"><span class="t">Get lot updates</span><span class="d" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" fill="none"/></svg> You’re on the list</span></button>
+    <p class="xsg-msg" aria-live="polite"></p></form>
+</div></div></section>
+
+<section class="xfq" id="faq" aria-labelledby="fqh">
+<div class="wrap xfq-g">
+  <div class="xfq-side">
+    <h2 class="h2" id="fqh">FAQ.</h2>
+    <label class="xfq-s"><span class="sr">Search the questions</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5"/></svg><input type="search" placeholder="Search the questions" id="xfqs"></label>
+    <ul class="xfq-ct">
+      <li><a href="mailto:info@ryxalabs.com"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg><span><small>General and support</small>info@ryxalabs.com</span></a></li>
+      <li><a href="mailto:sales@ryxalabs.com"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg><span><small>Orders, cancellations and claims</small>sales@ryxalabs.com</span></a></li>
+      <li><a href="tel:+16722303023"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span><small>Phone</small>672-230-3023</span></a></li>
+    </ul>
+    <a class="xfq-all" href="faq.html">All questions <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+  </div>
+  <div class="xfq-main">
+    <div class="xfq-tabs" role="toolbar" aria-label="Filter questions"><span class="ind" aria-hidden="true"></span><button type="button" class="on" data-g="all">All</button><button type="button" data-g="0">Products and use</button><button type="button" data-g="1">Testing and quality</button><button type="button" data-g="2">Orders and shipping</button><button type="button" data-g="3">Accounts and payment</button></div>
+    <div class="xfq-list"><div class="xfq-i open" data-g="0"><h3><button type="button" aria-expanded="true" aria-controls="xfa0" id="xfq0"><span>Who can buy from RYXA Labs?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa0" role="region" aria-labelledby="xfq0"><div><p>Researchers, laboratories, institutions and businesses aged 19 or older who will use our products for laboratory research only. You confirm this at checkout.</p></div></div></div><div class="xfq-i" data-g="0"><h3><button type="button" aria-expanded="false" aria-controls="xfa1" id="xfq1"><span>Can you tell me how to dose or reconstitute a product?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa1" role="region" aria-labelledby="xfq1"><div><p>No. We do not give dosing, administration or preparation advice, and our team cannot answer these questions. Please refer to published literature and your institution’s protocols for laboratory handling.</p></div></div></div><div class="xfq-i" data-g="0"><h3><button type="button" aria-expanded="false" aria-controls="xfa2" id="xfq2"><span>What form do products come in?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa2" role="region" aria-labelledby="xfq2"><div><p>Lyophilized (freeze-dried) powder in sealed glass vials, labelled with the compound, amount, lot number and storage conditions.</p></div></div></div><div class="xfq-i" data-g="1"><h3><button type="button" aria-expanded="false" aria-controls="xfa3" id="xfq3"><span>How do I know what’s in the vial?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa3" role="region" aria-labelledby="xfq3"><div><p>Every lot is tested by an independent laboratory for purity (HPLC) and identity (mass spectrometry). Scan the QR code on your vial, or search the lot number in our <a href="lab-testing.html#lookup">COA Library</a>.</p></div></div></div><div class="xfq-i" data-g="1"><h3><button type="button" aria-expanded="false" aria-controls="xfa4" id="xfq4"><span>What if a lot doesn’t match its COA?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa4" role="region" aria-labelledby="xfq4"><div><p>Contact us within 30 days of delivery with an independent lab report. We’ll replace it, refund it, or reimburse reasonable testing costs, as set out in our <a href="refund-returns.html">Refund &amp; Return Policy</a>.</p></div></div></div><div class="xfq-i" data-g="2"><h3><button type="button" aria-expanded="false" aria-controls="xfa5" id="xfq5"><span>When will my order ship?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa5" role="region" aria-labelledby="xfq5"><div><p>Orders placed before 2:00 PM Pacific on a business day ship within 1–2 business days. We ship Monday to Thursday only, so parcels don’t sit in a depot over the weekend.</p></div></div></div><div class="xfq-i" data-g="2"><h3><button type="button" aria-expanded="false" aria-controls="xfa6" id="xfq6"><span>How are products packed?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa6" role="region" aria-labelledby="xfq6"><div><p>In insulated packaging, with cold packs or a temperature indicator when the season and route need it.</p></div></div></div><div class="xfq-i" data-g="2"><h3><button type="button" aria-expanded="false" aria-controls="xfa7" id="xfq7"><span>Where do you ship?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa7" role="region" aria-labelledby="xfq7"><div><p>Within Canada. See our <a href="shipping.html">Shipping Policy</a> for details.</p></div></div></div><div class="xfq-i" data-g="3"><h3><button type="button" aria-expanded="false" aria-controls="xfa8" id="xfq8"><span>What payment methods do you accept?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa8" role="region" aria-labelledby="xfq8"><div><p>Interac e-Transfer, crypto, or invoice for approved accounts. Prices are in CAD.</p></div></div></div><div class="xfq-i" data-g="3"><h3><button type="button" aria-expanded="false" aria-controls="xfa9" id="xfq9"><span>Do you offer institutional accounts or bulk pricing?</span><i aria-hidden="true"></i></button></h3>
+<div class="xfq-a" id="xfa9" role="region" aria-labelledby="xfq9"><div><p>Yes. See <a href="wholesale.html">Wholesale &amp; Institutional Accounts</a>.</p></div></div></div></div>
+    <p class="xfq-none" hidden>No question matches. Write to <a href="mailto:info@ryxalabs.com">info@ryxalabs.com</a>.</p>
   </div>
 </div></section>
 </main>
@@ -2007,11 +2436,11 @@ const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getConte
 const whenNear=(el,fn,m='300px')=>new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();fn()}},{rootMargin:m}).observe(el);
 /* ---- lab proof: the vial and its report walk through the five checks ---- */
 {const coa=$('#coa9'),steps=$('.pf9-steps');if(coa){const btns=$$('.pf9-steps button'),tr=$('#c9tr'),L=tr.getTotalLength();let k=-1,st=null,started=false;
-  const VIEW={lab:'trace',date:'trace',trace:'trace',ms:'ms',net:'net'};
+  const VIEW={lab:'trace',date:'trace',trace:'trace',ms:'ms',net:'net',lot:'trace',labdate:'trace'},LOTK=['lab','date','lot','labdate'];
   const show=i=>{k=i;const key=btns[i].dataset.k;btns.forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-current',j===i)});
-    coa.dataset.view=VIEW[key];$$('#coa9 [data-k]').forEach(e=>e.classList.toggle('hl',e.dataset.k===key||(key==='date'&&e.dataset.k==='lot')));
+    coa.dataset.view=VIEW[key];const hl=(btns[i].dataset.hl||key).split(' ');$$('#coa9 [data-k]').forEach(e=>e.classList.toggle('hl',hl.includes(e.dataset.k)||(key==='date'&&e.dataset.k==='lot')));
     if(key==='trace'&&!reduce)tr.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:1500,easing:'cubic-bezier(.25,1,.5,1)',fill:'both'});
-    if(st){st.showLot(key==='lab'||key==='date'?'ok':null)}
+    if(st){st.showLot(LOTK.includes(key)?'ok':null)}
     const bar=btns[i].querySelector('.pf9-bar');bar.style.animation='none';void bar.offsetWidth;bar.style.animation=''};
   tr.style.strokeDasharray=L;
   btns.forEach((b,i)=>{b.addEventListener('click',()=>show(i));b.querySelector('.pf9-bar').addEventListener('animationend',()=>show((i+1)%btns.length))});
@@ -2019,9 +2448,9 @@ const whenNear=(el,fn,m='300px')=>new IntersectionObserver((es,o)=>{if(es[0].isI
   whenNear(coa,()=>{if(started)return;started=true;show(0)},'-25% 0px');
   if(gl)whenNear($('#pf9v'),async()=>{try{const {mountStage}=await import('./lib/stage.js');
     st=await mountStage($('#pf9v'),{mode:'single',rim:'#6f86d6',pointerZone:$('.pf9-stage'),vials:[{name:'BPC-157',mg:'10 mg',rx:'RX-01',lot:'R2611-01',chip:'#E8A33D',rotY:-.35}]});
-    $('#pf9v').classList.add('on');if(k>=0){const key=btns[k].dataset.k;st.showLot(key==='lab'||key==='date'?'ok':null)}}catch(e){console.warn(e)}});}}
+    $('#pf9v').classList.add('on');if(k>=0){const key=btns[k].dataset.k;st.showLot(LOTK.includes(key)?'ok':null)}}catch(e){console.warn(e)}});}}
 /* ---- catalogue by family: four cards pick the family; every vial of it stands on the 3D shelf ---- */
-{const sec=$('#families'),F=window.RYXA_FAM;if(sec&&F){const tabs=$$('.fm9'),panel=$('#ct9p'),info=$('.ct9-info'),list=$('.ct9-list'),stage=$('.ct9-stage'),still=$('.ct9-still');
+{const sec=$('#families'),F=window.RYXA_FAM;if(sec&&F&&$('.ct9-p')){const tabs=$$('.fm9'),panel=$('#ct9p'),info=$('.ct9-info'),list=$('.ct9-list'),stage=$('.ct9-stage'),still=$('.ct9-still');
   let fam='RX-01',i=0,st=null,timer=0,paused=false,seen=false;
   const money=v=>'$'+v.toLocaleString('en-CA');
   const render=()=>{const f=F[fam],p=f.items[i];panel.style.setProperty('--c',f.col);
@@ -2080,6 +2509,151 @@ const items=$$('.fq9-i');
 $$('.fq9-tabs button').forEach(b=>b.addEventListener('click',()=>{$$('.fq9-tabs button').forEach(x=>x.classList.toggle('on',x===b));items.forEach(i=>i.hidden=!(b.dataset.g==='all'||i.dataset.g===b.dataset.g))}));
 $$('.fq9-i h3 button').forEach(b=>b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')!=='true';$$('.fq9-i h3 button').forEach(x=>{x.setAttribute('aria-expanded','false');x.closest('.fq9-i').classList.remove('open')});b.setAttribute('aria-expanded',open);b.closest('.fq9-i').classList.toggle('open',open)}));
 })();
+</script>
+<script type="module">
+{const sec=document.getElementById('families'),F=window.RYXA_FAM;if(sec&&F&&sec.querySelector('.x8-f')){
+const $$=(s,r=document)=>[...r.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getContext('webgl2')||c.getContext('webgl'))}catch(e){return false}})();
+const cards=$$('.x8-f',sec),host=document.createElement('div');host.className='x8-3d';host.setAttribute('aria-hidden','true');
+let fam=null,sel=0,show=0,st=null,loading=false;
+const money=v=>'$'+v.toLocaleString('en-CA');
+const card=()=>cards.find(c=>c.dataset.f===fam);
+const ARW='<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>';
+const info=i=>{show=i;const c=card(),f=F[fam],p=f.items[i],box=c.querySelector('.x8-in');
+  box.innerHTML=`<div class="x8-nm"><a href="p-${p.s}.html">${p.n}</a><p>${p.mg} · Lot <b>${p.lot}</b> · <a href="lab-testing.html#lookup">COA</a></p></div>`+
+   (p.pr?`<div class="x8-lad" aria-label="Price per vial">${[['1 vial',p.pr[0]],['5+ vials',p.pr[1]],['10+ vials',p.pr[2]]].map(([l,v])=>`<div><span>${l}</span><b>${money(v)}</b></div>`).join('')}</div>`:`<p class="x8-soon">Price published at launch.</p>`)+
+   `<div class="x8-act">${p.pr?`<button class="x8-add" type="button">Add to cart <svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.7"/></svg><span class="x8-ok" aria-hidden="true">Added</span></button>`:''}<a class="x8-vd" href="p-${p.s}.html">View details ${ARW}</a></div>`;
+  box.classList.remove('swp');void box.offsetWidth;box.classList.add('swp');
+  $$('.x8-ls button',c).forEach((b,j)=>b.setAttribute('aria-current',j===sel))};
+const pick=i=>{sel=i;if(st)st.focus(i);info(i)};
+const open=k=>{if(k===fam&&card().classList.contains('on'))return;fam=k;sel=0;
+  cards.forEach(c=>{const on=c.dataset.f===k;c.classList.toggle('on',on);c.querySelector('.x8-hit').setAttribute('aria-expanded',on)});
+  const c=card(),f=F[k];c.querySelector('.x8-ls').innerHTML=f.items.map((p,j)=>`<li><button type="button" data-i="${j}">${p.n}${f.items.filter(q=>q.n===p.n).length>1?' '+p.mg:''}</button></li>`).join('');
+  const stg=c.querySelector('.x8-st');stg.appendChild(host);info(0);
+  if(st){stg.classList.add('on');st.rim(f.col);setTimeout(()=>{st.set(f.items.map(p=>({name:p.n,mg:p.mg,rx:k,lot:p.lot,chip:f.col,rotY:0})),0)},reduce?0:380)}
+  else boot()};
+const boot=async()=>{if(!gl||loading||st||!fam)return;loading=true;try{const {mountStage}=await import('./lib/stage.js');const f=F[fam],stg=card().querySelector('.x8-st');stg.appendChild(host);
+  st=await mountStage(host,{mode:'row',rim:f.col,pointerZone:stg,vials:f.items.map(p=>({name:p.n,mg:p.mg,rx:fam,lot:p.lot,chip:f.col,rotY:0})),focus:sel,
+    onHover:j=>{if(j!==show)info(j)},onPick:j=>pick(j)});
+  stg.classList.add('on');stg.addEventListener('pointerleave',()=>{if(show!==sel)info(sel)})}catch(e){console.warn(e)}};
+cards.forEach(c=>{c.querySelector('.x8-hit').addEventListener('click',()=>open(c.dataset.f));
+  c.querySelector('.x8-ls').addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(+b.dataset.i)});
+  c.querySelector('.x8-st').addEventListener('pointerleave',()=>{if(show!==sel)info(sel)});
+  c.querySelector('.x8-in').addEventListener('click',e=>{const b=e.target.closest('.x8-add');if(!b)return;const p=F[fam].items[show],cart=document.querySelector('header .pill-b')||document.querySelector('.pill-b');
+    b.classList.add('done');setTimeout(()=>b.classList.remove('done'),1500);
+    const finish=()=>{if(cart){cart.classList.remove('bump');void cart.offsetWidth;cart.classList.add('bump')}window.ryxaCart&&ryxaCart.add(p.s,1)};
+    if(reduce||!cart){finish();return}
+    const a=c.querySelector('.x8-st').getBoundingClientRect(),z=cart.getBoundingClientRect(),fl=document.createElement('img');fl.src='v/'+p.img+'.webp';fl.className='fly8';fl.alt='';document.body.appendChild(fl);
+    const x0=a.left+a.width/2-30,y0=a.top+a.height*.45-37,x1=z.left+z.width/2-30,y1=z.top+z.height/2-37;
+    fl.animate([{transform:`translate(${x0}px,${y0}px) scale(1.6)`,opacity:0},{transform:`translate(${x0}px,${y0-20}px) scale(1.5)`,opacity:1,offset:.15},{transform:`translate(${(x0+x1)/2}px,${Math.min(y0,y1)-90}px) scale(.9)`,opacity:1,offset:.6},{transform:`translate(${x1}px,${y1}px) scale(.3)`,opacity:.3}],{duration:850,easing:'cubic-bezier(.5,0,.3,1)'}).onfinish=()=>{fl.remove();finish()}})});
+/* keyboard: arrows move along the line-up */
+sec.addEventListener('keydown',e=>{if(!card().contains(document.activeElement))return;const n=F[fam].items.length,d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!d||n<2)return;e.preventDefault();pick((sel+d+n)%n);const b=$$('.x8-ls button',card())[sel];b&&b.focus()});
+open('RX-01');
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();boot()}},{rootMargin:'400px'}).observe(sec);
+}}
+</script>
+<script type="module">
+{const sec=document.getElementById('standard');if(sec&&sec.classList.contains('x9s')){
+const $$=(s)=>[...sec.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,desk=matchMedia('(min-width:901px)');
+const stage=sec.querySelector('.x9-stage'),vh=sec.querySelector('#x9v'),cos=$$('.x9-co'),prog=$$('.x9-prog li');
+const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getContext('webgl2')||c.getContext('webgl'))}catch(e){return false}})();
+let st=null,cur=-1;
+/* place each note at its anchor height and run its leader line to the vial's edge */
+const lay=()=>{if(!desk.matches)return;const S=stage.getBoundingClientRect(),V=vh.getBoundingClientRect(),hh=V.height,half=hh*.178,cx=V.left-S.left+V.width/2;
+  cos.forEach(c=>{const ay=+c.dataset.ay,y=hh*(.04+ay*.9);c.style.top=y+'px';const ln=c.querySelector('.x9-ln'),cb=c.getBoundingClientRect();
+    const r=(ay<.2?half*.87:half)*1.12;
+    if(c.classList.contains('x9-l')){const x0=cb.right-S.left+18;ln.style.width=Math.max(20,cx-r-x0)+'px'}else{const x0=cb.left-S.left-18;ln.style.width=Math.max(20,x0-(cx+r))+'px'}})};
+const set=i=>{if(i===cur)return;cur=i;cos.forEach((c,j)=>{c.classList.toggle('on',j===i);c.classList.toggle('done',j<i)});prog.forEach((p,j)=>p.classList.toggle('on',j<=i));
+  if(st){const cue=cos[i]&&cos[i].dataset.cue;st.showLot(cue==='lot'?'ok':null)}};
+const onScroll=()=>{if(!desk.matches){return}const r=sec.getBoundingClientRect(),run=r.height-innerHeight;const p=Math.min(.999,Math.max(0,-r.top/Math.max(1,run)));set(Math.floor(p*cos.length))};
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',()=>{lay();onScroll()});new ResizeObserver(lay).observe(stage);
+lay();onScroll();if(!desk.matches)set(0);
+if(gl)new IntersectionObserver(async(es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();try{const {mountStage}=await import('./lib/stage.js');
+  st=await mountStage(vh,{mode:'single',rim:'#9AA8CF',pointerZone:stage,vials:[{name:'BPC-157',mg:'10 mg',rx:'RX-01',lot:'R2611-01',chip:'#E8A33D',rotY:-.35}]});
+  vh.classList.add('on');const c=cos[cur];if(c)st.showLot(c.dataset.cue==='lot'?'ok':null)}catch(e){console.warn(e)}},{rootMargin:'300px'}).observe(sec);
+}}
+</script>
+<script type="module">
+{const sec=document.getElementById('institutions');if(sec&&sec.classList.contains('xin')){
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,tray=sec.querySelector('.xin-tray'),runs=[...sec.querySelectorAll('.xin-runs li')],ct=sec.querySelector('.xin-ct b');
+const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getContext('webgl2')||c.getContext('webgl'))}catch(e){return false}})();
+let st=null,i=0,timer=0,seen=false;
+const show=n=>{runs.forEach((r,j)=>{r.classList.toggle('on',j<n);r.classList.toggle('now',j===n-1)});ct.textContent=n};
+const step=()=>{if(!seen)return;if(i<10){if(st){st.pull(i,true);if(i>0)st.pull(i-1,false)}show(++i);timer=setTimeout(step,i<10?1250:3200)}
+  else{if(st)st.reset();i=0;show(0);timer=setTimeout(step,1600)}};
+if(reduce)show(10);
+new IntersectionObserver(es=>{seen=es[0].isIntersecting;clearTimeout(timer);if(seen&&!reduce)timer=setTimeout(step,700)},{threshold:.35}).observe(sec.querySelector('.xin-fig'));
+if(gl)new IntersectionObserver(async(es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();try{const {mountStage}=await import('./lib/stage.js');
+  st=await mountStage(sec.querySelector('#xin3d'),{mode:'rack',rim:'#9AA8CF',pointerZone:tray,vials:Array.from({length:10},()=>({name:'BPC-157',mg:'10 mg',rx:'RX-01',lot:'R2611-01',chip:'#E8A33D',rotY:0}))});
+  tray.classList.add('on')}catch(e){console.warn(e)}},{rootMargin:'300px'}).observe(sec);
+}}
+</script>
+<script>
+(()=>{const sec=document.getElementById('winter');if(!sec||!sec.classList.contains('xwn'))return;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,AB='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+/* a flap tile settles on its character after a short run through the alphabet */
+const flip=(el,to,spins)=>{if(reduce||!spins){el.textContent=to;return}let k=0;const go=()=>{if(k++>=spins){el.textContent=to;el.classList.remove('f');void el.offsetWidth;el.classList.add('f');return}
+  el.textContent=AB[(Math.random()*AB.length)|0];el.classList.remove('f');void el.offsetWidth;el.classList.add('f');setTimeout(go,70)};go()};
+const setNum=(u,v)=>{const s=String(v).padStart(2,'0'),t=[...sec.querySelectorAll(`[data-u=${u}] .fl`)];t.forEach((el,i)=>{if(el.textContent!==s[i])flip(el,s[i],reduce?0:4)})};
+const end=Date.UTC(2026,11,17,22,0,0);
+const tick=()=>{let ms=Math.max(0,end-Date.now());const d=Math.floor(ms/864e5);ms-=d*864e5;const h=Math.floor(ms/36e5);ms-=h*36e5;const m=Math.floor(ms/6e4);setNum('d',d);setNum('h',h);setNum('m',m)};
+/* thermometer readout follows the marker */
+const r=document.getElementById('xwnr'),mk=sec.querySelector('.xwn-scale .mk'),sc=sec.querySelector('.xwn-scale');
+const rd=()=>{if(sc.offsetWidth)r.textContent=(-20+(mk.offsetLeft+1)/sc.offsetWidth*45).toFixed(1);if(vis)requestAnimationFrame(rd)};let vis=false;
+new IntersectionObserver(es=>{const on=es[0].isIntersecting;if(on&&!sec.classList.contains('in')){sec.classList.add('in');
+  sec.querySelectorAll('.xwn-big .fl,.xwn-sm .fl').forEach((el,i)=>{const c=el.dataset.c;el.textContent=' ';setTimeout(()=>flip(el,c,6+(i%5)),i*55)});
+  setTimeout(()=>{tick();setInterval(tick,20000)},500)}
+  vis=on;if(on)requestAnimationFrame(rd)},{threshold:.3}).observe(sec);
+})();
+</script>
+<script>
+(()=>{const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* journal: plays once in view; the lot code decodes segment by segment */
+const jr=$('#journal.xjr');if(jr){new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();jr.classList.add('in');const l=$('.jx-lot',jr);if(l&&!reduce){const k=['b','c','all'];let i=0;l.dataset.k='b';setInterval(()=>{l.dataset.k=k[++i%3]},2000)}else if(l)l.dataset.k='all'}},{threshold:.25}).observe(jr)}
+/* lot updates */
+const f=$('.xsg-f');if(f){f.addEventListener('submit',e=>{e.preventDefault();const i=$('input',f),m=$('.xsg-msg',f);
+  if(!i.value.trim()){m.textContent='Enter your email address.';i.focus();return}if(!i.checkValidity()){m.textContent='Enter an email address like you@lab.ca.';i.focus();return}
+  m.textContent='';f.classList.add('ok');$('button',f).setAttribute('aria-label','You’re on the list')})}
+/* FAQ: sliding tab indicator, one open answer, search */
+const fq=$('#faq.xfq');if(fq){const tabs=$$('.xfq-tabs button',fq),ind=$('.xfq-tabs .ind',fq),items=$$('.xfq-i',fq),none=$('.xfq-none',fq),s=$('#xfqs');let g='all';
+  const mv=b=>{ind.style.width=b.offsetWidth+'px';ind.style.transform=`translate(${b.offsetLeft}px,${b.offsetTop-4}px)`};
+  const filt=()=>{const q=(s.value||'').trim().toLowerCase();let n=0;items.forEach(it=>{const show=(g==='all'||it.dataset.g===g)&&(!q||it.textContent.toLowerCase().includes(q));it.hidden=!show;if(show)n++});none.hidden=n>0};
+  tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.classList.toggle('on',x===b));g=b.dataset.g;mv(b);filt()}));
+  s.addEventListener('input',filt);
+  $$('.xfq-i h3 button',fq).forEach(b=>b.addEventListener('click',()=>{const open=b.getAttribute('aria-expanded')!=='true';
+    $$('.xfq-i h3 button',fq).forEach(x=>{x.setAttribute('aria-expanded','false');x.closest('.xfq-i').classList.remove('open')});b.setAttribute('aria-expanded',open);b.closest('.xfq-i').classList.toggle('open',open)}));
+  const on=()=>mv($('.xfq-tabs button.on',fq));on();addEventListener('resize',on);document.fonts&&document.fonts.ready.then(on)}
+})();
+</script>
+<script type="module">
+{const sec=document.getElementById('proof');if(sec&&sec.classList.contains('xpf')){
+const $=s=>sec.querySelector(s),$$=s=>[...sec.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const gl=(()=>{try{const c=document.createElement('canvas');return !!(c.getContext('webgl2')||c.getContext('webgl'))}catch(e){return false}})();
+const coa=$('#xcoa'),btns=$$('.xpf-steps button'),desc=$('.xpf-desc'),tr=$('#xctr'),L=tr.getTotalLength(),q=$('#xpfq'),LOT='R2611-01';
+const VIEW={lab:'trace',date:'trace',trace:'trace',ms:'ms',net:'net'},LOTK=['lab','date'];let k=-1,st=null,started=false;
+tr.style.strokeDasharray=L;tr.style.strokeDashoffset=L;
+const count=()=>$$('.xcnt').forEach(el=>{const to=+el.dataset.to,d=+el.dataset.d;if(reduce){el.textContent=to.toFixed(d);return}const t0=performance.now();
+  const f=t=>{const p=Math.min(1,(t-t0)/1100),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(d);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});
+const draw=()=>{if(reduce){tr.style.strokeDashoffset=0;return}tr.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:1500,easing:'cubic-bezier(.25,1,.5,1)',fill:'forwards'})};
+const show=i=>{k=i;const key=btns[i].dataset.k;btns.forEach((b,j)=>{b.classList.toggle('on',j===i);b.classList.toggle('done',j<i);b.setAttribute('aria-current',j===i?'step':'false')});
+  coa.dataset.view=VIEW[key];$$('#xcoa [data-k]').forEach(e=>e.classList.toggle('hl',e.dataset.k===key||(key==='date'&&e.dataset.k==='lot')));
+  if(key==='trace')draw()
+  if(st)st.showLot(LOTK.includes(key)?'ok':null);
+  desc.textContent=btns[i].dataset.d;desc.classList.remove('xsw');void desc.offsetWidth;desc.classList.add('xsw');
+  const bar=btns[i].querySelector('.xpf-bar');bar.style.display='none';void bar.offsetWidth;bar.style.display=''};
+btns.forEach((b,i)=>{b.addEventListener('click',()=>{if(!sec.classList.contains('found')){sec.classList.add('found');q.textContent=LOT;count();draw()}show(i)});
+  b.querySelector('.xpf-bar').addEventListener('animationend',()=>show((i+1)%btns.length))});
+const steps=$('.xpf-steps');steps.addEventListener('focusin',()=>steps.classList.add('hold'));steps.addEventListener('focusout',()=>steps.classList.remove('hold'));
+/* read the lot off the label, type it into the lookup, open the report */
+const run=()=>{if(started)return;started=true;if(reduce){q.textContent=LOT;sec.classList.add('found');count();draw();show(0);return}
+  sec.classList.add('reading');if(st)st.showLot('ok');let n=0;
+  const ty=()=>{if(sec.classList.contains('found'))return;q.textContent=LOT.slice(0,++n);if(n<LOT.length)setTimeout(ty,85+Math.random()*60);else setTimeout(()=>{sec.classList.add('found');count();draw();setTimeout(()=>{if(k<0)show(0)},550)},380)};
+  setTimeout(ty,700)};
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();run()}},{threshold:.35}).observe($('.xpf-ins'));
+if(gl)new IntersectionObserver(async(es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();try{const {mountStage}=await import('./lib/stage.js');
+  st=await mountStage($('#xpfv'),{mode:'single',rim:'#9AA8CF',pointerZone:$('.xpf-vial'),vials:[{name:'BPC-157',mg:'10 mg',rx:'RX-01',lot:'R2611-01',chip:'#E8A33D',rotY:-.25}]});
+  $('.xpf-vial').classList.add('on');if(sec.classList.contains('reading')&&(k<0||LOTK.includes(btns[k].dataset.k)))st.showLot('ok')}catch(e){console.warn(e)}},{rootMargin:'300px'}).observe(sec);
+}}
 </script>
 </body>
 </html>
